@@ -55,8 +55,39 @@ const userDashboards: UserDashboards = {
 				{
 					cols: 2,
 					rows: 4,
-					widget: 'noWidget',
-					props: {}
+					widget: 'simpleWidgetlaim',
+					props: {
+						title: 'Simple Widget laim'
+					}
+				}
+			]
+		},
+		{
+			name: 'Wind',
+			items: [
+				{
+					cols: 2,
+					rows: 2,
+					widget: 'mapWidgetWind',
+					props: {
+						title: 'Simple Wind Widget'
+					}
+				},
+				{
+					cols: 1,
+					rows: 1,
+					widget: 'simpleWidget',
+					props: {
+						title: 'Simple Widget'
+					}
+				},
+				{
+					cols: 1,
+					rows: 1,
+					widget: 'simpleWidgetlaim',
+					props: {
+						title: 'Seed location with wind probably'
+					}
 				}
 			]
 		}
