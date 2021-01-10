@@ -1,0 +1,2790 @@
+<html lang="en">
+<head>
+    <title>Telestion Client Monorepo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <style>
+        h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        code {
+            line-height: inherit;
+        }
+
+        :root {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <a href="/" class="logo">Telestion Client Monorepo</a>
+            <a class="button" href="https://github.com/TelestionTeam/telestion-client/" target="_blank">GitHub</a>
+            <a class="button" href="https://telestion.wuespace.de/" target="_blank">Homepage</a>
+            <a class="button" href="https://react-spectrum.adobe.com/" target="_blank">React Spectrum Libraries</a>
+    </header>
+<div class="container">
+    <div class="row">
+        <aside class="col-sm-12 col-md-4 col-lg-3">
+            <nav class="fixed">
+                <a href="/">Project README</a>
+                <span>Modules</span>
+                                    <a href="/@wuespace/vertx-event-bus">
+                        <code>
+                            @wuespace/vertx-event-bus                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-types">
+                        <code>
+                            @wuespace/telestion-client-types                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-prop-types">
+                        <code>
+                            @wuespace/telestion-client-prop-types                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-core">
+                        <code>
+                            @wuespace/telestion-client-core                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-common">
+                        <code>
+                            @wuespace/telestion-client-common                        </code>
+                    </a>
+                            </nav>
+        </aside>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+<h1><code>@wuespace/vertx-event-bus</code></h1>
+
+<p>
+    Install using
+</p>
+<pre><code>npm install @wuespace/vertx-event-bus</code></pre>
+
+<h2>Exported Members</h2>
+<p>You can access these members by importing the module:</p>
+<pre><code>import { <i>member</i> } from '@wuespace/vertx-event-bus';</code></pre>
+
+<!-- Members -->
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="defaultOptions" href="#defaultOptions">
+            <h3><code>defaultOptions</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            Required&lt;Options&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the default options for the event bus
+that are merged with the custom options in the constructor</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">constructor(url: string, options?: Partial&lt;Options&gt;) {
+	this.options = { ...defaultOptions, ...options };
+	...
+}
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="EventBus" href="#EventBus">
+            <h3><code>EventBus</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            class
+            <!-- Name -->
+            EventBus
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>An eventbus connector for the vertx environment.</p>
+<p>It implements the Javascript client-side of the SockJS event bus bridge
+based on the online documentation by the Vert.x-Team
+and their implementation:</p>
+<ul>
+<li><a href="https://vertx.io/docs/vertx-web/java/#_sockjs_event_bus_bridge">https://vertx.io/docs/vertx-web/java/#_sockjs_event_bus_bridge</a></li>
+<li><a href="https://github.com/vert-x3/vertx-web/blob/master/vertx-web/src/client/vertx-eventbus.js">https://github.com/vert-x3/vertx-web/blob/master/vertx-web/src/client/vertx-eventbus.js</a></li>
+</ul>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="https://vertx.io/">https://vertx.io/</a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+        <h4>Constructors</h4>
+            <a id="EventBus.constructor" href="#EventBus.constructor">
+            <h5><code>constructor</code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function undefined
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                url
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                options
+                ?
+                <!-- type -->
+                :
+                Partial&lt;Options&gt;
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Builds a new event bus
+that automatically tries to connect to the given server url.</p>
+<p>It uses the given options to configure the event bus instance
+and falls back on default options if some of the given options are not set.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>url - the server url</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>options - event bus configuration options</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.onOpen"><code>EventBus.onOpen</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.publish"><code>EventBus.publish</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// some vertx event bus channel
+const channel = 'EVENTBUS_CHANNEL';
+
+// build a new event bus instance
+const eventBus = new EventBus('http://localhost:9870/bridge');
+// set an event listener when the the event bus is open
+eventBus.onOpen = () =&gt; {
+	// publish a simple message to the event bus
+	eventBus.publish(channel, 'Hello World');
+};
+</code></pre>
+</div>
+            </div>
+    
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="EventBus.options" href="#EventBus.options">
+        <h5><code>
+                                                                readonly                options                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Required&lt;Options&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the options as readonly member for the current event bus instance
+as a merge of the default options and the in the constructor given options
+for the event bus instance</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Options"><code>Options</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// set ping interval to 2 seconds
+const eventBus = new EventBus('http://localhost:9870/bridge', {
+	pingInterval: 2000
+});
+
+// read ping interval
+console.log('Ping interval: ', eventBus.options.pingInterval);
+</code></pre>
+</div>
+            </div>
+    <a id="EventBus.serverUrl" href="#EventBus.serverUrl">
+        <h5><code>
+                                                                readonly                serverUrl                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the server url the event bus is connected to</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eb = new EventBus('http://localhost:9870/bridge');
+
+console.log(eb.serverUrl); // 'http://localhost:9870/bridge'
+</code></pre>
+</div>
+            </div>
+    <a id="EventBus.messageCount" href="#EventBus.messageCount">
+        <h5><code>
+                                                                                messageCount                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the current number of received messages through the eventbus connection</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>EventBus.setupConnection | setupConnection (here socket.onmessage)</code>](#EventBus.setupConnection | setupConnection (here socket.onmessage))</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eb = new EventBus('http://localhost:9870/bridge');
+
+eb.onOpen = () =&gt; {
+	console.log(eb.messageCount); // 0
+	eb.send('awesome-channel', 'Hello World!');
+	console.log(eb.messageCount); // 1
+};
+</code></pre>
+</div>
+            </div>
+    <a id="EventBus.onOpen" href="#EventBus.onOpen">
+        <h5><code>
+                                                                                onOpen                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            () =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>an event listener that gets called when:</p>
+<ul>
+<li>the event bus is opened</li>
+<li>the event bus has reconnected after a connection loss</li>
+</ul>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>EventBus.setupConnection | setupConnection (here socket.onopen)</code>](#EventBus.setupConnection | setupConnection (here socket.onopen))</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eventBus = new EventBus('http://localhost:9870/bridge');
+
+eventBus.onOpen = () =&gt; {
+	console.log('Event bus has opened');
+};
+
+// on connection is open or successful reconnect
+// -&gt; 'Event bus has opened'
+</code></pre>
+</div>
+            </div>
+    <a id="EventBus.onClose" href="#EventBus.onClose">
+        <h5><code>
+                                                                                onClose                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            () =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>an event listener that gets called</p>
+<ul>
+<li>when the event bus is closed</li>
+<li>when the event bus has lost the connection</li>
+<li>after an automatic reconnect failure</li>
+</ul>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.enableReconnect"><code>EventBus.enableReconnect</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>EventBus.setupConnection | setupConnection (here socket.onclose)</code>](#EventBus.setupConnection | setupConnection (here socket.onclose))</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eventBus = new EventBus('http://localhost:9870/bridge');
+// enable automatic reconnect
+const eventBus.enableReconnect(true);
+
+eventBus.onClose = () =&gt; {
+	console.log('Event bus has lost connection');
+};
+
+// on connection loss or reconnect failure
+// -&gt; 'Event bus has lost connection'
+</code></pre>
+</div>
+            </div>
+    <a id="EventBus.onReconnect" href="#EventBus.onReconnect">
+        <h5><code>
+                                                                                onReconnect                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            () =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>an event listener that gets called when:</p>
+<ul>
+<li>the event bus has reconnected if automatic reconnect is enabled</li>
+</ul>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.enableReconnect"><code>EventBus.enableReconnect</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>EventBus.setupConnection | setupConnection (here socket.onopen)</code>](#EventBus.setupConnection | setupConnection (here socket.onopen))</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eventBus = new EventBus('http://localhost:9870/bridge');
+// enable automatic reconnect
+const eventBus.enableReconnect(true);
+
+eventBus.onReconnect = () =&gt; {
+	console.log('Event bus has reconnected after a connection loss');
+};
+
+// on successful reconnect
+// -&gt; 'Event bus has reconnected after a connection loss'
+</code></pre>
+</div>
+            </div>
+    <a id="EventBus.onError" href="#EventBus.onError">
+        <h5><code>
+                                                                                onError                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (err: ErrorMessage) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>an event listener that gets called when:</p>
+<ul>
+<li>the connection is open and an error message is received via the socket</li>
+</ul>
+<p>In its default configuration, it logs the error message to the console
+with <code>console.error()</code>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>EventBus.setupConnection | setupConnection (here socket.onmessage)</code>](#EventBus.setupConnection | setupConnection (here socket.onmessage))</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eventBus = new EventBus('http://localhost:9870/bridge');
+
+eventBus.onError = (err) =&gt; {
+	console.log('Received error message:', err);
+};
+
+// on an error message
+// -&gt; Received error message: {
+//      type: 'err',
+//      failureCode: 123,
+//      failureType: '...',
+//      message: '...'
+//    }
+</code></pre>
+</div>
+            </div>
+
+<!-- Methods -->
+    <h4>Methods</h4>
+            <a id="EventBus.getStateName" href="#EventBus.getStateName">
+            <h5><code>
+                                        static                                                            getStateName                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function getStateName
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                stateId
+                
+                <!-- type -->
+                :
+                number
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns a human readable state name for the given eventbus state.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>stateId - the eventbus state to translate</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>a human readable state name</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.state"><code>EventBus.state</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eventBus = new EventBus('http://localhost:9870/bridge');
+console.log('EventBus state: ', EventBus.getStateName(eventBus.state));
+</code></pre>
+</div>
+            </div>
+            <a id="EventBus.enablePing" href="#EventBus.enablePing">
+            <h5><code>
+                                                                                                    enablePing                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function enablePing
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                enable
+                
+                <!-- type -->
+                :
+                boolean
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Enable or disable sending continuous ping messages on an open event bus.</p>
+<p>The ping interval can be defined in the options when creating the event bus.</p>
+<p>It is automatically enabled when the event bus is opened,
+and disabled when the event bus is closed.</p>
+<p><strong>Use with caution!
+The backend server closes the connection
+if no ping messages are received after a specific timeout!</strong></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>enable - <code>true</code> to enable continuous ping message,
+<code>false</code> to disable</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.isPingEnabled"><code>EventBus.isPingEnabled</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Options"><code>Options</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.onOpen"><code>EventBus.onOpen</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eventBus = new EventBus('http://localhost:9870/bridge');
+
+eventBus.onOpen = () =&gt; {
+	// disable ping message send for 1 second
+	eventBus.enablePing(false);
+	setTimeout(() =&gt; {
+		eventBus.enablePing(true);
+	}, 1000);
+};
+</code></pre>
+</div>
+            </div>
+            <a id="EventBus.enableReconnect" href="#EventBus.enableReconnect">
+            <h5><code>
+                                                                                                    enableReconnect                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function enableReconnect
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                enable
+                
+                <!-- type -->
+                :
+                boolean
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Enable or disable automatic reconnect on unexpected connection loss.</p>
+<p>If automatic reconnect is enabled,
+the event bus tries to reconnect to the backend server
+in increasing time steps until a connection is re-established.</p>
+<p>initially disabled</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>enable - true to enable automatic reconnect, false to disable</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.isReconnectEnabled"><code>EventBus.isReconnectEnabled</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.onReconnect"><code>EventBus.onReconnect</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.newReconnectDelay"><code>EventBus.newReconnectDelay</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eventBus = new EventBus('http://localhost:9870/bridge');
+// enable automatic reconnect
+eventBus.enableReconnect(true);
+
+eventBus.onReconnect = () =&gt; {
+	console.log('Event bus has reconnected');
+};
+</code></pre>
+</div>
+            </div>
+            <a id="EventBus.registerHandler" href="#EventBus.registerHandler">
+            <h5><code>
+                                                                                                    registerHandler                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function registerHandler
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                channel
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                callback
+                
+                <!-- type -->
+                :
+                Callback
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                headers
+                ?
+                <!-- type -->
+                :
+                Headers
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Register an event handler to the specified channel.</p>
+<p>The given callback is executed when the event bus receives a message
+on the specified channel.</p>
+<p>The specified headers are sent with the registration message
+that goes to the backend on the first registered event call
+for this specified channel.</p>
+<p>If the eventbus is currently closed it stores the callback
+and registers it after the connection is open.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>channel - the channel on which the event handler
+that executes the callback on incoming messages gets registered</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>callback - the function that gets executed
+when incoming messages are received on the specified channel</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>headers - optional headers sent with the initial registration
+message to the backend on the first register event</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.unregisterHandler"><code>EventBus.unregisterHandler</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.onOpen"><code>EventBus.onOpen</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// some vertx eventbus channel to register to
+const channel = 'MY_CHANNEL';
+
+// define a handler
+const handler: Callback = (message, err) =&gt; {
+	if (err) {
+		console.error(err);
+	} else {
+		console.log(message);
+	}
+};
+
+const eventBus = new EventBus('https://localhost:9870/bridge');
+
+eventBus.onOpen = () =&gt; {
+	eventBus.registerHandler(channel, handler);
+};
+
+// later
+// unregister handler
+eventBus.unregisterHandler(channel, handler);
+</code></pre>
+</div>
+            </div>
+            <a id="EventBus.unregisterHandler" href="#EventBus.unregisterHandler">
+            <h5><code>
+                                                                                                    unregisterHandler                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function unregisterHandler
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                channel
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                callback
+                
+                <!-- type -->
+                :
+                Callback
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                headers
+                ?
+                <!-- type -->
+                :
+                Headers
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Unregister an event handler from the specified channel.</p>
+<p>The callback argument must be the same as the one that was registered
+using <code>registerHandler()</code>.</p>
+<p>The specified headers are sent with the unregister message
+that goes to the backend
+<strong>if</strong> no other event handlers are registered to this channel anymore.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>channel - the channel the event handler unregisters from</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>callback - the callback to unregister from the channel</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>headers - optional headers sent with the last unregister message</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.registerHandler"><code>EventBus.registerHandler</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// some vertx eventbus channel to register to
+const channel = 'MY_CHANNEL';
+
+// define a handler
+const handler: Callback = (message, err) =&gt; {
+	if (err) {
+		console.error(err);
+	} else {
+		console.log(message);
+	}
+};
+
+const eventBus = new EventBus('https://localhost:9870/bridge');
+
+eventBus.onOpen = () =&gt; {
+	eventBus.registerHandler(channel, handler);
+};
+
+// later
+// unregister handler
+eventBus.unregisterHandler(channel, handler);
+</code></pre>
+</div>
+            </div>
+            <a id="EventBus.publish" href="#EventBus.publish">
+            <h5><code>
+                                                                                                    publish                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function publish
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                channel
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                message
+                
+                <!-- type -->
+                :
+                JsonSerializable
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                headers
+                ?
+                <!-- type -->
+                :
+                Headers
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Broadcasts or publishes a message on the specified channel.</p>
+<p>If the eventbus is currently closed it stores the message
+and publishes it after the connection is open.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>channel - channel to which the message gets published</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>message - the message
+that will be broadcasted on the specified channel</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>headers - optional headers sent with the event bus message</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.onOpen"><code>EventBus.onOpen</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// some vertx eventbus channel to publish to
+const channel = 'MY_CHANNEL';
+
+const eventBus = new EventBus('http://localhost:9870/bridge');
+
+eventBus.onOpen = () =&gt; {
+	eventBus.publish(channel, 'Hey there!');
+}
+</code></pre>
+</div>
+            </div>
+            <a id="EventBus.send" href="#EventBus.send">
+            <h5><code>
+                                                                                                    send                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function send
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                channel
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                message
+                
+                <!-- type -->
+                :
+                JsonSerializable
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                callback
+                
+                <!-- type -->
+                :
+                Callback
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                headers
+                ?
+                <!-- type -->
+                :
+                Headers
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Broadcasts or publishes a message to the specified channel
+and. It also registers a one-time event handler
+that gets called when the first answer to the message is received.</p>
+<p>Internally it generates a UUID as reply address
+that is sent with the message.
+The specified callback is registered in the reply handlers
+using the generated UUID.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>channel - channel in which the message is sent</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>message - the message that will sent on the specified channel</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>callback - the function
+that will get called when the first answer is received</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>headers - optional headers sent with the event bus message</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.onOpen"><code>EventBus.onOpen</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.generateUUID"><code>EventBus.generateUUID</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.replyHandlers"><code>EventBus.replyHandlers</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// some vertx eventbus channel to send to
+const channel = 'MY_CHANNEL';
+
+const eventBus = new EventBus('http://localhost:9870/bridge');
+
+eventBus.onOpen = () =&gt; {
+	eventBus.send(channel, 'Ping', (message, err) =&gt; {
+		console.log('Pong:', message);
+	});
+};
+</code></pre>
+</div>
+            </div>
+            <a id="EventBus.close" href="#EventBus.close">
+            <h5><code>
+                                                                                                    close                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function close
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                                    )
+
+            <!-- Return type -->
+            :
+            void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Close the event bus and stop receiving any further event bus messages.
+The connection will not be re-established automatically,
+even if automatic reconnect is enabled.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.enableReconnect"><code>EventBus.enableReconnect</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const eventBus = new EventBus('http://localhost:9870/bridge');
+// close event bus
+eventBus.close();
+</code></pre>
+</div>
+            </div>
+                            </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Options" href="#Options">
+            <h3><code>Options</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            Options
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the default options for the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="Options.pingInterval" href="#Options.pingInterval">
+        <h5><code>
+                                                                                pingInterval                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>time between ping messages sent to the backend server in milliseconds</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.reconnectAttempts" href="#Options.reconnectAttempts">
+        <h5><code>
+                                                                                reconnectAttempts                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>number of attempts to try to reconnect to the backend server
+before no more reconnects get attempted</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.reconnectExponent" href="#Options.reconnectExponent">
+        <h5><code>
+                                                                                reconnectExponent                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>exponent of the power function used to determine a new reconnect delay
+based on reconnect attempts</p>
+<p>for implementation details, see <a href="#EventBus.newReconnectDelay"><code>EventBus.newReconnectDelay</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.delayMin" href="#Options.delayMin">
+        <h5><code>
+                                                                                delayMin                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>minimum time to wait between reconnect attempts in milliseconds</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.delayMax" href="#Options.delayMax">
+        <h5><code>
+                                                                                delayMax                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>maximum time to wait between reconnect attempts in milliseconds</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.randomizationFactor" href="#Options.randomizationFactor">
+        <h5><code>
+                                                                                randomizationFactor                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>randomization factor for the deviation
+used in the reconnect delay generator function</p>
+<p>for implementation details, see <a href="#EventBus.newReconnectDelay"><code>EventBus.newReconnectDelay</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="JsonSerializable" href="#JsonSerializable">
+            <h3><code>JsonSerializable</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type JsonSerializable
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            | number
+	| string
+	| boolean
+	| Map&lt;string, JsonSerializable&gt;
+	| Array&lt;JsonSerializable&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>type for a valid message to transfer via the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Headers" href="#Headers">
+            <h3><code>Headers</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            Headers
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>headers that are sent with event bus messages</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="BaseMessage" href="#BaseMessage">
+            <h3><code>BaseMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            BaseMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a generic message that is sent to and received by the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="BaseMessage.type" href="#BaseMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;ping&#39; | &#39;register&#39; | &#39;unregister&#39; | &#39;publish&#39; | &#39;send&#39; | &#39;rec&#39; | &#39;err&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>every message must have a type
+so backend and frontend can differentiate
+between received and sent messages</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="AddressableMessage" href="#AddressableMessage">
+            <h3><code>AddressableMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            AddressableMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends BaseMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is addressable to a specific locations on the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="AddressableMessage.address" href="#AddressableMessage.address">
+        <h5><code>
+                                                                                address                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the address of a event bus location registered to the backend</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="AddressableMessage.headers" href="#AddressableMessage.headers">
+        <h5><code>
+                                                                                headers                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Headers        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>additional headers that will be sent with the message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="AddressableMessage.replyAddress" href="#AddressableMessage.replyAddress">
+        <h5><code>
+                                                                                replyAddress                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>optional reply address to send a message back</p>
+<p>very useful for a send-receive pattern
+where a backend node sends a message and waits for a receiving message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="AddressableMessage.reply" href="#AddressableMessage.reply">
+        <h5><code>
+                                                                                reply                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (message: any, callback: Callback, headers?: Headers) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Sends a message back to the sender with a actual content.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>message - the content that will be sent with the message</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>callback - a callback function that will be invoked
+if the sender reply again.</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>headers - additional headers to send with the message</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">eb.registerHandler('awesome-channel', message =&gt; {
+	if (message.replyAddress) {
+		console.log(message.body); // ping
+		message.reply('pong', () =&gt; {});
+	}
+});
+</code></pre>
+</div>
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ContentMessage" href="#ContentMessage">
+            <h3><code>ContentMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            ContentMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends AddressableMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message with actual content that will be transferred with the message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="ContentMessage.body" href="#ContentMessage.body">
+        <h5><code>
+                                                                                body                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            JsonSerializable        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the content that will be transferred with the message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PingMessage" href="#PingMessage">
+            <h3><code>PingMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PingMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends BaseMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a basic message that is sent
+to prove to the backend server that the client is still connected</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PingMessage.type" href="#PingMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;ping&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="RegisterMessage" href="#RegisterMessage">
+            <h3><code>RegisterMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            RegisterMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends AddressableMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is sent to the backend server
+to register to a specific channel
+to receive future messages from the event bus from this specific channel</p>
+<p>to unregister or unsubscribe from the channel,
+use <a href="#UnregisterMessage"><code>UnregisterMessage</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="RegisterMessage.type" href="#RegisterMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;register&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="UnregisterMessage" href="#UnregisterMessage">
+            <h3><code>UnregisterMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            UnregisterMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends AddressableMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is sent to the backend server
+to unregister or unsubscribe from a specific channel
+to not receive any further messages from this channel</p>
+<p>to register to a channel, use <a href="#RegisterMessage"><code>RegisterMessage</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="UnregisterMessage.type" href="#UnregisterMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;unregister&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PublishMessage" href="#PublishMessage">
+            <h3><code>PublishMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PublishMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends ContentMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that gets broadcasted on a specified channel</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PublishMessage.type" href="#PublishMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;publish&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="SendMessage" href="#SendMessage">
+            <h3><code>SendMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            SendMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends ContentMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is sent on the specified channel
+containing a reply address gets sent</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="SendMessage.type" href="#SendMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;send&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ReceiveMessage" href="#ReceiveMessage">
+            <h3><code>ReceiveMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            ReceiveMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends ContentMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is received from the event bus containing new information</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="ReceiveMessage.type" href="#ReceiveMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;rec&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ErrorMessage" href="#ErrorMessage">
+            <h3><code>ErrorMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            ErrorMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends AddressableMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is received from the event bus if something went wrong</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="ErrorMessage.type" href="#ErrorMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;err&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+    <a id="ErrorMessage.failureCode" href="#ErrorMessage.failureCode">
+        <h5><code>
+                                                                                failureCode                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the failure code of the received error</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="ErrorMessage.failureType" href="#ErrorMessage.failureType">
+        <h5><code>
+                                                                                failureType                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>additional error type of the received message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="ErrorMessage.message" href="#ErrorMessage.message">
+        <h5><code>
+                                                                                message                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>additional information about the received error</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Message" href="#Message">
+            <h3><code>Message</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type Message
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            | PingMessage
+	| RegisterMessage
+	| UnregisterMessage
+	| PublishMessage
+	| SendMessage
+	| ReceiveMessage
+	| ErrorMessage        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message sent to and received from the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Callback" href="#Callback">
+            <h3><code>Callback</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type Callback
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            (
+	message: ReceiveMessage | null,
+	error: ErrorMessage | null
+) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a function that is used as event handlers
+in the event bus when receiving messages</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus"><code>EventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>EventBus.setupConnection | setupConnection (here socket.onmessage)</code>](#EventBus.setupConnection | setupConnection (here socket.onmessage))</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// some vertx channel
+const channel = 'VERTX_CHANNEL';
+
+const eventBus = new EventBus('http://localhost:8081/');
+
+eventBus.onopen = () =&gt; {
+	eventBus.registerHandler(channel, (message, error) =&gt; {
+		if (message) {
+			console.log('Received message:', message);
+		} else {
+			console.error('Received error:', error);
+		}
+	});
+};
+</code></pre>
+</div>
+            </div>
+                        </div>

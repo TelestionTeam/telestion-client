@@ -1,0 +1,4126 @@
+<html lang="en">
+<head>
+    <title>Telestion Client Monorepo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <style>
+        h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        code {
+            line-height: inherit;
+        }
+
+        :root {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <a href="/" class="logo">Telestion Client Monorepo</a>
+            <a class="button" href="https://github.com/TelestionTeam/telestion-client/" target="_blank">GitHub</a>
+            <a class="button" href="https://telestion.wuespace.de/" target="_blank">Homepage</a>
+            <a class="button" href="https://react-spectrum.adobe.com/" target="_blank">React Spectrum Libraries</a>
+    </header>
+<div class="container">
+    <div class="row">
+        <aside class="col-sm-12 col-md-4 col-lg-3">
+            <nav class="fixed">
+                <a href="/">Project README</a>
+                <span>Modules</span>
+                                    <a href="/@wuespace/vertx-event-bus">
+                        <code>
+                            @wuespace/vertx-event-bus                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-types">
+                        <code>
+                            @wuespace/telestion-client-types                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-prop-types">
+                        <code>
+                            @wuespace/telestion-client-prop-types                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-core">
+                        <code>
+                            @wuespace/telestion-client-core                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-common">
+                        <code>
+                            @wuespace/telestion-client-common                        </code>
+                    </a>
+                            </nav>
+        </aside>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+<h1><code>@wuespace/telestion-client-core</code></h1>
+
+<p>
+    Install using
+</p>
+<pre><code>npm install @wuespace/telestion-client-core</code></pre>
+
+<h2>Exported Members</h2>
+<p>You can access these members by importing the module:</p>
+<pre><code>import { <i>member</i> } from '@wuespace/telestion-client-core';</code></pre>
+
+<!-- Members -->
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="TelestionClientProps" href="#TelestionClientProps">
+            <h3><code>TelestionClientProps</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            TelestionClientProps
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="TelestionClientProps.title" href="#TelestionClientProps.title">
+        <h5><code>
+                                                                                title                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the title of the application</p>
+<p>can be used with the <a href="#useTitle"><code>useTitle</code></a> hook
+to get a consistent state of the application</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="TelestionClientProps.wrapper" href="#TelestionClientProps.wrapper">
+        <h5><code>
+                                                                                wrapper                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (children?: ReactNode) =&gt; ReactNode        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Additional wrapper function
+that will &quot;wrap&quot; the children into additional contexts, setups, hoc, etc.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>children the children components
+of the <a href="#TelestionClient"><code>TelestionClient</code></a> component</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@return:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>a valid react node</p>
+</div>
+            </div>
+    <a id="TelestionClientProps.eventBusOptions" href="#TelestionClientProps.eventBusOptions">
+        <h5><code>
+                                                                                eventBusOptions                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Options        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>additional options for the eventbus</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Options"><code>Options</code></a></p>
+</div>
+            </div>
+    <a id="TelestionClientProps.children" href="#TelestionClientProps.children">
+        <h5><code>
+                                                                                children                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ReactNode        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="TelestionClient" href="#TelestionClient">
+            <h3><code>TelestionClient</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The main component of the Telestion Frontend.
+Every part of the Telestion Frontend Application is a child
+of this component.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"TelestionClient","implementations":[{"type":"variable","name":"TelestionClient","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nThe main component of the Telestion Frontend.\nEvery part of the Telestion Frontend Application is a child\nof this component.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"TelestionClient","initializer":"({\n\ttitle = 'Telestion Client',\n\twrapper,\n\teventBusOptions,\n\tchildren\n}: TelestionClientProps) => {\n\t// set title as preference\n\tconst update = usePreferences(preferencesSelector);\n\n\tuseEffect(() => {\n\t\tupdate('null', 'title', title);\n\t}, [title, update]);\n\n\t// automatic eventbus management\n\tconst { user, serverUrl } = useAuth(authSelector, shallow);\n\tconst { open, close } = useEventBus(eventBusSelector, shallow);\n\n\tuseEffect(() => {\n\t\tif (user && serverUrl) {\n\t\t\t// user authenticated -> open\n\t\t\topen(serverUrl, eventBusOptions);\n\t\t\t// on change of user, server url or options -> close first\n\t\t\treturn () => close();\n\t\t}\n\t}, [user, serverUrl, eventBusOptions, open, close]);\n\n\treturn <>{wrapper ? wrapper(children) : children}</>;\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PagesProps" href="#PagesProps">
+            <h3><code>PagesProps</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PagesProps
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PagesProps.children" href="#PagesProps.children">
+        <h5><code>
+                                                                                children                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ReactNode        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Pages" href="#Pages">
+            <h3><code>Pages</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The router of the application.
+Here are all pages managed.</p>
+<p>Every page defines a <code>routing</code> object
+that is attached to the actual component.</p>
+<p>If you want to write some pages, please take a look at
+<a href="#@wuespace/telestion-client-types#Routing"><code>@wuespace/telestion-client-types#Routing</code></a> for more information.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">import { Pages } from '@wuespace/telestion-client-core';
+
+const MyPages = () =&gt; (
+  &lt;Pages&gt;
+    &lt;LoginPage /&gt;
+    &lt;DashboardPage /&gt;
+    &lt;NotFoundPage /&gt;
+  &lt;/Pages&gt;
+);
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Pages","implementations":[{"type":"variable","name":"Pages","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nThe router of the application.\nHere are all pages managed.\n\nEvery page defines a `routing` object\nthat is attached to the actual component.\n\nIf you want to write some pages, please take a look at\n{@link @wuespace/telestion-client-types#Routing} for more information.\n","tags":[{"text":"```ts\nimport { Pages } from '@wuespace/telestion-client-core';\n\nconst MyPages = () => (\n  <Pages>\n    <LoginPage />\n    <DashboardPage />\n    <NotFoundPage />\n  </Pages>\n);\n","tagName":"@example"}]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Pages","initializer":"({ children }: PagesProps) => {\n\tconst routes: ReactNode[] = [];\n\tconst lastRoutes: ReactNode[] = [];\n\n\tChildren.forEach(children, (child, index) => {\n\t\tif (isValidChild(child)) {\n\t\t\tconst routing = {\n\t\t\t\t...defaultRouting,\n\t\t\t\t...parseRouting(child.type.name, child.type.routing)\n\t\t\t};\n\t\t\tconst Route = routeComponents[routing.type];\n\t\t\tconst key = `comp:${routing.path}:${routing.redirectPath}`;\n\n\t\t\troutes.push(\n\t\t\t\t<Route\n\t\t\t\t\tkey={key}\n\t\t\t\t\tpath={routing.path}\n\t\t\t\t\tredirectPath={routing.redirectPath}\n\t\t\t\t\texact={routing.exact}\n\t\t\t\t>\n\t\t\t\t\t{child}\n\t\t\t\t</Route>\n\t\t\t);\n\n\t\t\trouting.additionalRedirects.forEach(redirect =>\n\t\t\t\tredirect.last\n\t\t\t\t\t? lastRoutes.push(buildRedirect(redirect))\n\t\t\t\t\t: routes.push(buildRedirect(redirect))\n\t\t\t);\n\t\t} else {\n\t\t\tthrow new TypeError(\n\t\t\t\t`Child No. ${index} is not a valid Page component in Pages renderer.` +\n\t\t\t\t\t'Please define a valid React Component and attach a routing object to the component.'\n\t\t\t);\n\t\t}\n\t});\n\n\treturn (\n\t\t<Router>\n\t\t\t<Switch>\n\t\t\t\t{routes}\n\t\t\t\t{lastRoutes}\n\t\t\t</Switch>\n\t\t</Router>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="AuthRouteProps" href="#AuthRouteProps">
+            <h3><code>AuthRouteProps</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            AuthRouteProps
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends Omit&lt;RouteProps, &#39;children&#39; | &#39;render&#39;&gt;                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="AuthRouteProps.redirectPath" href="#AuthRouteProps.redirectPath">
+        <h5><code>
+                                                                                redirectPath                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+    <a id="AuthRouteProps.children" href="#AuthRouteProps.children">
+        <h5><code>
+                                                                                children                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ReactNode        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="AuthRoute" href="#AuthRoute">
+            <h3><code>AuthRoute</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"AuthRoute","implementations":[{"type":"variable","name":"AuthRoute","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"AuthRoute","initializer":"({\n\tchildren,\n\tredirectPath,\n\t...rest\n}: AuthRouteProps) => {\n\tconst { user } = useAuth();\n\treturn (\n\t\t<Route\n\t\t\t{...rest}\n\t\t\trender={({ location }) =>\n\t\t\t\tuser ? (\n\t\t\t\t\tchildren\n\t\t\t\t) : (\n\t\t\t\t\t<Redirect\n\t\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t\t/>\n\t\t\t\t)\n\t\t\t}\n\t\t/>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="UnAuthRouteProps" href="#UnAuthRouteProps">
+            <h3><code>UnAuthRouteProps</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            UnAuthRouteProps
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends Omit&lt;RouteProps, &#39;children&#39; | &#39;render&#39;&gt;                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="UnAuthRouteProps.redirectPath" href="#UnAuthRouteProps.redirectPath">
+        <h5><code>
+                                                                                redirectPath                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+    <a id="UnAuthRouteProps.children" href="#UnAuthRouteProps.children">
+        <h5><code>
+                                                                                children                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ReactNode        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="UnAuthRoute" href="#UnAuthRoute">
+            <h3><code>UnAuthRoute</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"UnAuthRoute","implementations":[{"type":"variable","name":"UnAuthRoute","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"UnAuthRoute","initializer":"({\n\tchildren,\n\tredirectPath,\n\t...rest\n}: UnAuthRouteProps) => {\n\tconst { user } = useAuth();\n\treturn (\n\t\t<Route\n\t\t\t{...rest}\n\t\t\trender={({ location }) =>\n\t\t\t\tuser ? (\n\t\t\t\t\t<Redirect\n\t\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t\t/>\n\t\t\t\t) : (\n\t\t\t\t\tchildren\n\t\t\t\t)\n\t\t\t}\n\t\t/>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PreferencesProps" href="#PreferencesProps">
+            <h3><code>PreferencesProps</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PreferencesProps
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PreferencesProps.children" href="#PreferencesProps.children">
+        <h5><code>
+                                                                                children                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Child | Array&lt;Child&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Preferences" href="#Preferences">
+            <h3><code>Preferences</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Wrapper component for <a href="#Group"><code>Group</code></a> and <a href="#Variable"><code>Variable</code></a>
+which defining renderer for application preferences.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Preferences","implementations":[{"type":"variable","name":"Preferences","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nWrapper component for {@link Group} and {@link Variable}\nwhich defining renderer for application preferences.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Preferences","initializer":"({ children }: PreferencesProps) => <>{children}</>","hasExclamationToken":false,"kind":38}]}]}]}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="GroupProps" href="#GroupProps">
+            <h3><code>GroupProps</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            GroupProps
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="GroupProps.name" href="#GroupProps.name">
+        <h5><code>
+                                                                                name                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            GroupSelector        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the name of the group of variables</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="GroupProps.children" href="#GroupProps.children">
+        <h5><code>
+                                                                                children                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Child | Array&lt;Child&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A list of <a href="#Variable"><code>Variable</code></a> components</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Group" href="#Group">
+            <h3><code>Group</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Defines a group of variables which are typically <a href="#Variable"><code>Variable</code></a> components.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Group","implementations":[{"type":"variable","name":"Group","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nDefines a group of variables which are typically {@link Variable} components.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Group","initializer":"({ name, children }: GroupProps) => (\n\t<GroupContext name={name}>{children}</GroupContext>\n)","hasExclamationToken":false,"kind":38}]}]}]}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="VariableProps" href="#VariableProps">
+            <h3><code>VariableProps</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            VariableProps
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="VariableProps.name" href="#VariableProps.name">
+        <h5><code>
+                                                                                name                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            PrefSelector        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the name of the preference</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="VariableProps.initialValue" href="#VariableProps.initialValue">
+        <h5><code>
+                                                                                initialValue                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            PrefValue        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the initial value of the preference</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="VariableProps.children" href="#VariableProps.children">
+        <h5><code>
+                                                                                children                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            PrefRenderer        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the renderer function for preference</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Variable" href="#Variable">
+            <h3><code>Variable</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Defines a renderer for a preference.</p>
+<p>If it is wrapped in the <a href="#Group"><code>Group</code></a> component,
+the renderer will be registered for
+the preference in that group otherwise for the preference in the global scope.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesStore"><code>PreferencesStore</code></a></p>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Variable","implementations":[{"type":"variable","name":"Variable","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nDefines a renderer for a preference.\n\nIf it is wrapped in the {@link Group} component,\nthe renderer will be registered for\nthe preference in that group otherwise for the preference in the global scope.\n","tags":[{"text":"{@link PreferencesStore}\n","tagName":"@see"}]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Variable","initializer":"({ name, initialValue, children }: VariableProps) => {\n\tconst { setRenderer, setValue } = usePreferences(prefSelector, shallow);\n\tconst group = useGroup();\n\n\tuseEffect(() => {\n\t\tif (initialValue) {\n\t\t\t// if not in group context, use global scope\n\t\t\tsetValue(group, name, initialValue);\n\t\t}\n\t}, [group, name, initialValue, setValue]);\n\n\tuseEffect(() => {\n\t\t// if not in group context, use global scope\n\t\tsetRenderer(group, name, children);\n\t}, [group, name, children, setRenderer]);\n\n\treturn null;\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Authentication" href="#Authentication">
+            <h3><code>Authentication</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            Authentication
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="Authentication.username" href="#Authentication.username">
+        <h5><code>
+                                                                                username                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the user's name who's is authenticated</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+            </div>
+    <a id="Authentication.authServerUrl" href="#Authentication.authServerUrl">
+        <h5><code>
+                                                                                authServerUrl                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the URL of the authentication server</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+            </div>
+    <a id="Authentication.eventBusUrl" href="#Authentication.eventBusUrl">
+        <h5><code>
+                                                                                eventBusUrl                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the URL of the eventbus (returned from the authenticator)</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="AuthState" href="#AuthState">
+            <h3><code>AuthState</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            AuthState
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends Record&lt;string, unknown&gt;                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The authentication state and actions of the Telestion Client Core.</p>
+<p>Defines the authentication state and functions to change the state.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.user"><code>AuthState.user</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="AuthState.auth" href="#AuthState.auth">
+        <h5><code>
+                                                                                auth                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Authentication | null        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Stores the current authentication state of the application.
+Contains the username, the authentication and the event bus URL.</p>
+<p>If it is <code>null</code> nobody is signed in.</p>
+<p>To sign in, call <a href="#AuthState.signIn"><code>AuthState.signIn</code></a>.
+To sign out, call <a href="#AuthState.signOut"><code>AuthState.signOut</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>check authentication status</p>
+<pre><code class="language-ts">export function AuthChecker(): ReactNode {
+	const auth = useAuth(state =&gt; state.auth);
+
+	return auth ? (
+		&lt;div&gt;
+			&lt;p&gt;User: {auth.username}&lt;/p&gt;
+			&lt;p&gt;Auth URL: {auth.authServerUrl}&lt;/p&gt;
+			&lt;p&gt;Event bus URL: {auth.eventBusUrl}&lt;/p&gt;
+		&lt;/div&gt;
+	) : &lt;div&gt;Not authenticated&lt;/div&gt;;
+}
+</code></pre>
+</div>
+            </div>
+
+<!-- Methods -->
+    <h4>Methods</h4>
+            <a id="AuthState.signIn" href="#AuthState.signIn">
+            <h5><code>
+                                                                                                    signIn                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function signIn
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                authServerUrl
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                username
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                password
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            Promise&lt;SignInResult&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Tries to sign on an authentication server using the specified URL
+with given user credentials
+and resolves if the authentication was successful
+otherwise it rejects if the authentication was not successful.</p>
+<p>To log out, call <a href="#AuthState.signOut"><code>AuthState.signOut</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>authServerUrl - the server to authenticate to</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>username - the users name</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>password - the users password</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.auth"><code>AuthState.auth</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>simple sign in process</p>
+<pre><code class="language-ts">import shallow from 'zustand/shallow';
+
+// function component context
+const { user, signIn } = useAuth(state =&gt; ({
+	user: state.user,
+	signIn: state.signIn
+}), shallow);
+
+const signIn = () =&gt; {
+	if (!user) {
+		signIn('http://localhost:9870/bridge', 'alice', '12345')
+			.then(signInRes =&gt; {
+				console.log(`User ${signInRes.user} signed in`);
+			})
+			.catch(err =&gt; {
+				console.log(`Cannot log in because: ${err.message}`);
+			});
+	}
+};
+</code></pre>
+</div>
+            </div>
+            <a id="AuthState.signOut" href="#AuthState.signOut">
+            <h5><code>
+                                                                                                    signOut                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function signOut
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                                    )
+
+            <!-- Return type -->
+            :
+            Promise&lt;SignOutResult&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Tries to sign out from the logged in authentication server
+and close all connections.</p>
+<p>To log in again, call <a href="#AuthState.signIn"><code>AuthState.signIn</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.auth"><code>AuthState.auth</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>simple sign out process</p>
+<pre><code class="language-ts">import shallow from 'zustand/shallow';
+
+// function component context
+const { user, signOut } = useAuth(state =&gt; ({
+	user: state.user,
+	signOut: state.signOut
+}), shallow);
+
+const signOut = () =&gt; {
+	if (user) {
+		signOut()
+			.then(()) =&gt; {
+				console.log(`Logged out`);
+			})
+			.catch(err =&gt; {
+				console.log(`Cannot log out because: ${err.message}`);
+			});
+	}
+};
+</code></pre>
+</div>
+            </div>
+                            </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useAuth" href="#useAuth">
+            <h3><code>useAuth</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            UseStore&lt;AuthState&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the authentication state and actions to interact with.
+A selector can be defined to pick out parts of the store.
+If correctly set up, the function only triggers a rerender
+if the selected values have changed.</p>
+<p>For more information about state management in Zustand,
+take a look at their [<code>https://github.com/pmndrs/zustand | GitHub page</code>](#<a href="https://github.com/pmndrs/zustand">https://github.com/pmndrs/zustand</a> | GitHub page).</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>selector - optional selector function
+which picks the specified elements out of the store</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>equalityFn - optional equality function
+to check for state updates on the picked elements</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the picked elements in the selector function</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState"><code>AuthState</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://github.com/pmndrs/zustand"><code>https://github.com/pmndrs/zustand</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#UseStore"><code>UseStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#zustand#shallow"><code>zustand#shallow</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Fetch current authentication state from the store:</p>
+<pre><code class="language-ts">// React component or hook context
+const auth = useAuth(state =&gt; state.auth);
+
+if (auth) {
+	console.log(`User ${auth.username} is logged in`);
+} else {
+	console.log('Nobody is logged in');
+}
+</code></pre>
+<p>Performance optimized and type-safe fetching from the store:</p>
+<pre><code class="language-ts">import { useCallback, ReactNode } from 'react';
+import { StateSelector } from 'zustand';
+import shallow from 'zustand/shallow';
+import { useAuth, AuthState } from '@wuespace/telestion-client-core';
+
+// selector does not depend on scope, so it's better to define it outside
+// to not re-declare it on every render
+const selector: StateSelector&lt;
+	AuthState,
+	{
+		signIn: AuthState['signIn'],
+		signOut: AuthState['signOut']
+	}
+&gt; = state =&gt; ({
+	signIn: state.signIn,
+	signOut: state.signOut
+});
+
+export function MyComponent(): ReactNode {
+	const { signIn, signOut } = useAuth(selector, shallow);
+
+	const logIn = useCallback(
+		() =&gt; signIn('http://localhost:9870/bridge/', 'alice', '12345'),
+		[]
+	);
+
+	const logOut = useCallback(() =&gt; signOut(), []);
+
+	return (
+		&lt;div&gt;
+			&lt;button onClick={logIn}&gt;Login&lt;/button&gt;
+			&lt;button onClick={logOut}&gt;Logout&lt;/button&gt;
+		&lt;/div&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ConnectionState" href="#ConnectionState">
+            <h3><code>ConnectionState</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type ConnectionState
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            &#39;connected&#39; | &#39;disconnected&#39; | &#39;error&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the connection state type of an event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBusState.connectionState"><code>EventBusState.connectionState</code></a></p>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="EventBusState" href="#EventBusState">
+            <h3><code>EventBusState</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            EventBusState
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends Record&lt;string, unknown&gt;                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The event bus state and actions of the Telestion Client Core.</p>
+<p>Defines the event bus store and function to open and close an event bus.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBusState.eventBus"><code>EventBusState.eventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBusState.openEventBus"><code>EventBusState.openEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBusState.closeEventBus"><code>EventBusState.closeEventBus</code></a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="EventBusState.eventBus" href="#EventBusState.eventBus">
+        <h5><code>
+                                                                                eventBus                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            EventBus | null        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the current eventbus instance if an event bus was opened
+otherwise it is <code>null</code></p>
+<p><strong>Notice</strong>:</p>
+<p>Please use the instance object for special purposes only!
+It can lead to weird bugs tricky to resolve
+because the object does not change its identity once it is created.
+React instead is based on detecting changes and only re-renders
+if a value identity has changed causing differences in ui and app states.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#@wuespace/vertx-event-bus#EventBus"><code>@wuespace/vertx-event-bus#EventBus</code></a></p>
+</div>
+            </div>
+    <a id="EventBusState.connectionState" href="#EventBusState.connectionState">
+        <h5><code>
+                                                                                connectionState                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ConnectionState        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the current connection state of the event bus</p>
+<p>Possible states:</p>
+<ul>
+<li><code>'connected'</code> if the eventbus is currently connected
+to the backend server</li>
+<li><code>'disconnected'</code> if the eventbus is currently disconnected
+from the backend server</li>
+<li><code>'error'</code> if the eventbus is currently open
+and an error message was received</li>
+</ul>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="EventBusState.error" href="#EventBusState.error">
+        <h5><code>
+                                                                                error                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string | null        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>optional error message
+if something gone wrong on connection setup or teardown</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="EventBusState.lastErrorMessage" href="#EventBusState.lastErrorMessage">
+        <h5><code>
+                                                                                lastErrorMessage                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ErrorMessage | null        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the last received error message through the event bus connection</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="EventBusState.openEventBus" href="#EventBusState.openEventBus">
+        <h5><code>
+                                                                                openEventBus                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (serverUrl: string, options?: Options) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Creates a new event bus which will automatically connect to the server URL
+and opens a connection.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>serverUrl - the URL of the backend part to connect to</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>options - options to configure the connection of the event bus</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>if <a href="#openEventBus"><code>openEventBus</code></a> was called earlier
+and an eventbus instance already opened</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#closeEventBus"><code>closeEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#eventBus"><code>eventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#connectionState"><code>connectionState</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Open an event bus</p>
+<pre><code class="language-ts">const open = useEventBus(state =&gt; state.openEventBus);
+return (
+	&lt;button onClick={() =&gt; open('http://localhost:9870/bridge/')}&gt;
+		Open event bus
+	&lt;/button&gt;
+);
+</code></pre>
+</div>
+            </div>
+    <a id="EventBusState.closeEventBus" href="#EventBusState.closeEventBus">
+        <h5><code>
+                                                                                closeEventBus                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            () =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Closes the current event bus and deletes it.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>if <a href="#closeEventBus"><code>closeEventBus</code></a> was called earlier
+and an eventbus instance already closed</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#openEventBus"><code>openEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#eventBus"><code>eventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#connectionState"><code>connectionState</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Close an event bus</p>
+<pre><code class="language-ts">const close = useEventBus(state =&gt; state.closeEventBus);
+return &lt;button onClick={() =&lt; close()}&gt;Close event bus&lt;/button&gt;;
+</code></pre>
+</div>
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useEventBus" href="#useEventBus">
+            <h3><code>useEventBus</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            UseStore&lt;EventBusState&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the event bus state and actions to interact with.
+A selector can be defined to pick out parts of the store.
+If correctly set up, the function only triggers a rerender
+if the selected values have changed.</p>
+<p>For more information about state management in Zustand,
+take a look at their [<code>https://github.com/pmndrs/zustand | GitHub page</code>](#<a href="https://github.com/pmndrs/zustand">https://github.com/pmndrs/zustand</a> | GitHub page).</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>selector - optional selector function
+which picks the specified elements out of the store</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>equalityFn - optional equality function
+to check for state updates on the picked elements</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the picked elements in the selector function</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBusState"><code>EventBusState</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://github.com/pmndrs/zustand"><code>https://github.com/pmndrs/zustand</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#UseStore"><code>UseStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#zustand#shallow"><code>zustand#shallow</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Fetch current connection state from the store:</p>
+<pre><code class="language-ts">// React component or hook context
+const connectionState = usePreferences(state =&gt; state.connectionState);
+return &lt;p&gt;Connection State: {connectionState}&lt;/p&gt;;
+</code></pre>
+<p>Performance optimized and type-safe fetching from the store:</p>
+<pre><code class="language-ts">import { useCallback, ReactNode } from 'react';
+import { StateSelector } from 'zustand';
+import shallow from 'zustand/shallow';
+import {
+	useEventBus,
+	EventBusState
+} from '@wuespace/telestion-client-core';
+import { someRenderer } from './some-renderer';
+
+// selector does not depend on scope, so it's better to define it outside
+// to not re-declare it on every render
+const selector: StateSelector&lt;
+	EventBusState,
+	{
+		open: EventBusState['openEventBus'],
+		close: PreferencesState['closeEventBus']
+	}
+&gt; = state =&gt; ({
+	open: state.openEventBus,
+	close: state.closeEventBus
+});
+
+export function MyComponent(): ReactNode {
+	const { open, close } = useEventBus(selector, shallow);
+
+	const openEB = useCallback(
+		() =&gt; open('http://localhost:9870/bridge/'),
+		[]
+	);
+
+	const closeEB = useCallback(
+		() =&gt; close(),
+		[]
+	);
+
+	return (
+		&lt;div&gt;
+			&lt;button onClick={openEB}&gt;Open event bus&lt;/button&gt;
+			&lt;button onClick={closeEB}&gt;Close event bus&lt;/button&gt;
+		&lt;/div&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PreferencesState" href="#PreferencesState">
+            <h3><code>PreferencesState</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PreferencesState
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends Record&lt;string, unknown&gt;                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The preference state and actions of the Telestion Client Core.</p>
+<p>Defines the preferences store and functions to change the store.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PreferencesState.preferences" href="#PreferencesState.preferences">
+        <h5><code>
+                                                                                preferences                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            PreferencesStore        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Stores the registered preferences as groups of selector-value pair.</p>
+<p>To add, update and remove the preference value use <a href="#setValue"><code>setValue</code></a>.</p>
+<p>To add, update and remove the preference renderer
+use <a href="#setRenderer"><code>setRenderer</code></a> instead.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setRenderer"><code>PreferencesState.setRenderer</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const preference = usePreferences(
+	state =&gt; state.preferences['group']['preference'].value
+);
+
+return &lt;div&gt;{preferences}&lt;/div&gt;;
+</code></pre>
+</div>
+            </div>
+    <a id="PreferencesState.setValue" href="#PreferencesState.setValue">
+        <h5><code>
+                                                                                setValue                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (
+	group: GroupSelector,
+	preference: PrefSelector,
+	newValue: PrefValue
+) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Adds, updates or removes a preference value from the preference store.</p>
+<p>To access the preference a group and a preference selector is needed.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the group of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>preference - the preference name</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>newValue - the new value of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefValue"><code>PrefValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setRenderer"><code>PreferencesState.setRenderer</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.removePreference"><code>PreferencesState.removePreference</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const update = usePreferences(state =&gt; state.updateValue);
+const handleClick = () =&gt; update('group', 'preference', 'My new value!');
+
+return &lt;button onClick={handleClick}&gt;Set Preference&lt;/button&gt;;
+</code></pre>
+</div>
+            </div>
+    <a id="PreferencesState.setRenderer" href="#PreferencesState.setRenderer">
+        <h5><code>
+                                                                                setRenderer                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (
+	group: GroupSelector,
+	preference: PrefSelector,
+	newRenderer: PrefRenderer
+) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Adds, updates or removes a preference renderer from the preference store.</p>
+<p>To access the preference a group and a preference selector is needed.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the group of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>preference - the preference name</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>newRenderer - the new renderer for the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefRenderer"><code>PrefRenderer</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const update = usePreferences(state =&gt; state.updateValue);
+const renderer = (value, setValue) =&gt; (
+	&lt;TextInput initialValue={value} onSubmit={setValue} /&gt;
+);
+
+const handleClick = () =&gt; update('group', 'preference', renderer);
+
+return &lt;button onClick={handleClick}&gt;Set Renderer&lt;/button&gt;;
+</code></pre>
+</div>
+            </div>
+    <a id="PreferencesState.removePreference" href="#PreferencesState.removePreference">
+        <h5><code>
+                                                                                removePreference                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (group: GroupSelector, preference: PrefSelector) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Removes a preference from the store.</p>
+<p>To access the preference a group and a preference selector is needed.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the group of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>preference - the name of the preference that will be removed</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.removeGroup"><code>PreferencesState.removeGroup</code></a></p>
+</div>
+            </div>
+    <a id="PreferencesState.removeGroup" href="#PreferencesState.removeGroup">
+        <h5><code>
+                                                                                removeGroup                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (group: GroupSelector) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Removes an entire group of preferences from the store.</p>
+<p>To access the group and a selector is needed.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the name of the group that will be removed</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.removePreference"><code>PreferencesState.removePreference</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+            </div>
+    <a id="PreferencesState.setStore" href="#PreferencesState.setStore">
+        <h5><code>
+                                                                                setStore                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (newStore: PreferencesStore) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Overwrites the current preferences store with the specified store.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>newStore - the new preferences store to use</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesStore"><code>PreferencesStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+</div>
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="usePreferences" href="#usePreferences">
+            <h3><code>usePreferences</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            UseStore&lt;PreferencesState&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the preferences application state and actions to interact with.
+A selector can be defined to pick out parts of the store.
+If correctly set up, the function only triggers a rerender
+if the selected values have changed.</p>
+<p>For more information about state management in Zustand,
+take a look at their [<code>https://github.com/pmndrs/zustand | GitHub page</code>](#<a href="https://github.com/pmndrs/zustand">https://github.com/pmndrs/zustand</a> | GitHub page).</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>selector - optional selector function
+which picks the specified elements out of the store</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>equalityFn - optional equality function
+to check for state updates on the picked elements</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the picked elements in the selector function</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState"><code>PreferencesState</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://github.com/pmndrs/zustand"><code>https://github.com/pmndrs/zustand</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#UseStore"><code>UseStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#zustand#shallow"><code>zustand#shallow</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Fetch current preference from the store:</p>
+<pre><code class="language-ts">// React component or hook context
+const myGroupSelector = 'my-group';
+const myVarSelector = 'my-var';
+const myPreference = usePreferences(
+	state =&gt; state.preferences[myGroupSelector][myVarSelector]
+);
+</code></pre>
+<p>Performance optimized and type-safe fetching from the store:</p>
+<pre><code class="language-ts">import { useCallback, ReactNode } from 'react';
+import { StateSelector } from 'zustand';
+import shallow from 'zustand/shallow';
+import {
+	usePreferences,
+	PreferencesState
+} from '@wuespace/telestion-client-core';
+import { someRenderer } from './some-renderer';
+
+// selector does not depend on scope, so it's better to define it outside
+// to not re-declare it on every render
+const selector: StateSelector&lt;
+	PreferencesState,
+	{
+		setValue: PreferencesState['setValue'],
+		setRenderer: PreferencesState['setRenderer']
+	}
+&gt; = state =&gt; ({
+	setValue: state.setValue,
+	setRenderer: state.setRenderer
+});
+
+export function MyComponent(): ReactNode {
+	const { setValue, setRenderer } = usePreferences(selector, shallow);
+
+	const updateValue = useCallback(
+		() =&gt; setValue('null', 'title', 'New Application Title!'),
+		[]
+	);
+
+	const updateRenderer = useCallback(
+		() =&gt; setRenderer('null', 'title', someRenderer),
+		[]
+	);
+
+	return (
+		&lt;div&gt;
+			&lt;button onClick={updateValue}&gt;Update Value&lt;/button&gt;
+			&lt;button onClick={updateRenderer}&gt;Update Renderer&lt;/button&gt;
+		&lt;/div&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useLogger" href="#useLogger">
+            <h3><code>useLogger</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function useLogger
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                system
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            ReturnType&lt;typeof getLogger&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns a component logger for a specific system.</p>
+<p>In the background it uses logsemts.
+For a better understanding, please take a look at their
+[<code>https://github.com/fliegwerk/logsemts | GitHub page</code>](#<a href="https://github.com/fliegwerk/logsemts">https://github.com/fliegwerk/logsemts</a> | GitHub page).</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>system - the system or component the logger is for</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the component logger for the specified system</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#logsemts#ComponentLogger"><code>logsemts#ComponentLogger</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://github.com/fliegwerk/logsemts"><code>https://github.com/fliegwerk/logsemts</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">export function MyComponent(): ReactNode {
+	const logger = useLogger('My Component');
+
+	return (
+		&lt;button onClick={() =&gt; logger.info('Button clicked')}&gt;
+			Click Me!
+		&lt;/button&gt;;
+}
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useBroadcast" href="#useBroadcast">
+            <h3><code>useBroadcast</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function useBroadcast
+            <!-- Type Parameters -->
+                <!-- opening angle bracket -->
+    &lt;
+
+            
+        <!-- Name -->
+        C
+        <!-- Constraints -->
+                    : string        
+        <!-- Default -->
+                    = string        
+        <!-- Comma if not last -->
+            
+    <!-- Closing angle bracket -->
+    &gt;
+
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                channel
+                
+                <!-- type -->
+                :
+                C
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            BroadcastFunction        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Send a broadcast on the specified channel with the returned function.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>channel - channel to broadcast to</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>a function that broadcasts a message</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@typeParam:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>C - union of all possible channels (defaults to <code>string</code>)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>if there is no eventbus instance</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#useEventBus"><code>useEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.publish"><code>EventBus.publish</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const broadcast = useBroadcast('channel:hello-world');
+
+const handleClick = () =&gt; {
+  broadcast('Hello World');
+};
+
+return &lt;button onClick={handleClick}&gt;Broadcast a hello world&lt;/button&gt;;
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useChannel" href="#useChannel">
+            <h3><code>useChannel</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function useChannel
+            <!-- Type Parameters -->
+                <!-- opening angle bracket -->
+    &lt;
+
+            
+        <!-- Name -->
+        C
+        <!-- Constraints -->
+                    : string        
+        <!-- Default -->
+                    = string        
+        <!-- Comma if not last -->
+            
+    <!-- Closing angle bracket -->
+    &gt;
+
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                channel
+                
+                <!-- type -->
+                :
+                C
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                onUpdate
+                
+                <!-- type -->
+                :
+                (data: JsonSerializable | null, error: ErrorMessage | null) =&gt; void
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Subscribes to the eventbus via a specific channel.</p>
+<p><strong>Important note:</strong></p>
+<p>Please preserve the identity of the <code>onUpdate</code> function
+to minimize registers and unregisters on the eventbus.</p>
+<p>For example use <a href="#useCallback"><code>useCallback</code></a> from React,
+or if you only interested on the most recent data
+use <a href="#useChannelLatest"><code>useChannelLatest</code></a> instead.
+It handles the caveats for you.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>channel - the channel address</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>onUpdate - callback that gets called on new data</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@typeParam:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>C - union of all possible channels (defaults to <code>string</code>)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>if there is no eventbus instance</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#useEventBus"><code>useEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#useChannelLatest"><code>useChannelLatest</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus"><code>EventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const [state, setState] = useState&lt;JSONSerializable&gt;();
+
+const cb = useCallback((data) =&gt; {
+  setState(data);
+}, []);
+
+useChannel('channel:test-data', cb);
+
+return &lt;p&gt;Content: {state}&lt;/p&gt;;
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useChannelLatest" href="#useChannelLatest">
+            <h3><code>useChannelLatest</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function useChannelLatest
+            <!-- Type Parameters -->
+                <!-- opening angle bracket -->
+    &lt;
+
+            
+        <!-- Name -->
+        C
+        <!-- Constraints -->
+                    : string        
+        <!-- Default -->
+                    = string        
+        <!-- Comma if not last -->
+            
+    <!-- Closing angle bracket -->
+    &gt;
+
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                channel
+                
+                <!-- type -->
+                :
+                C
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            JsonSerializable | undefined        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Gets the latest information broadcast on a specific channel.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>channel - the channel address</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the last received message
+or <code>undefined</code> if no message was received yet</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@typeParam:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>C - union of all possible channels (defaults to <code>string</code>)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>if there is no eventbus instance</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#useChannel"><code>useChannel</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#useEventBus"><code>useEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const latestPos = useChannelLatest('channel:position');
+return &lt;p&gt;Latest position: {latestPos}&lt;/p&gt;;
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useRequest" href="#useRequest">
+            <h3><code>useRequest</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function useRequest
+            <!-- Type Parameters -->
+                <!-- opening angle bracket -->
+    &lt;
+
+            
+        <!-- Name -->
+        C
+        <!-- Constraints -->
+                    : string        
+        <!-- Default -->
+                    = string        
+        <!-- Comma if not last -->
+            
+    <!-- Closing angle bracket -->
+    &gt;
+
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                channel
+                
+                <!-- type -->
+                :
+                C
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            SendFunction        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Send a message on the specified channel
+and get the first reply via a callback.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>channel - the channel to send to</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>a function that sends a message and registers a one-time callback</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@typeParam:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>C - union of all possible channels (defaults to <code>string</code>)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>if there is no eventbus instance</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#useEventBus"><code>useEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus.send"><code>EventBus.send</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const [answer, setAnswer] = useState&lt;JSONSerializable&gt;();
+const send = useRequest('channel:send-my-anything');
+
+const handleClick = () =&gt; {
+  send('Ping', (message: JSONSerializable) =&gt; {
+    if (message) setAnswer(message);
+  });
+};
+
+return (
+  &lt;&gt;
+    &lt;button onClick={handleClick}&gt;Send message&lt;/button&gt;
+    &lt;p&gt;{answer}&lt;/p&gt;
+  &lt;/&gt;
+);
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="usePrefValue" href="#usePrefValue">
+            <h3><code>usePrefValue</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function usePrefValue
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                group
+                
+                <!-- type -->
+                :
+                GroupSelector
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                preference
+                
+                <!-- type -->
+                :
+                PrefSelector
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            PrefValue | undefined        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the current value of a preference in a group.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the group of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>preference - the name of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the current value of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#usePreferences"><code>usePreferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const myPref = usePrefValue('myGroup', 'myPref');
+
+return &lt;div&gt;{myPref}&lt;/div&gt;;
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useTitle" href="#useTitle">
+            <h3><code>useTitle</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function useTitle
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                                    )
+
+            <!-- Return type -->
+            :
+            PrefValue | undefined        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the title of the application.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#usePrefValue"><code>usePrefValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#usePreferences"><code>usePreferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Displays the title of the application</p>
+<pre><code class="language-ts">const title = useTitle();
+return &lt;p&gt;Application title: {title}&lt;/p&gt;;
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PrefValue" href="#PrefValue">
+            <h3><code>PrefValue</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type PrefValue
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            JsonSerializable        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the default type of a preference value</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PrefRenderer" href="#PrefRenderer">
+            <h3><code>PrefRenderer</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type PrefRenderer
+            <!-- Type Parameters -->
+                <!-- opening angle bracket -->
+    &lt;
+
+            
+        <!-- Name -->
+        T
+        <!-- Constraints -->
+                    : PrefValue        
+        <!-- Default -->
+                    = PrefValue        
+        <!-- Comma if not last -->
+            
+    <!-- Closing angle bracket -->
+    &gt;
+        </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            (value: T, setValue: (newValue: T) =&gt; void) =&gt; ReactNode        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Renders a React node that displays and changes the given preference
+in a proper way.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@typeParam:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>T - the type of the preference
+(defaults to <a href="#JsonSerializable"><code>JsonSerializable</code></a>)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#JsonSerializable"><code>JsonSerializable</code></a></p>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Selector" href="#Selector">
+            <h3><code>Selector</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type Selector
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the &quot;name&quot; of a group or preference</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefSelector"><code>PrefSelector</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#GroupSelector"><code>GroupSelector</code></a></p>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PrefSelector" href="#PrefSelector">
+            <h3><code>PrefSelector</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type PrefSelector
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            Selector        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the type of a selector to select a preference out of a preference group</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Preference"><code>Preference</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesGroup"><code>PreferencesGroup</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Selector"><code>Selector</code></a></p>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="GroupSelector" href="#GroupSelector">
+            <h3><code>GroupSelector</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type GroupSelector
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            Selector | &#39;null&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the type of a selector to select a group out of a preference store</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesGroup"><code>PreferencesGroup</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesStore"><code>PreferencesStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Selector"><code>Selector</code></a></p>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Preference" href="#Preference">
+            <h3><code>Preference</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            Preference
+            <!-- Type Parameters -->
+                <!-- opening angle bracket -->
+    &lt;
+
+            
+        <!-- Name -->
+        T
+        <!-- Constraints -->
+                    : PrefValue        
+        <!-- Default -->
+                    = PrefValue        
+        <!-- Comma if not last -->
+            
+    <!-- Closing angle bracket -->
+    &gt;
+
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a preference with value and renderer</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@typeParam:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>T - the type of the preference
+(defaults to <a href="#PrefValue"><code>PrefValue</code></a>)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefRenderer"><code>PrefRenderer</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesStore"><code>PreferencesStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefValue"><code>PrefValue</code></a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="Preference.value" href="#Preference.value">
+        <h5><code>
+                                                                                value                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            T        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the current value of the preference</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Preference.renderer" href="#Preference.renderer">
+        <h5><code>
+                                                                                renderer                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            PrefRenderer&lt;T&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>an update component which displays and changes the preference value
+in a proper way</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PreferencesGroup" href="#PreferencesGroup">
+            <h3><code>PreferencesGroup</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type PreferencesGroup
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            Record&lt;PrefSelector, Preference&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a group of preferences where every preference is accessible via a selector</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefSelector"><code>PrefSelector</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#GroupSelector"><code>GroupSelector</code></a></p>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PreferencesStore" href="#PreferencesStore">
+            <h3><code>PreferencesStore</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type PreferencesStore
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            Record&lt;GroupSelector, PreferencesGroup&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the entire store of grouped preferences also accessible via a selector</p>
+<p>The group <code>null</code> has a special meaning.
+It is the group for global preferences
+which do not have a group they belong to.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesGroup"><code>PreferencesGroup</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#GroupSelector"><code>GroupSelector</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefSelector"><code>PrefSelector</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Preference"><code>Preference</code></a></p>
+</div>
+            </div>
+                        </div>

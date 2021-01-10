@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <title>Telestion Client Monorepo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <style>
+        h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        code {
+            line-height: inherit;
+        }
+
+        :root {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <a href="/" class="logo">Telestion Client Monorepo</a>
+            <a class="button" href="https://github.com/TelestionTeam/telestion-client/" target="_blank">GitHub</a>
+            <a class="button" href="https://telestion.wuespace.de/" target="_blank">Homepage</a>
+            <a class="button" href="https://react-spectrum.adobe.com/" target="_blank">React Spectrum Libraries</a>
+    </header>
+<div class="container">
+    <div class="row">
+        <aside class="col-sm-12 col-md-4 col-lg-3">
+            <nav class="fixed">
+                <a href="/">Project README</a>
+                <span>Modules</span>
+                                    <a href="/@wuespace/vertx-event-bus">
+                        <code>
+                            @wuespace/vertx-event-bus                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-types">
+                        <code>
+                            @wuespace/telestion-client-types                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-prop-types">
+                        <code>
+                            @wuespace/telestion-client-prop-types                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-core">
+                        <code>
+                            @wuespace/telestion-client-core                        </code>
+                    </a>
+                                    <a href="/@wuespace/telestion-client-common">
+                        <code>
+                            @wuespace/telestion-client-common                        </code>
+                    </a>
+                            </nav>
+        </aside>
+        <div class="col-sm-12 col-md-8 col-lg-6">
+<h1>Telestion Client</h1>
+<p>This is the Telestion Client Library Monorepo.</p>
+<h2>Getting Started</h2>
+<p>You likely want to start your own project with a specific frontend client in mind.
+This repository only contains the base parts that are later assembled in a specific implementation for your project.</p>
+<p>To make the start relatively easy,
+we provide you a full featured command line interface and dynamic template generator
+that gets project setup done in no time, so you can directly start developing and playing around with components.</p>
+<p>Before you are ready to takeoff, you need some tools in your hand.
+First, please install the following application via your distribution package manager
+or download and install them directly:</p>
+<ul>
+<li><a href="https://nodejs.org/en/">NodeJS</a> (<a href="https://nodejs.org/en/download/">Download</a>)</li>
+<li><a href="https://www.npmjs.com/">npm</a> (<a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Installation instructions</a>)</li>
+</ul>
+<p>After you set up these tools, install our command line interface:</p>
+<pre><code class="language-shell">$ npm install --global @wuespace/telestion-client-cli
+</code></pre>
+<p>Then go into your projects folder:</p>
+<pre><code class="language-shell">$ cd myProjects
+</code></pre>
+<p>Here initialize a new project with:</p>
+<pre><code class="language-shell">$ tc-cli init
+</code></pre>
+<p>The command line interface will guide you through the setup process.</p>
+<p>Finished!
+Now you a ready to go and develop your project groundstation frontend!</p>
+<p>A little overwhelmed by the project size or lost the track of the project structure?
+Don't worry! Take a look at our extensive documentation (coming soon™)
+or at projects that are already using the Telestion client in action:</p>
+<ul>
+<li>[link_daedalus2]</li>
+<li>[link_trex2]</li>
+</ul>
+<p>If you want to contribute to the Telestion Client project, read further!</p>
+<h2>Contributing</h2>
+<h3>Installation</h3>
+<p>This project uses <a href="https://lerna.js.org/">Lerna</a> as a monorepo package management tool.</p>
+<p>First, install <code>lerna</code> globally for better repository maintenance:</p>
+<pre><code>$ npm i -g lerna
+</code></pre>
+<p>To install all dependencies the right way, run:</p>
+<pre><code>$ npm ci
+</code></pre>
+<p>To clear all installed dependencies, execute:</p>
+<pre><code>$ cd /path/to/directory/root
+$ npm run clean
+$ rm -rf node_modules
+</code></pre>
+<h3>Developing and Testing</h3>
+<p>Most of the time, you can use a package in the <code>packages</code> folder like a normal npm project.
+If you want to run the command over all packages in parallel, ask lerna for help:</p>
+<pre><code>$ lerna run build --stream
+</code></pre>
+<p>Differences come up, if you want to add a dependency.
+Here you must use lerna with the scope modifier:</p>
+<pre><code>$ lerna add [packageName] [packages/prefix-*]
+</code></pre>
+<p>Sometimes you need to edit the <code>package.json</code> manually.
+You can add dependencies by simply adding the lines in the dependency object
+and run lerna to restructure the monorepo dependencies:</p>
+<pre><code>$ lerna link convert
+</code></pre>
+<p>To add a dependency to a monorepo package,
+use a file URI with a relative path to the package instead of a version number.
+Lerna inserts at publishing the most recent version of the linked monorepo package automatically:</p>
+<pre><code class="language-json">{
+	&quot;dependencies&quot;: {
+		&quot;@wuespace/telestion-client-cli&quot;: &quot;file:../telestion-client-cli&quot;
+	}
+}
+</code></pre>
+<h3>Publishing</h3>
+<p>To publish a new version of the project,
+lerna intelligently selects the packages that have change since the last publish,
+increase their version and publishes them.</p>
+<p>The actual publish process to npm and Github packages is handled by some neat Github-Actions
+that detect git tags and triggers a publishing to these registries.</p>
+<p>You only need to call:</p>
+<pre><code>$ lerna version
+$ git push
+</code></pre>
+<h2>Documentation</h2>
+<h3>Project Structure</h3>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>telestion-client-core</td>
+<td>Contains the core components of the Telestion Client that are essential for developing a Telestion frontend.</td>
+</tr>
+<tr>
+<td>telestion-client-common</td>
+<td>Contains more common components that not necessary for a working frontend project but are highly recommended by the Telestion development team.</td>
+</tr>
+<tr>
+<td>telestion-client-template</td>
+<td>Contains the template structure for a future Telestion Client project.</td>
+</tr>
+<tr>
+<td>telestion-client-cli</td>
+<td>Bundles the full-featured command line interface of the Telestion Client.</td>
+</tr>
+<tr>
+<td>mock-server</td>
+<td>Contains a mock server that simulates a connection with the Telestion backend only for testing purposes.</td>
+</tr>
+</tbody>
+</table>
+<h2>About</h2>
+<p>This is part of <a href="https://telestion.wuespace.de/">Telestion</a>, a project by <a href="https://www.wuespace.de/">WueSpace e.V.</a></p>
+</div>
+</div>
+</div>
+</body>
+</footer>
