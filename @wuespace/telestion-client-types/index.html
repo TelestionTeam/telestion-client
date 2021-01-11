@@ -2280,7 +2280,7 @@ commonly returned from a sign in function of an authenticator.</p>
             <div class="col-sm-10"><p>Analyze sign in result</p>
 <pre><code class="language-ts">const authenticator: Auth = new SomeAuth(); // implements Auth
 
-authenticator.signIn('http://localhost:9870/bridge/', 'alice', '12345')
+authenticator.signIn('http://localhost:9870/bridge', 'alice', '12345')
 	.then(signInRes =&gt; {
 		console.log(`User ${signInRes} signed in`);
 		if (signInRes.reason) {
