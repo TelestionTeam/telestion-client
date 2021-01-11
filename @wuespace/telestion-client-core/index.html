@@ -15,6 +15,15 @@
         :root {
             scroll-behavior: smooth;
         }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -24,7 +33,9 @@
             <a class="button" href="https://github.com/TelestionTeam/telestion-client/" target="_blank">GitHub</a>
             <a class="button" href="https://telestion.wuespace.de/" target="_blank">Homepage</a>
             <a class="button" href="https://react-spectrum.adobe.com/" target="_blank">React Spectrum Libraries</a>
-    </header>
+        <div class="spacer"></div>
+    <button onclick="openSearch()"><span class="icon-search"></span> Search: <kbd>Ctrl</kbd>+<kbd>K</kbd></button>
+</header>
 <div class="container">
     <div class="row">
         <aside class="col-sm-12 col-md-4 col-lg-3">
@@ -236,7 +247,7 @@ of this component.</p>
     <!-- Tags -->
     <div class="row">
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"TelestionClient","implementations":[{"type":"variable","name":"TelestionClient","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nThe main component of the Telestion Frontend.\nEvery part of the Telestion Frontend Application is a child\nof this component.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"TelestionClient","initializer":"({\n\ttitle = 'Telestion Client',\n\twrapper,\n\teventBusOptions,\n\tchildren\n}: TelestionClientProps) => {\n\t// set title as preference\n\tconst update = usePreferences(preferencesSelector);\n\n\tuseEffect(() => {\n\t\tupdate('null', 'title', title);\n\t}, [title, update]);\n\n\t// automatic eventbus management\n\tconst { user, serverUrl } = useAuth(authSelector, shallow);\n\tconst { open, close } = useEventBus(eventBusSelector, shallow);\n\n\tuseEffect(() => {\n\t\tif (user && serverUrl) {\n\t\t\t// user authenticated -> open\n\t\t\topen(serverUrl, eventBusOptions);\n\t\t\t// on change of user, server url or options -> close first\n\t\t\treturn () => close();\n\t\t}\n\t}, [user, serverUrl, eventBusOptions, open, close]);\n\n\treturn <>{wrapper ? wrapper(children) : children}</>;\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"TelestionClient","declarations":[{"type":"variable","name":"TelestionClient","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nThe main component of the Telestion Frontend.\nEvery part of the Telestion Frontend Application is a child\nof this component.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"TelestionClient","initializer":"({\n\ttitle = 'Telestion Client',\n\twrapper,\n\teventBusOptions,\n\tchildren\n}: TelestionClientProps) => {\n\t// set title as preference\n\tconst update = usePreferences(preferencesSelector);\n\n\tuseEffect(() => {\n\t\tupdate('null', 'title', title);\n\t}, [title, update]);\n\n\t// automatic eventbus management\n\tconst { user, serverUrl } = useAuth(authSelector, shallow);\n\tconst { open, close } = useEventBus(eventBusSelector, shallow);\n\n\tuseEffect(() => {\n\t\tif (user && serverUrl) {\n\t\t\t// user authenticated -> open\n\t\t\topen(serverUrl, eventBusOptions);\n\t\t\t// on change of user, server url or options -> close first\n\t\t\treturn () => close();\n\t\t}\n\t}, [user, serverUrl, eventBusOptions, open, close]);\n\n\treturn <>{wrapper ? wrapper(children) : children}</>;\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -336,7 +347,7 @@ const MyPages = () =&gt; (
 </code></pre>
 </div>
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Pages","implementations":[{"type":"variable","name":"Pages","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nThe router of the application.\nHere are all pages managed.\n\nEvery page defines a `routing` object\nthat is attached to the actual component.\n\nIf you want to write some pages, please take a look at\n{@link @wuespace/telestion-client-types#Routing} for more information.\n","tags":[{"text":"```ts\nimport { Pages } from '@wuespace/telestion-client-core';\n\nconst MyPages = () => (\n  <Pages>\n    <LoginPage />\n    <DashboardPage />\n    <NotFoundPage />\n  </Pages>\n);\n","tagName":"@example"}]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Pages","initializer":"({ children }: PagesProps) => {\n\tconst routes: ReactNode[] = [];\n\tconst lastRoutes: ReactNode[] = [];\n\n\tChildren.forEach(children, (child, index) => {\n\t\tif (isValidChild(child)) {\n\t\t\tconst routing = {\n\t\t\t\t...defaultRouting,\n\t\t\t\t...parseRouting(child.type.name, child.type.routing)\n\t\t\t};\n\t\t\tconst Route = routeComponents[routing.type];\n\t\t\tconst key = `comp:${routing.path}:${routing.redirectPath}`;\n\n\t\t\troutes.push(\n\t\t\t\t<Route\n\t\t\t\t\tkey={key}\n\t\t\t\t\tpath={routing.path}\n\t\t\t\t\tredirectPath={routing.redirectPath}\n\t\t\t\t\texact={routing.exact}\n\t\t\t\t>\n\t\t\t\t\t{child}\n\t\t\t\t</Route>\n\t\t\t);\n\n\t\t\trouting.additionalRedirects.forEach(redirect =>\n\t\t\t\tredirect.last\n\t\t\t\t\t? lastRoutes.push(buildRedirect(redirect))\n\t\t\t\t\t: routes.push(buildRedirect(redirect))\n\t\t\t);\n\t\t} else {\n\t\t\tthrow new TypeError(\n\t\t\t\t`Child No. ${index} is not a valid Page component in Pages renderer.` +\n\t\t\t\t\t'Please define a valid React Component and attach a routing object to the component.'\n\t\t\t);\n\t\t}\n\t});\n\n\treturn (\n\t\t<Router>\n\t\t\t<Switch>\n\t\t\t\t{routes}\n\t\t\t\t{lastRoutes}\n\t\t\t</Switch>\n\t\t</Router>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Pages","declarations":[{"type":"variable","name":"Pages","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nThe router of the application.\nHere are all pages managed.\n\nEvery page defines a `routing` object\nthat is attached to the actual component.\n\nIf you want to write some pages, please take a look at\n{@link @wuespace/telestion-client-types#Routing} for more information.\n","tags":[{"text":"```ts\nimport { Pages } from '@wuespace/telestion-client-core';\n\nconst MyPages = () => (\n  <Pages>\n    <LoginPage />\n    <DashboardPage />\n    <NotFoundPage />\n  </Pages>\n);\n","tagName":"@example"}]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Pages","initializer":"({ children }: PagesProps) => {\n\tconst routes: ReactNode[] = [];\n\tconst lastRoutes: ReactNode[] = [];\n\n\tChildren.forEach(children, (child, index) => {\n\t\tif (isValidChild(child)) {\n\t\t\tconst routing = {\n\t\t\t\t...defaultRouting,\n\t\t\t\t...parseRouting(child.type.name, child.type.routing)\n\t\t\t};\n\t\t\tconst Route = routeComponents[routing.type];\n\t\t\tconst key = `comp:${routing.path}:${routing.redirectPath}`;\n\n\t\t\troutes.push(\n\t\t\t\t<Route\n\t\t\t\t\tkey={key}\n\t\t\t\t\tpath={routing.path}\n\t\t\t\t\tredirectPath={routing.redirectPath}\n\t\t\t\t\texact={routing.exact}\n\t\t\t\t>\n\t\t\t\t\t{child}\n\t\t\t\t</Route>\n\t\t\t);\n\n\t\t\trouting.additionalRedirects.forEach(redirect =>\n\t\t\t\tredirect.last\n\t\t\t\t\t? lastRoutes.push(buildRedirect(redirect))\n\t\t\t\t\t: routes.push(buildRedirect(redirect))\n\t\t\t);\n\t\t} else {\n\t\t\tthrow new TypeError(\n\t\t\t\t`Child No. ${index} is not a valid Page component in Pages renderer.` +\n\t\t\t\t\t'Please define a valid React Component and attach a routing object to the component.'\n\t\t\t);\n\t\t}\n\t});\n\n\treturn (\n\t\t<Router>\n\t\t\t<Switch>\n\t\t\t\t{routes}\n\t\t\t\t{lastRoutes}\n\t\t\t</Switch>\n\t\t</Router>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -424,7 +435,7 @@ const MyPages = () =&gt; (
 <!-- Docs -->
     <!-- no docs :( -->
     <p><small>No docs provided</small></p>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"AuthRoute","implementations":[{"type":"variable","name":"AuthRoute","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"AuthRoute","initializer":"({\n\tchildren,\n\tredirectPath,\n\t...rest\n}: AuthRouteProps) => {\n\tconst { user } = useAuth();\n\treturn (\n\t\t<Route\n\t\t\t{...rest}\n\t\t\trender={({ location }) =>\n\t\t\t\tuser ? (\n\t\t\t\t\tchildren\n\t\t\t\t) : (\n\t\t\t\t\t<Redirect\n\t\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t\t/>\n\t\t\t\t)\n\t\t\t}\n\t\t/>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"AuthRoute","declarations":[{"type":"variable","name":"AuthRoute","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"AuthRoute","initializer":"({\n\tchildren,\n\tredirectPath,\n\t...rest\n}: AuthRouteProps) => {\n\tconst { user } = useAuth();\n\treturn (\n\t\t<Route\n\t\t\t{...rest}\n\t\t\trender={({ location }) =>\n\t\t\t\tuser ? (\n\t\t\t\t\tchildren\n\t\t\t\t) : (\n\t\t\t\t\t<Redirect\n\t\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t\t/>\n\t\t\t\t)\n\t\t\t}\n\t\t/>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -512,7 +523,7 @@ const MyPages = () =&gt; (
 <!-- Docs -->
     <!-- no docs :( -->
     <p><small>No docs provided</small></p>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"UnAuthRoute","implementations":[{"type":"variable","name":"UnAuthRoute","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"UnAuthRoute","initializer":"({\n\tchildren,\n\tredirectPath,\n\t...rest\n}: UnAuthRouteProps) => {\n\tconst { user } = useAuth();\n\treturn (\n\t\t<Route\n\t\t\t{...rest}\n\t\t\trender={({ location }) =>\n\t\t\t\tuser ? (\n\t\t\t\t\t<Redirect\n\t\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t\t/>\n\t\t\t\t) : (\n\t\t\t\t\tchildren\n\t\t\t\t)\n\t\t\t}\n\t\t/>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"UnAuthRoute","declarations":[{"type":"variable","name":"UnAuthRoute","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"UnAuthRoute","initializer":"({\n\tchildren,\n\tredirectPath,\n\t...rest\n}: UnAuthRouteProps) => {\n\tconst { user } = useAuth();\n\treturn (\n\t\t<Route\n\t\t\t{...rest}\n\t\t\trender={({ location }) =>\n\t\t\t\tuser ? (\n\t\t\t\t\t<Redirect\n\t\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t\t/>\n\t\t\t\t) : (\n\t\t\t\t\tchildren\n\t\t\t\t)\n\t\t\t}\n\t\t/>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -589,7 +600,7 @@ which defining renderer for application preferences.</p>
     <!-- Tags -->
     <div class="row">
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Preferences","implementations":[{"type":"variable","name":"Preferences","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nWrapper component for {@link Group} and {@link Variable}\nwhich defining renderer for application preferences.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Preferences","initializer":"({ children }: PreferencesProps) => <>{children}</>","hasExclamationToken":false,"kind":38}]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Preferences","declarations":[{"type":"variable","name":"Preferences","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nWrapper component for {@link Group} and {@link Variable}\nwhich defining renderer for application preferences.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Preferences","initializer":"({ children }: PreferencesProps) => <>{children}</>","hasExclamationToken":false,"kind":38}]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -689,7 +700,7 @@ which defining renderer for application preferences.</p>
     <!-- Tags -->
     <div class="row">
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Group","implementations":[{"type":"variable","name":"Group","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nDefines a group of variables which are typically {@link Variable} components.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Group","initializer":"({ name, children }: GroupProps) => (\n\t<GroupContext name={name}>{children}</GroupContext>\n)","hasExclamationToken":false,"kind":38}]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Group","declarations":[{"type":"variable","name":"Group","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nDefines a group of variables which are typically {@link Variable} components.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Group","initializer":"({ name, children }: GroupProps) => (\n\t<GroupContext name={name}>{children}</GroupContext>\n)","hasExclamationToken":false,"kind":38}]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -822,7 +833,7 @@ the preference in that group otherwise for the preference in the global scope.</
             <div class="col-sm-10"><p><a href="#PreferencesStore"><code>PreferencesStore</code></a></p>
 </div>
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Variable","implementations":[{"type":"variable","name":"Variable","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nDefines a renderer for a preference.\n\nIf it is wrapped in the {@link Group} component,\nthe renderer will be registered for\nthe preference in that group otherwise for the preference in the global scope.\n","tags":[{"text":"{@link PreferencesStore}\n","tagName":"@see"}]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Variable","initializer":"({ name, initialValue, children }: VariableProps) => {\n\tconst { setRenderer, setValue } = usePreferences(prefSelector, shallow);\n\tconst group = useGroup();\n\n\tuseEffect(() => {\n\t\tif (initialValue) {\n\t\t\t// if not in group context, use global scope\n\t\t\tsetValue(group, name, initialValue);\n\t\t}\n\t}, [group, name, initialValue, setValue]);\n\n\tuseEffect(() => {\n\t\t// if not in group context, use global scope\n\t\tsetRenderer(group, name, children);\n\t}, [group, name, children, setRenderer]);\n\n\treturn null;\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Variable","declarations":[{"type":"variable","name":"Variable","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nDefines a renderer for a preference.\n\nIf it is wrapped in the {@link Group} component,\nthe renderer will be registered for\nthe preference in that group otherwise for the preference in the global scope.\n","tags":[{"text":"{@link PreferencesStore}\n","tagName":"@see"}]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Variable","initializer":"({ name, initialValue, children }: VariableProps) => {\n\tconst { setRenderer, setValue } = usePreferences(prefSelector, shallow);\n\tconst group = useGroup();\n\n\tuseEffect(() => {\n\t\tif (initialValue) {\n\t\t\t// if not in group context, use global scope\n\t\t\tsetValue(group, name, initialValue);\n\t\t}\n\t}, [group, name, initialValue, setValue]);\n\n\tuseEffect(() => {\n\t\t// if not in group context, use global scope\n\t\tsetRenderer(group, name, children);\n\t}, [group, name, children, setRenderer]);\n\n\treturn null;\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -4124,3 +4135,37 @@ which do not have a group they belong to.</p>
 </div>
             </div>
                         </div>
+</div>
+</div>
+</div>
+<script src="https://rawcdn.githack.com/nextapps-de/flexsearch/master/dist/flexsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fliegwerk/search-popup/dist/bundle.js"></script>
+<script>
+    const searchIndex = new FlexSearch({
+        encode: q => (q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase() + ' ' + q.toLowerCase(),
+        // encode: q => (q.replace(/(.*)[\W.](.*)/g, "$1$2")).toLowerCase(),
+        tokenize: "full",
+        threshold: 0,
+        resolution: 9,
+        depth: 3,
+        doc: {
+            id: 'url',
+            field: ['name', 'text']
+        }
+    });
+
+    function search(q) {
+        q = q || '';
+        return searchIndex.search((q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase(), 5)
+    }
+
+    fetch('/telestion-client/search-index.json').then(r => r.json()).then(index => {
+        searchIndex.add(index)
+
+        const searchPopup = document.createElement('search-popup');
+        searchPopup.setAttribute('search', 'search')
+        document.body.appendChild(searchPopup);
+    });
+</script>
+</body>
+</html>
