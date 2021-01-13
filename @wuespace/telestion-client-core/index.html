@@ -79,6 +79,88 @@
 <!-- Members -->
     <div class="card fluid">
         <!-- Name with anchor link -->
+        <a id="TelestionClient" href="#TelestionClient">
+            <h3><code>TelestionClient</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function TelestionClient
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                {
+	title = &#39;Telestion Client&#39;,
+	wrapper,
+	children
+}
+                
+                <!-- type -->
+                :
+                TelestionClientProps
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The &quot;root&quot; component of a Telestion Client.</p>
+<p>Every part of a Telestion Client application should be a child
+of this component.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#TelestionClientProps"><code>TelestionClientProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>A very simple Telestion Client</p>
+<pre><code class="language-ts">import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+	&lt;TelestionClient /&gt;,
+	document.getElementById('root')
+);
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"TelestionClient","declarations":[{"type":"function","name":"TelestionClient","declarations":[{"name":"TelestionClient","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"update","initializer":"usePreferences(selector)","hasExclamationToken":false,"kind":38}]},"useEffect(() => {\n\tupdate('null', 'title', title);\n}, [title, update]);","return <>{wrapper ? wrapper(children) : children}</>;"],"parameters":[{"name":"{\n\ttitle = 'Telestion Client',\n\twrapper,\n\tchildren\n}","type":"TelestionClientProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nThe \"root\" component of a Telestion Client.\n\nEvery part of a Telestion Client application should be a child\nof this component.\n","tags":[{"text":"{@link TelestionClientProps}\n\n","tagName":"@see"},{"text":"\nA very simple Telestion Client\n```ts\nimport ReactDOM from 'react-dom';\n\nReactDOM.render(\n\t<TelestionClient />,\n\tdocument.getElementById('root')\n);\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
         <a id="TelestionClientProps" href="#TelestionClientProps">
             <h3><code>TelestionClientProps</code></h3></a>
 
@@ -99,8 +181,34 @@
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#TelestionClient"><code>TelestionClient</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#TelestionClient"><code>TelestionClient</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -121,9 +229,9 @@
 
 <!-- Docs -->
     <!-- Description -->
-    <p>the title of the application</p>
-<p>can be used with the <a href="#useTitle"><code>useTitle</code></a> hook
-to get a consistent state of the application</p>
+    <p>The title of the application.</p>
+<p>The title can be used with the <a href="#useTitle"><code>useTitle</code></a> hook
+to get a consistent title of the application.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -137,14 +245,14 @@ to get a consistent state of the application</p>
     <b>Type:
         <code>
             <!-- Type -->
-            (children?: ReactNode) =&gt; ReactNode        </code>
+            (children: ReactNode) =&gt; ReactElement        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Additional wrapper function
-that will &quot;wrap&quot; the children into additional contexts, setups, hoc, etc.</p>
+    <p>A function that will &quot;wrap&quot; the children into
+additional contexts, setups, HOCs, ...</p>
 
     <!-- Tags -->
     <div class="row">
@@ -156,53 +264,23 @@ that will &quot;wrap&quot; the children into additional contexts, setups, hoc, e
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>children the children components
+            <div class="col-sm-10"><p>children - the children components
 of the <a href="#TelestionClient"><code>TelestionClient</code></a> component</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
                 <p>
-                    <mark class="tag">@return:</mark>
+                    <mark class="tag">@returns:</mark>
                 </p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>a valid react node</p>
-</div>
-            </div>
-    <a id="TelestionClientProps.eventBusOptions" href="#TelestionClientProps.eventBusOptions">
-        <h5><code>
-                                                                                eventBusOptions                ?            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            Options        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>additional options for the eventbus</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#Options"><code>Options</code></a></p>
+            <div class="col-sm-10"><p>a valid react element</p>
 </div>
             </div>
     <a id="TelestionClientProps.children" href="#TelestionClientProps.children">
         <h5><code>
-                                                                                children                            </code></h5>
+                                                                                children                ?            </code></h5>
     </a>
     <!-- Signature -->
 <p>
@@ -214,40 +292,108 @@ of the <a href="#TelestionClient"><code>TelestionClient</code></a> component</p>
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Additional children given to the Telestion Client.
+It renders them in his context.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/glossary.html#propschildren"><code>https://reactjs.org/docs/glossary.html#propschildren</code></a></p>
+</div>
+            </div>
 
 <!-- Methods -->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="TelestionClient" href="#TelestionClient">
-            <h3><code>TelestionClient</code></h3></a>
+        <a id="Pages" href="#Pages">
+            <h3><code>Pages</code></h3></a>
 
         <!-- Description, based on type -->
-                                    <!-- Signature -->
+                                    
+<!-- Signature -->
 <p>
     <b>
         <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
+            
+            function Pages
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
 
-            <!-- Variable type or any -->
+                                
+                <!-- parameter name -->
+                { children }
+                
+                <!-- type -->
+                :
+                PagesProps
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
             any        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>The main component of the Telestion Frontend.
-Every part of the Telestion Frontend Application is a child
-of this component.</p>
+    <p>The router of the application.
+Here are all pages managed.</p>
+<p>Every page defines a <code>routing</code> object
+that is attached to the actual component.</p>
+<p>If you want to write some pages, please take a look at
+<a href="#@wuespace/telestion-client-types#Routing"><code>@wuespace/telestion-client-types#Routing</code></a> for more information.</p>
 
     <!-- Tags -->
     <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"TelestionClient","declarations":[{"type":"variable","name":"TelestionClient","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nThe main component of the Telestion Frontend.\nEvery part of the Telestion Frontend Application is a child\nof this component.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"TelestionClient","initializer":"({\n\ttitle = 'Telestion Client',\n\twrapper,\n\teventBusOptions,\n\tchildren\n}: TelestionClientProps) => {\n\t// set title as preference\n\tconst update = usePreferences(preferencesSelector);\n\n\tuseEffect(() => {\n\t\tupdate('null', 'title', title);\n\t}, [title, update]);\n\n\t// automatic eventbus management\n\tconst { user, serverUrl } = useAuth(authSelector, shallow);\n\tconst { open, close } = useEventBus(eventBusSelector, shallow);\n\n\tuseEffect(() => {\n\t\tif (user && serverUrl) {\n\t\t\t// user authenticated -> open\n\t\t\topen(serverUrl, eventBusOptions);\n\t\t\t// on change of user, server url or options -> close first\n\t\t\treturn () => close();\n\t\t}\n\t}, [user, serverUrl, eventBusOptions, open, close]);\n\n\treturn <>{wrapper ? wrapper(children) : children}</>;\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PagesProps"><code>PagesProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function MyPages() {
+	return (
+		&lt;Pages&gt;
+			&lt;LoginPage /&gt;
+			&lt;DashboardPage /&gt;
+			&lt;NotFoundPage /&gt;
+		&lt;/Pages&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Pages","declarations":[{"type":"function","name":"Pages","declarations":[{"name":"Pages","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"routes","initializer":"[]","type":"ReactNode[]","hasExclamationToken":false,"kind":38}]},{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"lastRoutes","initializer":"[]","type":"ReactNode[]","hasExclamationToken":false,"kind":38}]},"Children.forEach(children, (child, index) => {\n\t\tif (isValidChild(child)) {\n\t\t\tconst routing = {\n\t\t\t\t...defaultRouting,\n\t\t\t\t...parseRouting(child.type.name, child.type.routing)\n\t\t\t};\n\t\t\tconst Route = routeComponents[routing.type];\n\t\t\tconst key = `comp:${routing.path}:${routing.redirectPath}`;\n\n\t\t\troutes.push(\n\t\t\t\t<Route\n\t\t\t\t\tkey={key}\n\t\t\t\t\tpath={routing.path}\n\t\t\t\t\tredirectPath={routing.redirectPath}\n\t\t\t\t\texact={routing.exact}\n\t\t\t\t>\n\t\t\t\t\t{child}\n\t\t\t\t</Route>\n\t\t\t);\n\n\t\t\trouting.additionalRedirects.forEach(redirect =>\n\t\t\t\tredirect.last\n\t\t\t\t\t? lastRoutes.push(buildRedirect(redirect))\n\t\t\t\t\t: routes.push(buildRedirect(redirect))\n\t\t\t);\n\t\t} else {\n\t\t\tthrow new TypeError(\n\t\t\t\t`Child No. ${index} is not a valid Page component in Pages renderer.` +\n\t\t\t\t\t'Please define a valid React Component and attach a routing object to the component.'\n\t\t\t);\n\t\t}\n\t});","return (\n\t<Router>\n\t\t<Switch>\n\t\t\t{routes}\n\t\t\t{lastRoutes}\n\t\t</Switch>\n\t</Router>\n);"],"parameters":[{"name":"{ children }","type":"PagesProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nThe router of the application.\nHere are all pages managed.\n\nEvery page defines a `routing` object\nthat is attached to the actual component.\n\nIf you want to write some pages, please take a look at\n{@link @wuespace/telestion-client-types#Routing} for more information.\n","tags":[{"text":"{@link PagesProps}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyPages() {\n\treturn (\n\t\t<Pages>\n\t\t\t<LoginPage />\n\t\t\t<DashboardPage />\n\t\t\t<NotFoundPage />\n\t\t</Pages>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -271,8 +417,34 @@ of this component.</p>
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#Pages"><code>Pages</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Pages"><code>Pages</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -292,41 +464,84 @@ of this component.</p>
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Pages that the application can have.
+The <a href="#Pages"><code>Pages</code></a> component renders them based on the application state.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/glossary.html#propschildren"><code>https://reactjs.org/docs/glossary.html#propschildren</code></a></p>
+</div>
+            </div>
 
 <!-- Methods -->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="Pages" href="#Pages">
-            <h3><code>Pages</code></h3></a>
+        <a id="AuthRoute" href="#AuthRoute">
+            <h3><code>AuthRoute</code></h3></a>
 
         <!-- Description, based on type -->
-                                    <!-- Signature -->
+                                    
+<!-- Signature -->
 <p>
     <b>
         <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
+            
+            function AuthRoute
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
 
-            <!-- Variable type or any -->
+                                
+                <!-- parameter name -->
+                { children, redirectPath, ...rest }
+                
+                <!-- type -->
+                :
+                AuthRouteProps
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
             any        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>The router of the application.
-Here are all pages managed.</p>
-<p>Every page defines a <code>routing</code> object
-that is attached to the actual component.</p>
-<p>If you want to write some pages, please take a look at
-<a href="#@wuespace/telestion-client-types#Routing"><code>@wuespace/telestion-client-types#Routing</code></a> for more information.</p>
+    <p>A special route component that renders its <a href="#AuthRouteProps.children"><code>AuthRouteProps.children</code></a>
+if the user is logged in and otherwise redirects the application
+to the specified <a href="#AuthRouteProps.redirectPath"><code>AuthRouteProps.redirectPath</code></a>.</p>
 
     <!-- Tags -->
     <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthRouteProps"><code>AuthRouteProps</code></a></p>
+</div>
                     <!-- Tag name -->
             <div class="col-sm-2">
                 <p>
@@ -335,19 +550,19 @@ that is attached to the actual component.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><pre><code class="language-ts">import { Pages } from '@wuespace/telestion-client-core';
-
-const MyPages = () =&gt; (
-  &lt;Pages&gt;
-    &lt;LoginPage /&gt;
-    &lt;DashboardPage /&gt;
-    &lt;NotFoundPage /&gt;
-  &lt;/Pages&gt;
-);
+            <div class="col-sm-10"><pre><code class="language-ts">function MyPages() {
+	return (
+		&lt;Pages&gt;
+			&lt;AuthRoute path=&quot;/dashboards&quot; redirectPath=&quot;/login&quot;&gt;
+				&lt;Dashboard /&gt;
+			&lt;/AuthRoute&gt;
+		&lt;/Pages&gt;
+	);
+}
 </code></pre>
 </div>
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Pages","declarations":[{"type":"variable","name":"Pages","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nThe router of the application.\nHere are all pages managed.\n\nEvery page defines a `routing` object\nthat is attached to the actual component.\n\nIf you want to write some pages, please take a look at\n{@link @wuespace/telestion-client-types#Routing} for more information.\n","tags":[{"text":"```ts\nimport { Pages } from '@wuespace/telestion-client-core';\n\nconst MyPages = () => (\n  <Pages>\n    <LoginPage />\n    <DashboardPage />\n    <NotFoundPage />\n  </Pages>\n);\n","tagName":"@example"}]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Pages","initializer":"({ children }: PagesProps) => {\n\tconst routes: ReactNode[] = [];\n\tconst lastRoutes: ReactNode[] = [];\n\n\tChildren.forEach(children, (child, index) => {\n\t\tif (isValidChild(child)) {\n\t\t\tconst routing = {\n\t\t\t\t...defaultRouting,\n\t\t\t\t...parseRouting(child.type.name, child.type.routing)\n\t\t\t};\n\t\t\tconst Route = routeComponents[routing.type];\n\t\t\tconst key = `comp:${routing.path}:${routing.redirectPath}`;\n\n\t\t\troutes.push(\n\t\t\t\t<Route\n\t\t\t\t\tkey={key}\n\t\t\t\t\tpath={routing.path}\n\t\t\t\t\tredirectPath={routing.redirectPath}\n\t\t\t\t\texact={routing.exact}\n\t\t\t\t>\n\t\t\t\t\t{child}\n\t\t\t\t</Route>\n\t\t\t);\n\n\t\t\trouting.additionalRedirects.forEach(redirect =>\n\t\t\t\tredirect.last\n\t\t\t\t\t? lastRoutes.push(buildRedirect(redirect))\n\t\t\t\t\t: routes.push(buildRedirect(redirect))\n\t\t\t);\n\t\t} else {\n\t\t\tthrow new TypeError(\n\t\t\t\t`Child No. ${index} is not a valid Page component in Pages renderer.` +\n\t\t\t\t\t'Please define a valid React Component and attach a routing object to the component.'\n\t\t\t);\n\t\t}\n\t});\n\n\treturn (\n\t\t<Router>\n\t\t\t<Switch>\n\t\t\t\t{routes}\n\t\t\t\t{lastRoutes}\n\t\t\t</Switch>\n\t\t</Router>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"AuthRoute","declarations":[{"type":"function","name":"AuthRoute","declarations":[{"name":"AuthRoute","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"auth","initializer":"useAuth(selector)","hasExclamationToken":false,"kind":38}]},"return (\n\t<Route\n\t\t{...rest}\n\t\trender={({ location }) =>\n\t\t\tauth ? (\n\t\t\t\tchildren\n\t\t\t) : (\n\t\t\t\t<Redirect\n\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t/>\n\t\t\t)\n\t\t}\n\t/>\n);"],"parameters":[{"name":"{ children, redirectPath, ...rest }","type":"AuthRouteProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nA special route component that renders its {@link AuthRouteProps.children}\nif the user is logged in and otherwise redirects the application\nto the specified {@link AuthRouteProps.redirectPath}.\n","tags":[{"text":"{@link AuthRouteProps}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyPages() {\n\treturn (\n\t\t<Pages>\n\t\t\t<AuthRoute path=\"/dashboards\" redirectPath=\"/login\">\n\t\t\t\t<Dashboard />\n\t\t\t</AuthRoute>\n\t\t</Pages>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -371,8 +586,34 @@ const MyPages = () =&gt; (
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#AuthRoute"><code>AuthRoute</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthRoute"><code>AuthRoute</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -392,8 +633,12 @@ const MyPages = () =&gt; (
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>The redirect path to application is taking if nobody is logged in.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
     <a id="AuthRouteProps.children" href="#AuthRouteProps.children">
         <h5><code>
                                                                                 children                            </code></h5>
@@ -408,34 +653,109 @@ const MyPages = () =&gt; (
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Children given to the AuthRoute.
+They are rendered if the user is logged in.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/glossary.html#propschildren"><code>https://reactjs.org/docs/glossary.html#propschildren</code></a></p>
+</div>
+            </div>
 
 <!-- Methods -->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="AuthRoute" href="#AuthRoute">
-            <h3><code>AuthRoute</code></h3></a>
+        <a id="UnAuthRoute" href="#UnAuthRoute">
+            <h3><code>UnAuthRoute</code></h3></a>
 
         <!-- Description, based on type -->
-                                    <!-- Signature -->
+                                    
+<!-- Signature -->
 <p>
     <b>
         <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
+            
+            function UnAuthRoute
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
 
-            <!-- Variable type or any -->
+                                
+                <!-- parameter name -->
+                {
+	children,
+	redirectPath,
+	...rest
+}
+                
+                <!-- type -->
+                :
+                UnAuthRouteProps
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
             any        </code>
     </b>
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"AuthRoute","declarations":[{"type":"variable","name":"AuthRoute","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"AuthRoute","initializer":"({\n\tchildren,\n\tredirectPath,\n\t...rest\n}: AuthRouteProps) => {\n\tconst { user } = useAuth();\n\treturn (\n\t\t<Route\n\t\t\t{...rest}\n\t\t\trender={({ location }) =>\n\t\t\t\tuser ? (\n\t\t\t\t\tchildren\n\t\t\t\t) : (\n\t\t\t\t\t<Redirect\n\t\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t\t/>\n\t\t\t\t)\n\t\t\t}\n\t\t/>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+    <!-- Description -->
+    <p>A special route component that renders its <a href="#UnAuthRouteProps.children"><code>UnAuthRouteProps.children</code></a>
+if nobody is logged in and otherwise redirects the application
+to the specified <a href="#AuthRouteProps.redirectPath"><code>AuthRouteProps.redirectPath</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthRouteProps"><code>AuthRouteProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function MyPages() {
+	return (
+		&lt;Pages&gt;
+			&lt;UnAuthRoute path=&quot;/login&quot; redirectPath=&quot;/dashboards&quot;&gt;
+				&lt;Login /&gt;
+			&lt;/UnAuthRoute&gt;
+		&lt;/Pages&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"UnAuthRoute","declarations":[{"type":"function","name":"UnAuthRoute","declarations":[{"name":"UnAuthRoute","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"auth","initializer":"useAuth(selector)","hasExclamationToken":false,"kind":38}]},"return (\n\t<Route\n\t\t{...rest}\n\t\trender={({ location }) =>\n\t\t\tauth ? (\n\t\t\t\t<Redirect\n\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t/>\n\t\t\t) : (\n\t\t\t\tchildren\n\t\t\t)\n\t\t}\n\t/>\n);"],"parameters":[{"name":"{\n\tchildren,\n\tredirectPath,\n\t...rest\n}","type":"UnAuthRouteProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nA special route component that renders its {@link UnAuthRouteProps.children}\nif nobody is logged in and otherwise redirects the application\nto the specified {@link AuthRouteProps.redirectPath}.\n","tags":[{"text":"{@link AuthRouteProps}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyPages() {\n\treturn (\n\t\t<Pages>\n\t\t\t<UnAuthRoute path=\"/login\" redirectPath=\"/dashboards\">\n\t\t\t\t<Login />\n\t\t\t</UnAuthRoute>\n\t\t</Pages>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -459,8 +779,34 @@ const MyPages = () =&gt; (
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#UnAuthRoute"><code>UnAuthRoute</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#UnAuthRoute"><code>UnAuthRoute</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -480,8 +826,12 @@ const MyPages = () =&gt; (
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>The redirect path to application is taking if nobody is logged in.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
     <a id="UnAuthRouteProps.children" href="#UnAuthRouteProps.children">
         <h5><code>
                                                                                 children                            </code></h5>
@@ -496,34 +846,143 @@ const MyPages = () =&gt; (
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Children given to the UnAuthRoute.
+They are rendered if nobody is logged in.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/glossary.html#propschildren"><code>https://reactjs.org/docs/glossary.html#propschildren</code></a></p>
+</div>
+            </div>
 
 <!-- Methods -->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="UnAuthRoute" href="#UnAuthRoute">
-            <h3><code>UnAuthRoute</code></h3></a>
+        <a id="Preferences" href="#Preferences">
+            <h3><code>Preferences</code></h3></a>
 
         <!-- Description, based on type -->
-                                    <!-- Signature -->
+                                    
+<!-- Signature -->
 <p>
     <b>
         <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
+            
+            function Preferences
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
 
-            <!-- Variable type or any -->
+                                
+                <!-- parameter name -->
+                { children }
+                
+                <!-- type -->
+                :
+                PreferencesProps
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
             any        </code>
     </b>
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"UnAuthRoute","declarations":[{"type":"variable","name":"UnAuthRoute","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"UnAuthRoute","initializer":"({\n\tchildren,\n\tredirectPath,\n\t...rest\n}: UnAuthRouteProps) => {\n\tconst { user } = useAuth();\n\treturn (\n\t\t<Route\n\t\t\t{...rest}\n\t\t\trender={({ location }) =>\n\t\t\t\tuser ? (\n\t\t\t\t\t<Redirect\n\t\t\t\t\t\tto={{ pathname: redirectPath, state: { from: location } }}\n\t\t\t\t\t/>\n\t\t\t\t) : (\n\t\t\t\t\tchildren\n\t\t\t\t)\n\t\t\t}\n\t\t/>\n\t);\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
+    <!-- Description -->
+    <p>Wrapper component for <a href="#Group"><code>Group</code></a> and <a href="#Variable"><code>Variable</code></a>
+which defining application preferences and their renderers.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Group"><code>Group</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Variable"><code>Variable</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#usePreferences"><code>usePreferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesProps"><code>PreferencesProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function MyPreferences() {
+	return (
+		&lt;Preferences&gt;
+			&lt;Variable name=&quot;myPref&quot;&gt;
+				{(value, setValue) =&gt; (
+					&lt;input value={value} onChange={event =&gt; setValue(event.target.value)} /&gt;
+				)}
+			&lt;/Variable&gt;
+			&lt;Group name=&quot;SomeGroup&quot;&gt;
+				&lt;Variable name=&quot;groupedPref&quot;&gt;
+					{(value, setValue) =&gt; (
+						&lt;input value={value} onChange={event =&gt; setValue(event.target.value)} /&gt;
+					)}
+				&lt;/Variable&gt;
+			&lt;/Group&gt;
+		&lt;/Preferences&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Preferences","declarations":[{"type":"function","name":"Preferences","declarations":[{"name":"Preferences","statements":["return <>{children}</>;"],"parameters":[{"name":"{ children }","type":"PreferencesProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nWrapper component for {@link Group} and {@link Variable}\nwhich defining application preferences and their renderers.\n","tags":[{"text":"{@link Group}\n","tagName":"@see"},{"text":"{@link Variable}\n","tagName":"@see"},{"text":"{@link usePreferences}\n","tagName":"@see"},{"text":"{@link PreferencesProps}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyPreferences() {\n\treturn (\n\t\t<Preferences>\n\t\t\t<Variable name=\"myPref\">\n\t\t\t\t{(value, setValue) => (\n\t\t\t\t\t<input value={value} onChange={event => setValue(event.target.value)} />\n\t\t\t\t)}\n\t\t\t</Variable>\n\t\t\t<Group name=\"SomeGroup\">\n\t\t\t\t<Variable name=\"groupedPref\">\n\t\t\t\t\t{(value, setValue) => (\n\t\t\t\t\t\t<input value={value} onChange={event => setValue(event.target.value)} />\n\t\t\t\t\t)}\n\t\t\t\t</Variable>\n\t\t\t</Group>\n\t\t</Preferences>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -547,8 +1006,34 @@ const MyPages = () =&gt; (
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#Preferences"><code>Preferences</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Preferences"><code>Preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -563,44 +1048,138 @@ const MyPages = () =&gt; (
     <b>Type:
         <code>
             <!-- Type -->
-            Child | Array&lt;Child&gt;        </code>
+            ReactNode        </code>
     </b>
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Usually components of the type <a href="#Group"><code>Group</code></a> and <a href="#Variable"><code>Variable</code></a>
+to build an application preferences structure.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
 
 <!-- Methods -->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="Preferences" href="#Preferences">
-            <h3><code>Preferences</code></h3></a>
+        <a id="Group" href="#Group">
+            <h3><code>Group</code></h3></a>
 
         <!-- Description, based on type -->
-                                    <!-- Signature -->
+                                    
+<!-- Signature -->
 <p>
     <b>
         <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
+            
+            function Group
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
 
-            <!-- Variable type or any -->
+                                
+                <!-- parameter name -->
+                { name, children }
+                
+                <!-- type -->
+                :
+                GroupProps
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
             any        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Wrapper component for <a href="#Group"><code>Group</code></a> and <a href="#Variable"><code>Variable</code></a>
-which defining renderer for application preferences.</p>
+    <p>Defines a group of variables which are typically <a href="#Variable"><code>Variable</code></a> components.
+It gives <a href="#Variable"><code>Variable</code></a> a group context.</p>
 
     <!-- Tags -->
     <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Preferences","declarations":[{"type":"variable","name":"Preferences","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nWrapper component for {@link Group} and {@link Variable}\nwhich defining renderer for application preferences.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Preferences","initializer":"({ children }: PreferencesProps) => <>{children}</>","hasExclamationToken":false,"kind":38}]}]}]}-->
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Variable"><code>Variable</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Preferences"><code>Preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#usePreferences"><code>usePreferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#GroupProps"><code>GroupProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function MyPreferences() {
+	return (
+		&lt;Preferences&gt;
+			&lt;Variable name=&quot;myPref&quot;&gt;
+				{(value, setValue) =&gt; (
+					&lt;input value={value} onChange={event =&gt; setValue(event.target.value)} /&gt;
+				)}
+			&lt;/Variable&gt;
+			&lt;Group name=&quot;SomeGroup&quot;&gt;
+				&lt;Variable name=&quot;groupedPref&quot;&gt;
+					{(value, setValue) =&gt; (
+						&lt;input value={value} onChange={event =&gt; setValue(event.target.value)} /&gt;
+					)}
+				&lt;/Variable&gt;
+			&lt;/Group&gt;
+		&lt;/Preferences&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Group","declarations":[{"type":"function","name":"Group","declarations":[{"name":"Group","statements":["return <GroupContext name={name}>{children}</GroupContext>;"],"parameters":[{"name":"{ name, children }","type":"GroupProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nDefines a group of variables which are typically {@link Variable} components.\nIt gives {@link Variable} a group context.\n","tags":[{"text":"{@link Variable}\n","tagName":"@see"},{"text":"{@link Preferences}\n","tagName":"@see"},{"text":"{@link usePreferences}\n","tagName":"@see"},{"text":"{@link GroupProps}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyPreferences() {\n\treturn (\n\t\t<Preferences>\n\t\t\t<Variable name=\"myPref\">\n\t\t\t\t{(value, setValue) => (\n\t\t\t\t\t<input value={value} onChange={event => setValue(event.target.value)} />\n\t\t\t\t)}\n\t\t\t</Variable>\n\t\t\t<Group name=\"SomeGroup\">\n\t\t\t\t<Variable name=\"groupedPref\">\n\t\t\t\t\t{(value, setValue) => (\n\t\t\t\t\t\t<input value={value} onChange={event => setValue(event.target.value)} />\n\t\t\t\t\t)}\n\t\t\t\t</Variable>\n\t\t\t</Group>\n\t\t</Preferences>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -624,8 +1203,34 @@ which defining renderer for application preferences.</p>
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#Group"><code>Group</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Group"><code>Group</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -646,7 +1251,7 @@ which defining renderer for application preferences.</p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>the name of the group of variables</p>
+    <p>The name of the group of variables.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -660,13 +1265,14 @@ which defining renderer for application preferences.</p>
     <b>Type:
         <code>
             <!-- Type -->
-            Child | Array&lt;Child&gt;        </code>
+            ReactNode        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>A list of <a href="#Variable"><code>Variable</code></a> components</p>
+    <p>Usually components of the type <a href="#Variable"><code>Variable</code></a>
+to build an application preferences structure.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -676,31 +1282,125 @@ which defining renderer for application preferences.</p>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="Group" href="#Group">
-            <h3><code>Group</code></h3></a>
+        <a id="Variable" href="#Variable">
+            <h3><code>Variable</code></h3></a>
 
         <!-- Description, based on type -->
-                                    <!-- Signature -->
+                                    
+<!-- Signature -->
 <p>
     <b>
         <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
+            
+            function Variable
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
 
-            <!-- Variable type or any -->
+                                
+                <!-- parameter name -->
+                { name, initialValue, children }
+                
+                <!-- type -->
+                :
+                VariableProps
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
             any        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Defines a group of variables which are typically <a href="#Variable"><code>Variable</code></a> components.</p>
+    <p>Component to define a preference for the application
+and a renderer for this preference.</p>
+<p>If it is wrapped in the <a href="#Group"><code>Group</code></a> component,
+the renderer will be registered for
+the preference in that group
+otherwise for the preference in the global scope.</p>
 
     <!-- Tags -->
     <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Group","declarations":[{"type":"variable","name":"Group","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nDefines a group of variables which are typically {@link Variable} components.","tags":[]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Group","initializer":"({ name, children }: GroupProps) => (\n\t<GroupContext name={name}>{children}</GroupContext>\n)","hasExclamationToken":false,"kind":38}]}]}]}-->
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Group"><code>Group</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Preferences"><code>Preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#usePreferences"><code>usePreferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#VariableProps"><code>VariableProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function MyPreferences() {
+	return (
+		&lt;Preferences&gt;
+			&lt;Variable name=&quot;myPref&quot;&gt;
+				{(value, setValue) =&gt; (
+					&lt;input value={value} onChange={event =&gt; setValue(event.target.value)} /&gt;
+				)}
+			&lt;/Variable&gt;
+			&lt;Group name=&quot;SomeGroup&quot;&gt;
+				&lt;Variable name=&quot;groupedPref&quot;&gt;
+					{(value, setValue) =&gt; (
+						&lt;input value={value} onChange={event =&gt; setValue(event.target.value)} /&gt;
+					)}
+				&lt;/Variable&gt;
+			&lt;/Group&gt;
+		&lt;/Preferences&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Variable","declarations":[{"type":"function","name":"Variable","declarations":[{"name":"Variable","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"{ setRenderer, setValue }","initializer":"usePreferences(selector, shallow)","hasExclamationToken":false,"kind":38}]},{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"group","initializer":"useGroup()","hasExclamationToken":false,"kind":38}]},"useEffect(() => {\n\tif (initialValue) {\n\t\t// if not in group context, use global scope\n\t\tsetValue(group, name, initialValue);\n\t}\n}, [group, name, initialValue, setValue]);","useEffect(() => {\n\t// if not in group context, use global scope\n\tsetRenderer(group, name, children);\n}, [group, name, children, setRenderer]);","return null;"],"parameters":[{"name":"{ name, initialValue, children }","type":"VariableProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nComponent to define a preference for the application\nand a renderer for this preference.\n\nIf it is wrapped in the {@link Group} component,\nthe renderer will be registered for\nthe preference in that group\notherwise for the preference in the global scope.\n","tags":[{"text":"{@link Group}\n","tagName":"@see"},{"text":"{@link Preferences}\n","tagName":"@see"},{"text":"{@link usePreferences}\n","tagName":"@see"},{"text":"{@link VariableProps}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyPreferences() {\n\treturn (\n\t\t<Preferences>\n\t\t\t<Variable name=\"myPref\">\n\t\t\t\t{(value, setValue) => (\n\t\t\t\t\t<input value={value} onChange={event => setValue(event.target.value)} />\n\t\t\t\t)}\n\t\t\t</Variable>\n\t\t\t<Group name=\"SomeGroup\">\n\t\t\t\t<Variable name=\"groupedPref\">\n\t\t\t\t\t{(value, setValue) => (\n\t\t\t\t\t\t<input value={value} onChange={event => setValue(event.target.value)} />\n\t\t\t\t\t)}\n\t\t\t\t</Variable>\n\t\t\t</Group>\n\t\t</Preferences>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -724,8 +1424,34 @@ which defining renderer for application preferences.</p>
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#Variable"><code>Variable</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Variable"><code>Variable</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -746,7 +1472,7 @@ which defining renderer for application preferences.</p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>the name of the preference</p>
+    <p>The name of the preference.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -766,7 +1492,7 @@ which defining renderer for application preferences.</p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>the initial value of the preference</p>
+    <p>The initial value of the preference.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -786,54 +1512,13 @@ which defining renderer for application preferences.</p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>the renderer function for preference</p>
+    <p>The renderer function for the preference.</p>
 
     <!-- Tags -->
     <div class="row">
             </div>
 
 <!-- Methods -->
-                        </div>
-    <div class="card fluid">
-        <!-- Name with anchor link -->
-        <a id="Variable" href="#Variable">
-            <h3><code>Variable</code></h3></a>
-
-        <!-- Description, based on type -->
-                                    <!-- Signature -->
-<p>
-    <b>
-        <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
-
-            <!-- Variable type or any -->
-            any        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Defines a renderer for a preference.</p>
-<p>If it is wrapped in the <a href="#Group"><code>Group</code></a> component,
-the renderer will be registered for
-the preference in that group otherwise for the preference in the global scope.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesStore"><code>PreferencesStore</code></a></p>
-</div>
-            </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Variable","declarations":[{"type":"variable","name":"Variable","declarations":[{"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[{"description":"\nDefines a renderer for a preference.\n\nIf it is wrapped in the {@link Group} component,\nthe renderer will be registered for\nthe preference in that group otherwise for the preference in the global scope.\n","tags":[{"text":"{@link PreferencesStore}\n","tagName":"@see"}]}],"kind":39,"declarationKind":"const","declarations":[{"name":"Variable","initializer":"({ name, initialValue, children }: VariableProps) => {\n\tconst { setRenderer, setValue } = usePreferences(prefSelector, shallow);\n\tconst group = useGroup();\n\n\tuseEffect(() => {\n\t\tif (initialValue) {\n\t\t\t// if not in group context, use global scope\n\t\t\tsetValue(group, name, initialValue);\n\t\t}\n\t}, [group, name, initialValue, setValue]);\n\n\tuseEffect(() => {\n\t\t// if not in group context, use global scope\n\t\tsetRenderer(group, name, children);\n\t}, [group, name, children, setRenderer]);\n\n\treturn null;\n}","hasExclamationToken":false,"kind":38}]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -858,7 +1543,8 @@ the preference in that group otherwise for the preference in the global scope.</
 
 <!-- Docs -->
     <!-- Description -->
-    
+    <p>Current authentication data stored here.</p>
+
     <!-- Tags -->
     <div class="row">
             </div>
