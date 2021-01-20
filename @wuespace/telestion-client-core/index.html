@@ -2321,12 +2321,12 @@ return &lt;p&gt;Application title: {title}&lt;/p&gt;;
                                 
                 <!-- parameter name -->
                 options
-                ?
+                
                 <!-- type -->
                 :
-                Options
+                EventBusManagerOptions
                 <!-- Default value -->
-                
+                                = {}                
                 <!-- Comma if not last -->
                                                         <br>
                         )
@@ -2356,8 +2356,7 @@ the event bus will be closed.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>options - options passed to the event bus instance to control it
-and set it up</p>
+            <div class="col-sm-10"><p>options - optional parameters to configure the event bus manager</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -2371,7 +2370,11 @@ and set it up</p>
 <pre><code class="language-ts">import { TelestionClient, useEventBusManager } from '@wuespace/telestion-client-core';
 
 export function App() {
-	useEventBusManager({ pingInterval: 2000 });
+	useEventBusManager({
+		options: { pingInterval: 2000 },
+		onOpen: () =&gt; console.log('Open...'),
+		onClose: () =&gt; console.log('Close...')
+	});
 
 	return (
 		&lt;TelestionClient title=&quot;My Application&quot;&gt;
@@ -2382,6 +2385,114 @@ export function App() {
 </code></pre>
 </div>
             </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="EventBusManagerOptions" href="#EventBusManagerOptions">
+            <h3><code>EventBusManagerOptions</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            EventBusManagerOptions
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Optional parameters to configure the event bus manager.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="EventBusManagerOptions.options" href="#EventBusManagerOptions.options">
+        <h5><code>
+                                                                                options                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Options        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Optional parameters for the event bus instance.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#@wuespace/vertx-event-bus#Options"><code>@wuespace/vertx-event-bus#Options</code></a></p>
+</div>
+            </div>
+    <a id="EventBusManagerOptions.onOpen" href="#EventBusManagerOptions.onOpen">
+        <h5><code>
+                                                                                onOpen                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            () =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Gets called, when the event bus manager detects a valid authentication
+and opens an event bus connection.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="EventBusManagerOptions.onClose" href="#EventBusManagerOptions.onClose">
+        <h5><code>
+                                                                                onClose                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            () =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Gets called, when the event bus manager detects a change in authentication
+and closes the event bus connection.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->

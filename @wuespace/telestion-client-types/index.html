@@ -2162,8 +2162,52 @@ for more information.</p>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="UserConfig" href="#UserConfig">
-            <h3><code>UserConfig</code></h3></a>
+        <a id="Username" href="#Username">
+            <h3><code>Username</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type Username
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A type definition for a username in a user configuration.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#UserConfig"><code>UserConfig</code></a></p>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="UserInformation" href="#UserInformation">
+            <h3><code>UserInformation</code></h3></a>
 
         <!-- Description, based on type -->
                                     <!-- Signature -->
@@ -2173,7 +2217,7 @@ for more information.</p>
             <!-- Type -->
             interface
             <!-- Name -->
-            UserConfig
+            UserInformation
             <!-- Type Parameters -->
             
             <!-- Extends -->
@@ -2183,8 +2227,100 @@ for more information.</p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Describes some dashboard definitions associated to a user.
-When the user is logged in, the dashboard page will render
+    <p>User information mapped to a username and stored in a user configuration.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#UserConfig"><code>UserConfig</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Username"><code>Username</code></a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="UserInformation.dashboards" href="#UserInformation.dashboards">
+        <h5><code>
+                                                                                dashboards                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Array&lt;Dashboard&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The dashboards associated to the user.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Dashboard"><code>Dashboard</code></a></p>
+</div>
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="UserConfig" href="#UserConfig">
+            <h3><code>UserConfig</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type UserConfig
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            Record&lt;Username, UserInformation&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Describes an entire user configuration.
+It is a map between the username and its stored information.
+When the user is logged in, typically the dashboard page will render
 these definitions for the logged in username.</p>
 
     <!-- Tags -->
@@ -2209,86 +2345,30 @@ these definitions for the logged in username.</p>
             <!-- Tag content -->
             <div class="col-sm-10"><p>A very simple user dashboard association</p>
 <pre><code class="language-ts">const userConfig: UserConfig = {
-	username: 'Alice',
-	dashboards: [
-		{
-			title: 'My awesome dashboard',
-			columns: 4,
-			rows: 4,
-			widgets: [
-				{
-					width: 2,
-					height: 2,
-					widgetName: 'myWidget',
-					title: 'My awesome widget',
-					initialProps: {
-						value: 'TheBox'
+	'Alice': {
+		dashboards: [
+			{
+				title: 'My awesome dashboard',
+				columns: 4,
+				rows: 4,
+				widgets: [
+					{
+						width: 2,
+						height: 2,
+						widgetName: 'myWidget',
+						title: 'My awesome widget',
+						initialProps: {
+							value: 'TheBox'
+						}
 					}
-				}
-			]
-		}
-	]
+				]
+			}
+		]
+	}
 }
 </code></pre>
 </div>
             </div>
-
-<!-- Constructors -->
-
-<!-- Properties -->
-<h4>Properties</h4>
-    <a id="UserConfig.username" href="#UserConfig.username">
-        <h5><code>
-                                                                                username                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            string        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the name of the user which has some dashboard definitions</p>
-
-    <!-- Tags -->
-    <div class="row">
-            </div>
-    <a id="UserConfig.dashboards" href="#UserConfig.dashboards">
-        <h5><code>
-                                                                                dashboards                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            Array&lt;Dashboard&gt;        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the dashboards associated to the user</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#Dashboard"><code>Dashboard</code></a></p>
-</div>
-            </div>
-
-<!-- Methods -->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
