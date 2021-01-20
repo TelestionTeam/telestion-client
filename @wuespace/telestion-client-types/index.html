@@ -3600,6 +3600,162 @@ which do not have a group they belong to.</p>
 </div>
             </div>
                         </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="NotificationType" href="#NotificationType">
+            <h3><code>NotificationType</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type NotificationType
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            &#39;INFO&#39; | &#39;SUCCESS&#39; | &#39;WARNING&#39; | &#39;ERROR&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The type of a notification.
+A notification of this type will show in the app in a specific way.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Notification" href="#Notification">
+            <h3><code>Notification</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            Notification
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>A generic notification that can be showed and stored.
+It has a [<code>NotificationType | notification type</code>](#NotificationType | notification type)
+and a dismissed flag to show the dismiss state.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="Notification.type" href="#Notification.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            NotificationType        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The type of the notification.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Notification.message" href="#Notification.message">
+        <h5><code>
+                                                                                message                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The message of the notification.
+Usually it is a short abstract of the description
+and should not be multi-line.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Notification.description" href="#Notification.description">
+        <h5><code>
+                                                                                description                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The description of the notification.
+Usually contains more detailed information and can be multi-line.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Notification.isDismissed" href="#Notification.isDismissed">
+        <h5><code>
+                                                                                isDismissed                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            boolean        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Is <code>true</code> if the notification is dismissed.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
 </div>
 </div>
 </div>
