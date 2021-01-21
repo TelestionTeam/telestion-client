@@ -3151,413 +3151,6 @@ export function MyComponent(): ReactNode {
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="ConnectionState" href="#ConnectionState">
-            <h3><code>ConnectionState</code></h3></a>
-
-        <!-- Description, based on type -->
-                                    <!-- Signature -->
-<p>
-    <b>
-        <code>
-            <!-- Name -->
-            type ConnectionState
-            <!-- Type Parameters -->
-                    </code>
-    </b>
-</p>
-
-<!-- Definition -->
-<p>
-    <b>
-        Alias for:
-        <code>
-            | &#39;connected&#39;
-	| &#39;disconnected&#39;
-	| &#39;error&#39;
-	| &#39;noEventBus&#39;        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>The connection state type of an event bus.</p>
-<ul>
-<li>Possible states:</li>
-</ul>
-<ul>
-<li><code>'connected'</code> if the eventbus is currently connected
-to the backend server</li>
-<li><code>'disconnected'</code> if the eventbus is currently disconnected
-from the backend server</li>
-<li><code>'error'</code> if the eventbus is currently open
-and an error message was received</li>
-<li><code>'noEventBus'</code> - if currently no event bus exists</li>
-</ul>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#EventBusState.connectionState"><code>EventBusState.connectionState</code></a></p>
-</div>
-            </div>
-                        </div>
-    <div class="card fluid">
-        <!-- Name with anchor link -->
-        <a id="EventBusState" href="#EventBusState">
-            <h3><code>EventBusState</code></h3></a>
-
-        <!-- Description, based on type -->
-                                    <!-- Signature -->
-<p>
-    <b>
-        <code>
-            <!-- Type -->
-            interface
-            <!-- Name -->
-            EventBusState
-            <!-- Type Parameters -->
-            
-            <!-- Extends -->
-                            extends State                    </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>The event bus state and actions of the Telestion Client Core.</p>
-<p>Defines the event bus store and function to open and close an event bus.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#EventBusState.eventBus"><code>EventBusState.eventBus</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#EventBusState.openEventBus"><code>EventBusState.openEventBus</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#EventBusState.closeEventBus"><code>EventBusState.closeEventBus</code></a></p>
-</div>
-            </div>
-
-<!-- Constructors -->
-
-<!-- Properties -->
-<h4>Properties</h4>
-    <a id="EventBusState.eventBus" href="#EventBusState.eventBus">
-        <h5><code>
-                                                                                eventBus                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            EventBus | null        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the current eventbus instance if an event bus was opened
-otherwise it is <code>null</code></p>
-<p><strong>Notice</strong>:</p>
-<p>Please use the instance object for special purposes only!
-It can lead to weird bugs tricky to resolve
-because the object does not change its identity once it is created.
-React instead is based on detecting changes and only re-renders
-if a value identity has changed causing differences in ui and app states.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#@wuespace/vertx-event-bus#EventBus"><code>@wuespace/vertx-event-bus#EventBus</code></a></p>
-</div>
-            </div>
-    <a id="EventBusState.connectionState" href="#EventBusState.connectionState">
-        <h5><code>
-                                                                                connectionState                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            ConnectionState        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the current connection state of the event bus</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#ConnectionState"><code>ConnectionState</code></a></p>
-</div>
-            </div>
-    <a id="EventBusState.error" href="#EventBusState.error">
-        <h5><code>
-                                                                                error                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            string | null        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>optional error message
-if something gone wrong on connection setup or teardown</p>
-
-    <!-- Tags -->
-    <div class="row">
-            </div>
-    <a id="EventBusState.lastErrorMessage" href="#EventBusState.lastErrorMessage">
-        <h5><code>
-                                                                                lastErrorMessage                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            ErrorMessage | null        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the last received error message through the event bus connection</p>
-
-    <!-- Tags -->
-    <div class="row">
-            </div>
-    <a id="EventBusState.openEventBus" href="#EventBusState.openEventBus">
-        <h5><code>
-                                                                                openEventBus                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            (serverUrl: string, options?: Options) =&gt; void        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Creates a new event bus which will automatically connect to the server URL
-and opens a connection.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>serverUrl - the URL of the backend part to connect to</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>options - options to configure the connection of the event bus</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@throws:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>if <a href="#openEventBus"><code>openEventBus</code></a> was called earlier
-and an eventbus instance already opened</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#closeEventBus"><code>closeEventBus</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#eventBus"><code>eventBus</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#connectionState"><code>connectionState</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>Open an event bus</p>
-<pre><code class="language-ts">const open = useEventBus(state =&gt; state.openEventBus);
-return (
-	&lt;button onClick={() =&gt; open('http://localhost:9870/bridge/')}&gt;
-		Open event bus
-	&lt;/button&gt;
-);
-</code></pre>
-</div>
-            </div>
-    <a id="EventBusState.closeEventBus" href="#EventBusState.closeEventBus">
-        <h5><code>
-                                                                                closeEventBus                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            () =&gt; void        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Closes the current event bus and deletes it.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@throws:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>if <a href="#closeEventBus"><code>closeEventBus</code></a> was called earlier
-and an eventbus instance already closed</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#openEventBus"><code>openEventBus</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#eventBus"><code>eventBus</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#connectionState"><code>connectionState</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>Close an event bus</p>
-<pre><code class="language-ts">const close = useEventBus(state =&gt; state.closeEventBus);
-return &lt;button onClick={() =&lt; close()}&gt;Close event bus&lt;/button&gt;;
-</code></pre>
-</div>
-            </div>
-
-<!-- Methods -->
-                        </div>
-    <div class="card fluid">
-        <!-- Name with anchor link -->
         <a id="useEventBus" href="#useEventBus">
             <h3><code>useEventBus</code></h3></a>
 
@@ -3717,6 +3310,830 @@ export function MyComponent(): ReactNode {
 </code></pre>
 </div>
             </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useNotifications" href="#useNotifications">
+            <h3><code>useNotifications</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            UseStore&lt;NotificationState&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the notification state and actions to interact with.
+A selector can be defined to pick out parts of the store.
+If correctly set up, the function only triggers a rerender
+if the selected values have changed.</p>
+<p>For more information about state management in Zustand,
+take a look at their [<code>https://github.com/pmndrs/zustand | GitHub page</code>](#<a href="https://github.com/pmndrs/zustand">https://github.com/pmndrs/zustand</a> | GitHub page).</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>selector - optional selector function
+which picks the specified elements out of the store</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>equalityFn - optional equality function
+to check for state updates on the picked elements</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the picked elements in the selector function</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#NotificationState"><code>NotificationState</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://github.com/pmndrs/zustand"><code>https://github.com/pmndrs/zustand</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#UseStore"><code>UseStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#zustand#shallow"><code>zustand#shallow</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Fetch stored notifications from the store:</p>
+<pre><code class="language-ts">function Notifications() {
+	const notifications = useNotifications(state =&gt; state.notifications);
+
+	return (
+		&lt;ul&gt;
+			{notifications.map(notification =&gt; (
+				&lt;li&gt;{`${notification.message}: ${notification.description}`}&lt;/li&gt;
+			)}
+		&lt;/ul&gt;
+	);
+}
+</code></pre>
+<p>Performance optimized and type-safe fetching from the store:</p>
+<pre><code class="language-ts">import { useCallback, ReactNode } from 'react';
+import { StateSelector } from 'zustand';
+import shallow from 'zustand/shallow';
+import {
+	useNotifications,
+	NotificationState
+} from '@wuespace/telestion-client-core';
+
+// selector does not depend on scope, so it's better to define it outside
+// to not re-declare it on every render
+const selector: StateSelector&lt;
+	NotificationState,
+	{
+		showAll: NotificationState['showAll'],
+		mute: NotificationState['mute'],
+		unmute: NotificationState['unmute']
+	}
+&gt; = state =&gt; ({
+	showAll: state.showAll,
+	mute: state.mute,
+	unmute: state.unmute
+});
+
+function MyComponent() {
+	const { showAll, mute, unmute } = useAuth(selector, shallow);
+
+	return (
+		&lt;div&gt;
+			&lt;button onClick={showAll}&gt;Show all notifications&lt;/button&gt;
+			&lt;button onClick={mute}&gt;Mute all new notifications&lt;/button&gt;
+			&lt;button onClick={unmute}&gt;Unmute all new notifications&lt;/button&gt;
+		&lt;/div&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="usePreferences" href="#usePreferences">
+            <h3><code>usePreferences</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            UseStore&lt;PreferencesState&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Returns the preferences application state and actions to interact with.
+A selector can be defined to pick out parts of the store.
+If correctly set up, the function only triggers a rerender
+if the selected values have changed.</p>
+<p>For more information about state management in Zustand,
+take a look at their [<code>https://github.com/pmndrs/zustand | GitHub page</code>](#<a href="https://github.com/pmndrs/zustand">https://github.com/pmndrs/zustand</a> | GitHub page).</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>selector - optional selector function
+which picks the specified elements out of the store</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>equalityFn - optional equality function
+to check for state updates on the picked elements</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the picked elements in the selector function</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState"><code>PreferencesState</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://github.com/pmndrs/zustand"><code>https://github.com/pmndrs/zustand</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#UseStore"><code>UseStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#zustand#shallow"><code>zustand#shallow</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Fetch current preference from the store:</p>
+<pre><code class="language-ts">// React component or hook context
+const myGroupSelector = 'my-group';
+const myVarSelector = 'my-var';
+const myPreference = usePreferences(
+	state =&gt; state.preferences[myGroupSelector][myVarSelector]
+);
+</code></pre>
+<p>Performance optimized and type-safe fetching from the store:</p>
+<pre><code class="language-ts">import { useCallback, ReactNode } from 'react';
+import { StateSelector } from 'zustand';
+import shallow from 'zustand/shallow';
+import {
+	usePreferences,
+	PreferencesState
+} from '@wuespace/telestion-client-core';
+import { someRenderer } from './some-renderer';
+
+// selector does not depend on scope, so it's better to define it outside
+// to not re-declare it on every render
+const selector: StateSelector&lt;
+	PreferencesState,
+	{
+		setValue: PreferencesState['setValue'],
+		setRenderer: PreferencesState['setRenderer']
+	}
+&gt; = state =&gt; ({
+	setValue: state.setValue,
+	setRenderer: state.setRenderer
+});
+
+export function MyComponent(): ReactNode {
+	const { setValue, setRenderer } = usePreferences(selector, shallow);
+
+	const updateValue = useCallback(
+		() =&gt; setValue('null', 'title', 'New Application Title!'),
+		[]
+	);
+
+	const updateRenderer = useCallback(
+		() =&gt; setRenderer('null', 'title', someRenderer),
+		[]
+	);
+
+	return (
+		&lt;div&gt;
+			&lt;button onClick={updateValue}&gt;Update Value&lt;/button&gt;
+			&lt;button onClick={updateRenderer}&gt;Update Renderer&lt;/button&gt;
+		&lt;/div&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PreferencesState" href="#PreferencesState">
+            <h3><code>PreferencesState</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PreferencesState
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends State                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The preference state and actions of the Telestion Client Core.</p>
+<p>Defines the preferences store and functions to change the store.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PreferencesState.preferences" href="#PreferencesState.preferences">
+        <h5><code>
+                                                                                preferences                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            PreferencesStore        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Stores the registered preferences as groups of selector-value pair.</p>
+<p>To add, update and remove the preference value use <a href="#setValue"><code>setValue</code></a>.</p>
+<p>To add, update and remove the preference renderer
+use <a href="#setRenderer"><code>setRenderer</code></a> instead.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setRenderer"><code>PreferencesState.setRenderer</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const preference = usePreferences(
+   state =&gt; state.preferences['group']['preference'].value
+);
+
+return &lt;div&gt;{preferences}&lt;/div&gt;;
+</code></pre>
+</div>
+            </div>
+    <a id="PreferencesState.setValue" href="#PreferencesState.setValue">
+        <h5><code>
+                                                                                setValue                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (
+	group: GroupSelector,
+	preference: PrefSelector,
+	newValue: PrefValue
+) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Adds, updates or removes a preference value from the preference store.</p>
+<p>To access the preference a group and a preference selector is needed.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the group of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>preference - the preference name</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>newValue - the new value of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefValue"><code>PrefValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setRenderer"><code>PreferencesState.setRenderer</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.removePreference"><code>PreferencesState.removePreference</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const update = usePreferences(state =&gt; state.updateValue);
+const handleClick = () =&gt; update('group', 'preference', 'My new value!');
+
+return &lt;button onClick={handleClick}&gt;Set Preference&lt;/button&gt;;
+</code></pre>
+</div>
+            </div>
+    <a id="PreferencesState.setRenderer" href="#PreferencesState.setRenderer">
+        <h5><code>
+                                                                                setRenderer                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (
+	group: GroupSelector,
+	preference: PrefSelector,
+	newRenderer: PrefRenderer
+) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Adds, updates or removes a preference renderer from the preference store.</p>
+<p>To access the preference a group and a preference selector is needed.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the group of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>preference - the preference name</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>newRenderer - the new renderer for the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PrefRenderer"><code>PrefRenderer</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const update = usePreferences(state =&gt; state.updateValue);
+const renderer = (value, setValue) =&gt; (
+   &lt;TextInput initialValue={value} onSubmit={setValue} /&gt;
+);
+
+const handleClick = () =&gt; update('group', 'preference', renderer);
+
+return &lt;button onClick={handleClick}&gt;Set Renderer&lt;/button&gt;;
+</code></pre>
+</div>
+            </div>
+    <a id="PreferencesState.removePreference" href="#PreferencesState.removePreference">
+        <h5><code>
+                                                                                removePreference                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (group: GroupSelector, preference: PrefSelector) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Removes a preference from the store.</p>
+<p>To access the preference a group and a preference selector is needed.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the group of the preference</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>preference - the name of the preference that will be removed</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.removeGroup"><code>PreferencesState.removeGroup</code></a></p>
+</div>
+            </div>
+    <a id="PreferencesState.removeGroup" href="#PreferencesState.removeGroup">
+        <h5><code>
+                                                                                removeGroup                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (group: GroupSelector) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Removes an entire group of preferences from the store.</p>
+<p>To access the group and a selector is needed.</p>
+<p>If the group selector is <code>null</code>
+the preference in the global scope will be used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>group - the name of the group that will be removed</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.removePreference"><code>PreferencesState.removePreference</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+</div>
+            </div>
+    <a id="PreferencesState.setStore" href="#PreferencesState.setStore">
+        <h5><code>
+                                                                                setStore                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (newStore: PreferencesStore) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Overwrites the current preferences store with the specified store.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>newStore - the new preferences store to use</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesStore"><code>PreferencesStore</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+</div>
+            </div>
+
+<!-- Methods -->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -4301,170 +4718,67 @@ to handle them as &quot;new&quot; notifications.</p>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="useNotifications" href="#useNotifications">
-            <h3><code>useNotifications</code></h3></a>
+        <a id="ConnectionState" href="#ConnectionState">
+            <h3><code>ConnectionState</code></h3></a>
 
         <!-- Description, based on type -->
                                     <!-- Signature -->
 <p>
     <b>
         <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
+            <!-- Name -->
+            type ConnectionState
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
 
-            <!-- Variable type or any -->
-            UseStore&lt;NotificationState&gt;        </code>
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            | &#39;connected&#39;
+	| &#39;disconnected&#39;
+	| &#39;error&#39;
+	| &#39;noEventBus&#39;        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Returns the notification state and actions to interact with.
-A selector can be defined to pick out parts of the store.
-If correctly set up, the function only triggers a rerender
-if the selected values have changed.</p>
-<p>For more information about state management in Zustand,
-take a look at their [<code>https://github.com/pmndrs/zustand | GitHub page</code>](#<a href="https://github.com/pmndrs/zustand">https://github.com/pmndrs/zustand</a> | GitHub page).</p>
+    <p>The connection state type of an event bus.</p>
+<ul>
+<li>Possible states:</li>
+</ul>
+<ul>
+<li><code>'connected'</code> if the eventbus is currently connected
+to the backend server</li>
+<li><code>'disconnected'</code> if the eventbus is currently disconnected
+from the backend server</li>
+<li><code>'error'</code> if the eventbus is currently open
+and an error message was received</li>
+<li><code>'noEventBus'</code> - if currently no event bus exists</li>
+</ul>
 
     <!-- Tags -->
     <div class="row">
                     <!-- Tag name -->
             <div class="col-sm-2">
                 <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>selector - optional selector function
-which picks the specified elements out of the store</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>equalityFn - optional equality function
-to check for state updates on the picked elements</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@returns:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>the picked elements in the selector function</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
                     <mark class="tag">@see:</mark>
                 </p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#NotificationState"><code>NotificationState</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#https://github.com/pmndrs/zustand"><code>https://github.com/pmndrs/zustand</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#UseStore"><code>UseStore</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#zustand#shallow"><code>zustand#shallow</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>Fetch stored notifications from the store:</p>
-<pre><code class="language-ts">function Notifications() {
-	const notifications = useNotifications(state =&gt; state.notifications);
-
-	return (
-		&lt;ul&gt;
-			{notifications.map(notification =&gt; (
-				&lt;li&gt;{`${notification.message}: ${notification.description}`}&lt;/li&gt;
-			)}
-		&lt;/ul&gt;
-	);
-}
-</code></pre>
-<p>Performance optimized and type-safe fetching from the store:</p>
-<pre><code class="language-ts">import { useCallback, ReactNode } from 'react';
-import { StateSelector } from 'zustand';
-import shallow from 'zustand/shallow';
-import {
-	useNotifications,
-	NotificationState
-} from '@wuespace/telestion-client-core';
-
-// selector does not depend on scope, so it's better to define it outside
-// to not re-declare it on every render
-const selector: StateSelector&lt;
-	NotificationState,
-	{
-		showAll: NotificationState['showAll'],
-		mute: NotificationState['mute'],
-		unmute: NotificationState['unmute']
-	}
-&gt; = state =&gt; ({
-	showAll: state.showAll,
-	mute: state.mute,
-	unmute: state.unmute
-});
-
-function MyComponent() {
-	const { showAll, mute, unmute } = useAuth(selector, shallow);
-
-	return (
-		&lt;div&gt;
-			&lt;button onClick={showAll}&gt;Show all notifications&lt;/button&gt;
-			&lt;button onClick={mute}&gt;Mute all new notifications&lt;/button&gt;
-			&lt;button onClick={unmute}&gt;Unmute all new notifications&lt;/button&gt;
-		&lt;/div&gt;
-	);
-}
-</code></pre>
+            <div class="col-sm-10"><p><a href="#EventBusState.connectionState"><code>EventBusState.connectionState</code></a></p>
 </div>
             </div>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="PreferencesState" href="#PreferencesState">
-            <h3><code>PreferencesState</code></h3></a>
+        <a id="EventBusState" href="#EventBusState">
+            <h3><code>EventBusState</code></h3></a>
 
         <!-- Description, based on type -->
                                     <!-- Signature -->
@@ -4474,7 +4788,7 @@ function MyComponent() {
             <!-- Type -->
             interface
             <!-- Name -->
-            PreferencesState
+            EventBusState
             <!-- Type Parameters -->
             
             <!-- Extends -->
@@ -4484,8 +4798,8 @@ function MyComponent() {
 
 <!-- Docs -->
     <!-- Description -->
-    <p>The preference state and actions of the Telestion Client Core.</p>
-<p>Defines the preferences store and functions to change the store.</p>
+    <p>The event bus state and actions of the Telestion Client Core.</p>
+<p>Defines the event bus store and function to open and close an event bus.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -4497,7 +4811,7 @@ function MyComponent() {
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+            <div class="col-sm-10"><p><a href="#EventBusState.eventBus"><code>EventBusState.eventBus</code></a></p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -4507,7 +4821,17 @@ function MyComponent() {
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+            <div class="col-sm-10"><p><a href="#EventBusState.openEventBus"><code>EventBusState.openEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBusState.closeEventBus"><code>EventBusState.closeEventBus</code></a></p>
 </div>
             </div>
 
@@ -4515,25 +4839,29 @@ function MyComponent() {
 
 <!-- Properties -->
 <h4>Properties</h4>
-    <a id="PreferencesState.preferences" href="#PreferencesState.preferences">
+    <a id="EventBusState.eventBus" href="#EventBusState.eventBus">
         <h5><code>
-                                                                                preferences                            </code></h5>
+                                                                                eventBus                            </code></h5>
     </a>
     <!-- Signature -->
 <p>
     <b>Type:
         <code>
             <!-- Type -->
-            PreferencesStore        </code>
+            EventBus | null        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Stores the registered preferences as groups of selector-value pair.</p>
-<p>To add, update and remove the preference value use <a href="#setValue"><code>setValue</code></a>.</p>
-<p>To add, update and remove the preference renderer
-use <a href="#setRenderer"><code>setRenderer</code></a> instead.</p>
+    <p>the current eventbus instance if an event bus was opened
+otherwise it is <code>null</code></p>
+<p><strong>Notice</strong>:</p>
+<p>Please use the instance object for special purposes only!
+It can lead to weird bugs tricky to resolve
+because the object does not change its identity once it is created.
+React instead is based on detecting changes and only re-renders
+if a value identity has changed causing differences in ui and app states.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -4545,7 +4873,130 @@ use <a href="#setRenderer"><code>setRenderer</code></a> instead.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
+            <div class="col-sm-10"><p><a href="#@wuespace/vertx-event-bus#EventBus"><code>@wuespace/vertx-event-bus#EventBus</code></a></p>
+</div>
+            </div>
+    <a id="EventBusState.connectionState" href="#EventBusState.connectionState">
+        <h5><code>
+                                                                                connectionState                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ConnectionState        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the current connection state of the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#ConnectionState"><code>ConnectionState</code></a></p>
+</div>
+            </div>
+    <a id="EventBusState.error" href="#EventBusState.error">
+        <h5><code>
+                                                                                error                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string | null        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>optional error message
+if something gone wrong on connection setup or teardown</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="EventBusState.lastErrorMessage" href="#EventBusState.lastErrorMessage">
+        <h5><code>
+                                                                                lastErrorMessage                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ErrorMessage | null        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the last received error message through the event bus connection</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="EventBusState.openEventBus" href="#EventBusState.openEventBus">
+        <h5><code>
+                                                                                openEventBus                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (serverUrl: string, options?: Options) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Creates a new event bus which will automatically connect to the server URL
+and opens a connection.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>serverUrl - the URL of the backend part to connect to</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>options - options to configure the connection of the event bus</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>if <a href="#openEventBus"><code>openEventBus</code></a> was called earlier
+and an eventbus instance already opened</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -4555,7 +5006,27 @@ use <a href="#setRenderer"><code>setRenderer</code></a> instead.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.setRenderer"><code>PreferencesState.setRenderer</code></a></p>
+            <div class="col-sm-10"><p><a href="#closeEventBus"><code>closeEventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#eventBus"><code>eventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#connectionState"><code>connectionState</code></a></p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -4565,69 +5036,45 @@ use <a href="#setRenderer"><code>setRenderer</code></a> instead.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><pre><code class="language-ts">const preference = usePreferences(
-	state =&gt; state.preferences['group']['preference'].value
+            <div class="col-sm-10"><p>Open an event bus</p>
+<pre><code class="language-ts">const open = useEventBus(state =&gt; state.openEventBus);
+return (
+   &lt;button onClick={() =&gt; open('http://localhost:9870/bridge/')}&gt;
+       Open event bus
+   &lt;/button&gt;
 );
-
-return &lt;div&gt;{preferences}&lt;/div&gt;;
 </code></pre>
 </div>
             </div>
-    <a id="PreferencesState.setValue" href="#PreferencesState.setValue">
+    <a id="EventBusState.closeEventBus" href="#EventBusState.closeEventBus">
         <h5><code>
-                                                                                setValue                            </code></h5>
+                                                                                closeEventBus                            </code></h5>
     </a>
     <!-- Signature -->
 <p>
     <b>Type:
         <code>
             <!-- Type -->
-            (
-	group: GroupSelector,
-	preference: PrefSelector,
-	newValue: PrefValue
-) =&gt; void        </code>
+            () =&gt; void        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Adds, updates or removes a preference value from the preference store.</p>
-<p>To access the preference a group and a preference selector is needed.</p>
-<p>If the group selector is <code>null</code>
-the preference in the global scope will be used.</p>
+    <p>Closes the current event bus and deletes it.</p>
 
     <!-- Tags -->
     <div class="row">
                     <!-- Tag name -->
             <div class="col-sm-2">
                 <p>
-                    <mark class="tag">@param:</mark>
+                    <mark class="tag">@throws:</mark>
                 </p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>group - the group of the preference</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>preference - the preference name</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>newValue - the new value of the preference</p>
+            <div class="col-sm-10"><p>if <a href="#closeEventBus"><code>closeEventBus</code></a> was called earlier
+and an eventbus instance already closed</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -4637,7 +5084,7 @@ the preference in the global scope will be used.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
+            <div class="col-sm-10"><p><a href="#openEventBus"><code>openEventBus</code></a></p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -4647,7 +5094,7 @@ the preference in the global scope will be used.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PrefValue"><code>PrefValue</code></a></p>
+            <div class="col-sm-10"><p><a href="#eventBus"><code>eventBus</code></a></p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -4657,17 +5104,7 @@ the preference in the global scope will be used.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.setRenderer"><code>PreferencesState.setRenderer</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.removePreference"><code>PreferencesState.removePreference</code></a></p>
+            <div class="col-sm-10"><p><a href="#connectionState"><code>connectionState</code></a></p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -4677,451 +5114,14 @@ the preference in the global scope will be used.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><pre><code class="language-ts">const update = usePreferences(state =&gt; state.updateValue);
-const handleClick = () =&gt; update('group', 'preference', 'My new value!');
-
-return &lt;button onClick={handleClick}&gt;Set Preference&lt;/button&gt;;
+            <div class="col-sm-10"><p>Close an event bus</p>
+<pre><code class="language-ts">const close = useEventBus(state =&gt; state.closeEventBus);
+return &lt;button onClick={() =&lt; close()}&gt;Close event bus&lt;/button&gt;;
 </code></pre>
-</div>
-            </div>
-    <a id="PreferencesState.setRenderer" href="#PreferencesState.setRenderer">
-        <h5><code>
-                                                                                setRenderer                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            (
-	group: GroupSelector,
-	preference: PrefSelector,
-	newRenderer: PrefRenderer
-) =&gt; void        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Adds, updates or removes a preference renderer from the preference store.</p>
-<p>To access the preference a group and a preference selector is needed.</p>
-<p>If the group selector is <code>null</code>
-the preference in the global scope will be used.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>group - the group of the preference</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>preference - the preference name</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>newRenderer - the new renderer for the preference</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PrefRenderer"><code>PrefRenderer</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><pre><code class="language-ts">const update = usePreferences(state =&gt; state.updateValue);
-const renderer = (value, setValue) =&gt; (
-	&lt;TextInput initialValue={value} onSubmit={setValue} /&gt;
-);
-
-const handleClick = () =&gt; update('group', 'preference', renderer);
-
-return &lt;button onClick={handleClick}&gt;Set Renderer&lt;/button&gt;;
-</code></pre>
-</div>
-            </div>
-    <a id="PreferencesState.removePreference" href="#PreferencesState.removePreference">
-        <h5><code>
-                                                                                removePreference                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            (group: GroupSelector, preference: PrefSelector) =&gt; void        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Removes a preference from the store.</p>
-<p>To access the preference a group and a preference selector is needed.</p>
-<p>If the group selector is <code>null</code>
-the preference in the global scope will be used.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>group - the group of the preference</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>preference - the name of the preference that will be removed</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.removeGroup"><code>PreferencesState.removeGroup</code></a></p>
-</div>
-            </div>
-    <a id="PreferencesState.removeGroup" href="#PreferencesState.removeGroup">
-        <h5><code>
-                                                                                removeGroup                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            (group: GroupSelector) =&gt; void        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Removes an entire group of preferences from the store.</p>
-<p>To access the group and a selector is needed.</p>
-<p>If the group selector is <code>null</code>
-the preference in the global scope will be used.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>group - the name of the group that will be removed</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.removePreference"><code>PreferencesState.removePreference</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.setValue"><code>PreferencesState.setValue</code></a></p>
-</div>
-            </div>
-    <a id="PreferencesState.setStore" href="#PreferencesState.setStore">
-        <h5><code>
-                                                                                setStore                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            (newStore: PreferencesStore) =&gt; void        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Overwrites the current preferences store with the specified store.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>newStore - the new preferences store to use</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesStore"><code>PreferencesStore</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState.preferences"><code>PreferencesState.preferences</code></a></p>
 </div>
             </div>
 
 <!-- Methods -->
-                        </div>
-    <div class="card fluid">
-        <!-- Name with anchor link -->
-        <a id="usePreferences" href="#usePreferences">
-            <h3><code>usePreferences</code></h3></a>
-
-        <!-- Description, based on type -->
-                                    <!-- Signature -->
-<p>
-    <b>
-        <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
-
-            <!-- Variable type or any -->
-            UseStore&lt;PreferencesState&gt;        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Returns the preferences application state and actions to interact with.
-A selector can be defined to pick out parts of the store.
-If correctly set up, the function only triggers a rerender
-if the selected values have changed.</p>
-<p>For more information about state management in Zustand,
-take a look at their [<code>https://github.com/pmndrs/zustand | GitHub page</code>](#<a href="https://github.com/pmndrs/zustand">https://github.com/pmndrs/zustand</a> | GitHub page).</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>selector - optional selector function
-which picks the specified elements out of the store</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>equalityFn - optional equality function
-to check for state updates on the picked elements</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@returns:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>the picked elements in the selector function</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#PreferencesState"><code>PreferencesState</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#https://github.com/pmndrs/zustand"><code>https://github.com/pmndrs/zustand</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#UseStore"><code>UseStore</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#zustand#shallow"><code>zustand#shallow</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>Fetch current preference from the store:</p>
-<pre><code class="language-ts">// React component or hook context
-const myGroupSelector = 'my-group';
-const myVarSelector = 'my-var';
-const myPreference = usePreferences(
-	state =&gt; state.preferences[myGroupSelector][myVarSelector]
-);
-</code></pre>
-<p>Performance optimized and type-safe fetching from the store:</p>
-<pre><code class="language-ts">import { useCallback, ReactNode } from 'react';
-import { StateSelector } from 'zustand';
-import shallow from 'zustand/shallow';
-import {
-	usePreferences,
-	PreferencesState
-} from '@wuespace/telestion-client-core';
-import { someRenderer } from './some-renderer';
-
-// selector does not depend on scope, so it's better to define it outside
-// to not re-declare it on every render
-const selector: StateSelector&lt;
-	PreferencesState,
-	{
-		setValue: PreferencesState['setValue'],
-		setRenderer: PreferencesState['setRenderer']
-	}
-&gt; = state =&gt; ({
-	setValue: state.setValue,
-	setRenderer: state.setRenderer
-});
-
-export function MyComponent(): ReactNode {
-	const { setValue, setRenderer } = usePreferences(selector, shallow);
-
-	const updateValue = useCallback(
-		() =&gt; setValue('null', 'title', 'New Application Title!'),
-		[]
-	);
-
-	const updateRenderer = useCallback(
-		() =&gt; setRenderer('null', 'title', someRenderer),
-		[]
-	);
-
-	return (
-		&lt;div&gt;
-			&lt;button onClick={updateValue}&gt;Update Value&lt;/button&gt;
-			&lt;button onClick={updateRenderer}&gt;Update Renderer&lt;/button&gt;
-		&lt;/div&gt;
-	);
-}
-</code></pre>
-</div>
-            </div>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
