@@ -81,13 +81,13 @@ or download and install them directly:</p>
 <li><a href="https://www.npmjs.com/">npm</a> (<a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Installation instructions</a>)</li>
 </ul>
 <p>After you set up these tools, install our command line interface:</p>
-<pre><code class="language-shell">$ npm install --global @wuespace/telestion-client-cli
+<pre><code class="language-shell">npm install --global @wuespace/telestion-client-cli
 </code></pre>
 <p>Then go into your projects folder:</p>
-<pre><code class="language-shell">$ cd myProjects
+<pre><code class="language-shell">cd myProjects
 </code></pre>
 <p>Here initialize a new project with:</p>
-<pre><code class="language-shell">$ tc-cli init
+<pre><code class="language-shell">tc-cli init
 </code></pre>
 <p>The command line interface will guide you through the setup process.</p>
 <p>Finished!
@@ -104,29 +104,29 @@ or at projects that are already using the Telestion client in action:</p>
 <h3>Installation</h3>
 <p>This project uses <a href="https://lerna.js.org/">Lerna</a> as a monorepo package management tool.</p>
 <p>First, install <code>lerna</code> globally for better repository maintenance:</p>
-<pre><code>$ npm i -g lerna
+<pre><code>npm i -g lerna
 </code></pre>
 <p>To install all dependencies the right way, run:</p>
-<pre><code>$ npm ci
+<pre><code>npm ci
 </code></pre>
 <p>To clear all installed dependencies, execute:</p>
-<pre><code>$ cd /path/to/directory/root
-$ npm run clean
-$ rm -rf node_modules
+<pre><code>cd /path/to/directory/root
+npm run clean
+rm -rf node_modules
 </code></pre>
 <h3>Developing and Testing</h3>
 <p>Most of the time, you can use a package in the <code>packages</code> folder like a normal npm project.
 If you want to run the command over all packages in parallel, ask lerna for help:</p>
-<pre><code>$ lerna run build --stream
+<pre><code>lerna run build --stream
 </code></pre>
 <p>Differences come up, if you want to add a dependency.
 Here you must use lerna with the scope modifier:</p>
-<pre><code>$ lerna add [packageName] [packages/prefix-*]
+<pre><code>lerna add [packageName] [packages/prefix-*]
 </code></pre>
 <p>Sometimes you need to edit the <code>package.json</code> manually.
 You can add dependencies by simply adding the lines in the dependency object
 and run lerna to restructure the monorepo dependencies:</p>
-<pre><code>$ lerna link convert
+<pre><code>lerna link convert
 </code></pre>
 <p>To add a dependency to a monorepo package,
 use a file URI with a relative path to the package instead of a version number.
@@ -144,8 +144,8 @@ increase their version and publishes them.</p>
 <p>The actual publish process to npm and Github packages is handled by some neat Github-Actions
 that detect git tags and triggers a publishing to these registries.</p>
 <p>You only need to call:</p>
-<pre><code>$ lerna version
-$ git push
+<pre><code>lerna version
+git push
 </code></pre>
 <h2>Documentation</h2>
 <h3>Project Structure</h3>
