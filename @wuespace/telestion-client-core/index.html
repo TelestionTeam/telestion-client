@@ -2540,497 +2540,6 @@ and closes the event bus connection.</p>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="Authentication" href="#Authentication">
-            <h3><code>Authentication</code></h3></a>
-
-        <!-- Description, based on type -->
-                                    <!-- Signature -->
-<p>
-    <b>
-        <code>
-            <!-- Type -->
-            interface
-            <!-- Name -->
-            Authentication
-            <!-- Type Parameters -->
-            
-            <!-- Extends -->
-                    </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Current authentication data stored here.</p>
-
-    <!-- Tags -->
-    <div class="row">
-            </div>
-
-<!-- Constructors -->
-
-<!-- Properties -->
-<h4>Properties</h4>
-    <a id="Authentication.username" href="#Authentication.username">
-        <h5><code>
-                                                                                username                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            string        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the user's name who's is authenticated</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
-</div>
-            </div>
-    <a id="Authentication.authServerUrl" href="#Authentication.authServerUrl">
-        <h5><code>
-                                                                                authServerUrl                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            string        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the URL of the authentication server</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
-</div>
-            </div>
-    <a id="Authentication.eventBusUrl" href="#Authentication.eventBusUrl">
-        <h5><code>
-                                                                                eventBusUrl                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            string        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the URL of the eventbus (returned from the authenticator)</p>
-
-    <!-- Tags -->
-    <div class="row">
-            </div>
-
-<!-- Methods -->
-                        </div>
-    <div class="card fluid">
-        <!-- Name with anchor link -->
-        <a id="AuthState" href="#AuthState">
-            <h3><code>AuthState</code></h3></a>
-
-        <!-- Description, based on type -->
-                                    <!-- Signature -->
-<p>
-    <b>
-        <code>
-            <!-- Type -->
-            interface
-            <!-- Name -->
-            AuthState
-            <!-- Type Parameters -->
-            
-            <!-- Extends -->
-                            extends State                    </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>The authentication state and actions of the Telestion Client Core.</p>
-<p>Defines the authentication state and functions to change the state.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.user"><code>AuthState.user</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
-</div>
-            </div>
-
-<!-- Constructors -->
-
-<!-- Properties -->
-<h4>Properties</h4>
-    <a id="AuthState.auth" href="#AuthState.auth">
-        <h5><code>
-                                                                                auth                            </code></h5>
-    </a>
-    <!-- Signature -->
-<p>
-    <b>Type:
-        <code>
-            <!-- Type -->
-            Authentication | null        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Stores the current authentication state of the application.
-Contains the username, the authentication and the event bus URL.</p>
-<p>If it is <code>null</code> nobody is signed in.</p>
-<p>To sign in, call <a href="#AuthState.signIn"><code>AuthState.signIn</code></a>.
-To sign out, call <a href="#AuthState.signOut"><code>AuthState.signOut</code></a>.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>check authentication status</p>
-<pre><code class="language-ts">export function AuthChecker(): ReactNode {
-	const auth = useAuth(state =&gt; state.auth);
-
-	return auth ? (
-		&lt;div&gt;
-			&lt;p&gt;User: {auth.username}&lt;/p&gt;
-			&lt;p&gt;Auth URL: {auth.authServerUrl}&lt;/p&gt;
-			&lt;p&gt;Event bus URL: {auth.eventBusUrl}&lt;/p&gt;
-		&lt;/div&gt;
-	) : &lt;div&gt;Not authenticated&lt;/div&gt;;
-}
-</code></pre>
-</div>
-            </div>
-
-<!-- Methods -->
-    <h4>Methods</h4>
-            <a id="AuthState.signIn" href="#AuthState.signIn">
-            <h5><code>
-                                                                                                    signIn                                        (...)
-                                    </code></h5>
-        </a>
-        
-<!-- Signature -->
-<p>
-    <b>
-        <code>
-            
-            function signIn
-            <!-- Type Parameters -->
-            
-                        <!-- Parameters -->
-            (
-                            
-                <br>
-                &nbsp;&nbsp;
-
-                                
-                <!-- parameter name -->
-                authServerUrl
-                
-                <!-- type -->
-                :
-                string
-                <!-- Default value -->
-                
-                <!-- Comma if not last -->
-                ,                             
-                <br>
-                &nbsp;&nbsp;
-
-                                
-                <!-- parameter name -->
-                username
-                
-                <!-- type -->
-                :
-                string
-                <!-- Default value -->
-                
-                <!-- Comma if not last -->
-                ,                             
-                <br>
-                &nbsp;&nbsp;
-
-                                
-                <!-- parameter name -->
-                password
-                
-                <!-- type -->
-                :
-                string
-                <!-- Default value -->
-                
-                <!-- Comma if not last -->
-                                                        <br>
-                        )
-
-            <!-- Return type -->
-            :
-            Promise&lt;SignInResult&gt;        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Tries to sign on an authentication server using the specified URL
-with given user credentials
-and resolves if the authentication was successful
-otherwise it rejects if the authentication was not successful.</p>
-<p>To log out, call <a href="#AuthState.signOut"><code>AuthState.signOut</code></a>.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>authServerUrl - the server to authenticate to</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>username - the users name</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@param:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>password - the users password</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.auth"><code>AuthState.auth</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>simple sign in process</p>
-<pre><code class="language-ts">import shallow from 'zustand/shallow';
-
-// function component context
-const { user, signIn } = useAuth(state =&gt; ({
-	user: state.user,
-	signIn: state.signIn
-}), shallow);
-
-const signIn = () =&gt; {
-	if (!user) {
-		signIn('http://localhost:9870/bridge', 'alice', '12345')
-			.then(signInRes =&gt; {
-				console.log(`User ${signInRes.user} signed in`);
-			})
-			.catch(err =&gt; {
-				console.log(`Cannot log in because: ${err.message}`);
-			});
-	}
-};
-</code></pre>
-</div>
-            </div>
-            <a id="AuthState.signOut" href="#AuthState.signOut">
-            <h5><code>
-                                                                                                    signOut                                        (...)
-                                    </code></h5>
-        </a>
-        
-<!-- Signature -->
-<p>
-    <b>
-        <code>
-            
-            function signOut
-            <!-- Type Parameters -->
-            
-                        <!-- Parameters -->
-            (
-                                    )
-
-            <!-- Return type -->
-            :
-            Promise&lt;SignOutResult&gt;        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>Tries to sign out from the logged in authentication server
-and close all connections.</p>
-<p>To log in again, call <a href="#AuthState.signIn"><code>AuthState.signIn</code></a>.</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#AuthState.auth"><code>AuthState.auth</code></a></p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>simple sign out process</p>
-<pre><code class="language-ts">import shallow from 'zustand/shallow';
-
-// function component context
-const { user, signOut } = useAuth(state =&gt; ({
-	user: state.user,
-	signOut: state.signOut
-}), shallow);
-
-const signOut = () =&gt; {
-	if (user) {
-		signOut()
-			.then(()) =&gt; {
-				console.log(`Logged out`);
-			})
-			.catch(err =&gt; {
-				console.log(`Cannot log out because: ${err.message}`);
-			});
-	}
-};
-</code></pre>
-</div>
-            </div>
-                            </div>
-    <div class="card fluid">
-        <!-- Name with anchor link -->
         <a id="useAuth" href="#useAuth">
             <h3><code>useAuth</code></h3></a>
 
@@ -5163,6 +4672,497 @@ return &lt;button onClick={() =&lt; close()}&gt;Close event bus&lt;/button&gt;;
 
 <!-- Methods -->
                         </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Authentication" href="#Authentication">
+            <h3><code>Authentication</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            Authentication
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Current authentication data stored here.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="Authentication.username" href="#Authentication.username">
+        <h5><code>
+                                                                                username                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the user's name who's is authenticated</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+            </div>
+    <a id="Authentication.authServerUrl" href="#Authentication.authServerUrl">
+        <h5><code>
+                                                                                authServerUrl                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the URL of the authentication server</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+            </div>
+    <a id="Authentication.eventBusUrl" href="#Authentication.eventBusUrl">
+        <h5><code>
+                                                                                eventBusUrl                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the URL of the eventbus (returned from the authenticator)</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="AuthState" href="#AuthState">
+            <h3><code>AuthState</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            AuthState
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends State                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The authentication state and actions of the Telestion Client Core.</p>
+<p>Defines the authentication state and functions to change the state.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.user"><code>AuthState.user</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="AuthState.auth" href="#AuthState.auth">
+        <h5><code>
+                                                                                auth                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Authentication | null        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Stores the current authentication state of the application.
+Contains the username, the authentication and the event bus URL.</p>
+<p>If it is <code>null</code> nobody is signed in.</p>
+<p>To sign in, call <a href="#AuthState.signIn"><code>AuthState.signIn</code></a>.
+To sign out, call <a href="#AuthState.signOut"><code>AuthState.signOut</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>check authentication status</p>
+<pre><code class="language-ts">export function AuthChecker(): ReactNode {
+	const auth = useAuth(state =&gt; state.auth);
+
+	return auth ? (
+		&lt;div&gt;
+			&lt;p&gt;User: {auth.username}&lt;/p&gt;
+			&lt;p&gt;Auth URL: {auth.authServerUrl}&lt;/p&gt;
+			&lt;p&gt;Event bus URL: {auth.eventBusUrl}&lt;/p&gt;
+		&lt;/div&gt;
+	) : &lt;div&gt;Not authenticated&lt;/div&gt;;
+}
+</code></pre>
+</div>
+            </div>
+
+<!-- Methods -->
+    <h4>Methods</h4>
+            <a id="AuthState.signIn" href="#AuthState.signIn">
+            <h5><code>
+                                                                                                    signIn                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function signIn
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                authServerUrl
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                username
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                password
+                
+                <!-- type -->
+                :
+                string
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            Promise&lt;SignInResult&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Tries to sign on an authentication server using the specified URL
+with given user credentials
+and resolves if the authentication was successful
+otherwise it rejects if the authentication was not successful.</p>
+<p>To log out, call <a href="#AuthState.signOut"><code>AuthState.signOut</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>authServerUrl - the server to authenticate to</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>username - the users name</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>password - the users password</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signOut"><code>AuthState.signOut</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.auth"><code>AuthState.auth</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>simple sign in process</p>
+<pre><code class="language-ts">import shallow from 'zustand/shallow';
+
+// function component context
+const { user, signIn } = useAuth(state =&gt; ({
+	user: state.user,
+	signIn: state.signIn
+}), shallow);
+
+const signIn = () =&gt; {
+	if (!user) {
+		signIn('http://localhost:9870/bridge', 'alice', '12345')
+			.then(signInRes =&gt; {
+				console.log(`User ${signInRes.user} signed in`);
+			})
+			.catch(err =&gt; {
+				console.log(`Cannot log in because: ${err.message}`);
+			});
+	}
+};
+</code></pre>
+</div>
+            </div>
+            <a id="AuthState.signOut" href="#AuthState.signOut">
+            <h5><code>
+                                                                                                    signOut                                        (...)
+                                    </code></h5>
+        </a>
+        
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function signOut
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                                    )
+
+            <!-- Return type -->
+            :
+            Promise&lt;SignOutResult&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Tries to sign out from the logged in authentication server
+and close all connections.</p>
+<p>To log in again, call <a href="#AuthState.signIn"><code>AuthState.signIn</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.signIn"><code>AuthState.signIn</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AuthState.auth"><code>AuthState.auth</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>simple sign out process</p>
+<pre><code class="language-ts">import shallow from 'zustand/shallow';
+
+// function component context
+const { user, signOut } = useAuth(state =&gt; ({
+	user: state.user,
+	signOut: state.signOut
+}), shallow);
+
+const signOut = () =&gt; {
+	if (user) {
+		signOut()
+			.then(()) =&gt; {
+				console.log(`Logged out`);
+			})
+			.catch(err =&gt; {
+				console.log(`Cannot log out because: ${err.message}`);
+			});
+	}
+};
+</code></pre>
+</div>
+            </div>
+                            </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
         <a id="useLogger" href="#useLogger">
