@@ -83,58 +83,6 @@
 <!-- Members -->
     <div class="card fluid">
         <!-- Name with anchor link -->
-        <a id="defaultOptions" href="#defaultOptions">
-            <h3><code>defaultOptions</code></h3></a>
-
-        <!-- Description, based on type -->
-                                    <!-- Signature -->
-<p>
-    <b>
-        <code>
-            <!-- Declaration Kind: const, let, or var -->
-            const
-            :
-
-            <!-- Variable type or any -->
-            Required&lt;Options&gt;        </code>
-    </b>
-</p>
-
-<!-- Docs -->
-    <!-- Description -->
-    <p>the default options for the event bus
-that are merged with the custom options in the constructor</p>
-
-    <!-- Tags -->
-    <div class="row">
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@see:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
-                    <mark class="tag">@example:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><pre><code class="language-ts">constructor(url: string, options?: Partial&lt;Options&gt;) {
-	this.options = { ...defaultOptions, ...options };
-	...
-}
-</code></pre>
-</div>
-            </div>
-                        </div>
-    <div class="card fluid">
-        <!-- Name with anchor link -->
         <a id="EventBus" href="#EventBus">
             <h3><code>EventBus</code></h3></a>
 
@@ -2799,6 +2747,58 @@ eventBus.onopen = () =&gt; {
 		}
 	});
 };
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="defaultOptions" href="#defaultOptions">
+            <h3><code>defaultOptions</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Declaration Kind: const, let, or var -->
+            const
+            :
+
+            <!-- Variable type or any -->
+            Required&lt;Options&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the default options for the event bus
+that are merged with the custom options in the constructor</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>(EventBus:constructor) | EventBus Constructor</code>](#(EventBus:constructor) | EventBus Constructor)</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">constructor(url: string, options?: Partial&lt;Options&gt;) {
+	this.options = { ...defaultOptions, ...options };
+	...
+}
 </code></pre>
 </div>
             </div>
