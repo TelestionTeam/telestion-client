@@ -339,7 +339,7 @@ It renders them in his context.</p>
 
                                 
                 <!-- parameter name -->
-                { children }
+                { preNodes, postNodes, children }
                 
                 <!-- type -->
                 :
@@ -397,7 +397,7 @@ that is attached to the actual component.</p>
 </code></pre>
 </div>
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Pages","declarations":[{"type":"function","name":"Pages","declarations":[{"name":"Pages","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"routes","initializer":"[]","type":"ReactNode[]","hasExclamationToken":false,"kind":38}]},{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"lastRoutes","initializer":"[]","type":"ReactNode[]","hasExclamationToken":false,"kind":38}]},"Children.forEach(children, (child, index) => {\n\t\tif (isValidChild(child)) {\n\t\t\tconst routing = {\n\t\t\t\t...defaultRouting,\n\t\t\t\t...parseRouting(child.type.name, child.type.routing)\n\t\t\t};\n\t\t\tconst Route = routeComponents[routing.type];\n\t\t\tconst key = `comp:${routing.path}:${routing.redirectPath}`;\n\n\t\t\troutes.push(\n\t\t\t\t<Route\n\t\t\t\t\tkey={key}\n\t\t\t\t\tpath={routing.path}\n\t\t\t\t\tredirectPath={routing.redirectPath}\n\t\t\t\t\texact={routing.exact}\n\t\t\t\t>\n\t\t\t\t\t{child}\n\t\t\t\t</Route>\n\t\t\t);\n\n\t\t\trouting.additionalRedirects.forEach(redirect =>\n\t\t\t\tredirect.last\n\t\t\t\t\t? lastRoutes.push(buildRedirect(redirect))\n\t\t\t\t\t: routes.push(buildRedirect(redirect))\n\t\t\t);\n\t\t} else {\n\t\t\tthrow new TypeError(\n\t\t\t\t`Child No. ${index} is not a valid Page component in Pages renderer.` +\n\t\t\t\t\t'Please define a valid React Component and attach a routing object to the component.'\n\t\t\t);\n\t\t}\n\t});","return (\n\t<Router>\n\t\t<Switch>\n\t\t\t{routes}\n\t\t\t{lastRoutes}\n\t\t</Switch>\n\t</Router>\n);"],"parameters":[{"name":"{ children }","type":"PagesProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nThe router of the application.\nHere are all pages managed.\n\nEvery page defines a `routing` object\nthat is attached to the actual component.\n\nIf you want to write some pages, please take a look at\n{@link @wuespace/telestion-client-types#Routing} for more information.\n","tags":[{"text":"{@link PagesProps}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyPages() {\n\treturn (\n\t\t<Pages>\n\t\t\t<LoginPage />\n\t\t\t<DashboardPage />\n\t\t\t<NotFoundPage />\n\t\t</Pages>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Pages","declarations":[{"type":"function","name":"Pages","declarations":[{"name":"Pages","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"routes","initializer":"[]","type":"ReactNode[]","hasExclamationToken":false,"kind":38}]},{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"lastRoutes","initializer":"[]","type":"ReactNode[]","hasExclamationToken":false,"kind":38}]},"Children.forEach(children, (child, index) => {\n\t\tif (isValidChild(child)) {\n\t\t\tconst routing = {\n\t\t\t\t...defaultRouting,\n\t\t\t\t...parseRouting(child.type.name, child.type.routing)\n\t\t\t};\n\t\t\tconst Route = routeComponents[routing.type];\n\t\t\tconst key = `comp:${routing.path}:${routing.redirectPath}`;\n\n\t\t\troutes.push(\n\t\t\t\t<Route\n\t\t\t\t\tkey={key}\n\t\t\t\t\tpath={routing.path}\n\t\t\t\t\tredirectPath={routing.redirectPath}\n\t\t\t\t\texact={routing.exact}\n\t\t\t\t>\n\t\t\t\t\t{child}\n\t\t\t\t</Route>\n\t\t\t);\n\n\t\t\trouting.additionalRedirects.forEach(redirect =>\n\t\t\t\tredirect.last\n\t\t\t\t\t? lastRoutes.push(buildRedirect(redirect))\n\t\t\t\t\t: routes.push(buildRedirect(redirect))\n\t\t\t);\n\t\t} else {\n\t\t\tthrow new TypeError(\n\t\t\t\t`Child No. ${index} is not a valid Page component in Pages renderer.` +\n\t\t\t\t\t'Please define a valid React Component and attach a routing object to the component.'\n\t\t\t);\n\t\t}\n\t});","return (\n\t<Router>\n\t\t{preNodes}\n\t\t<Switch>\n\t\t\t{routes}\n\t\t\t{lastRoutes}\n\t\t</Switch>\n\t\t{postNodes}\n\t</Router>\n);"],"parameters":[{"name":"{ preNodes, postNodes, children }","type":"PagesProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nThe router of the application.\nHere are all pages managed.\n\nEvery page defines a `routing` object\nthat is attached to the actual component.\n\nIf you want to write some pages, please take a look at\n{@link @wuespace/telestion-client-types#Routing} for more information.\n","tags":[{"text":"{@link PagesProps}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyPages() {\n\treturn (\n\t\t<Pages>\n\t\t\t<LoginPage />\n\t\t\t<DashboardPage />\n\t\t\t<NotFoundPage />\n\t\t</Pages>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -454,6 +454,48 @@ that is attached to the actual component.</p>
 
 <!-- Properties -->
 <h4>Properties</h4>
+    <a id="PagesProps.preNodes" href="#PagesProps.preNodes">
+        <h5><code>
+                                                                                preNodes                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ReactNode        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>React nodes that are always rendered above the active page.
+E.g. useful for an application header.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="PagesProps.postNodes" href="#PagesProps.postNodes">
+        <h5><code>
+                                                                                postNodes                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ReactNode        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>React nodes that are always rendered below the active page.
+E.g. useful for an application footer.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
     <a id="PagesProps.children" href="#PagesProps.children">
         <h5><code>
                                                                                 children                            </code></h5>
