@@ -546,9 +546,83 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"NavBar","declarations":[{"type":"function","name":"NavBar","declarations":[{"name":"NavBar","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"title","initializer":"useTitle()","hasExclamationToken":false,"kind":38}]},{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"{ items, selected, onSelectionChange, isHidden }","initializer":"useNavBarState(\n\t\tlinks\n\t)","hasExclamationToken":false,"kind":38}]},"if (isHidden) {\n\treturn <Heading level={4}>{title}</Heading>;\n}","return (\n\t<Tabs\n\t\theight=\"100%\"\n\t\titems={items}\n\t\tselectedKey={selected}\n\t\tonSelectionChange={onSelectionChange}\n\t>\n\t\t{item => (\n\t\t\t<Item title={item.title} key={item.path}>\n\t\t\t\t<></>\n\t\t\t</Item>\n\t\t)}\n\t</Tabs>\n);"],"parameters":[{"name":"{ links }","type":"NavBarProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
+    <!-- Description -->
+    <p>Part of the Telestion Client Common header.</p>
+<p>It displays the given links in a React Spectrum tab list.
+If no links are set the application title are shown instead.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://react-spectrum.adobe.com/react-spectrum/Tabs.html"><code>https://react-spectrum.adobe.com/react-spectrum/Tabs.html</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#NavBarProps"><code>NavBarProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Header"><code>Header</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Display only title:</p>
+<pre><code class="language-ts">function AppHeader() {
+	return (
+		&lt;Header
+			left={&lt;NavBar /&gt;}
+		/&gt;
+	);
+}
+</code></pre>
+<p>Display some links:</p>
+<pre><code class="language-ts">const links: Array&lt;Link&gt; = [
+	{
+		title: 'Dashboards',
+		path: '/dashboard'
+	},
+	{
+		title: 'Preferences',
+		path: '/preferences'
+	}
+];
+
+function AppHeader() {
+	return (
+		&lt;Header
+			left={&lt;NavBar links={links} /&gt;}
+		/&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"NavBar","declarations":[{"type":"function","name":"NavBar","declarations":[{"name":"NavBar","statements":[{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"title","initializer":"useTitle()","hasExclamationToken":false,"kind":38}]},{"isExported":false,"isDefaultExport":false,"hasDeclareKeyword":false,"docs":[],"kind":39,"declarationKind":"const","declarations":[{"name":"{ items, selected, onSelectionChange, isHidden }","initializer":"useNavBarState(\n\t\tlinks\n\t)","hasExclamationToken":false,"kind":38}]},"if (isHidden) {\n\treturn <Heading level={4}>{title}</Heading>;\n}","return (\n\t<Tabs\n\t\theight=\"100%\"\n\t\titems={items}\n\t\tselectedKey={selected}\n\t\tonSelectionChange={onSelectionChange}\n\t>\n\t\t{item => (\n\t\t\t<Item title={item.title} key={item.path}>\n\t\t\t\t<></>\n\t\t\t</Item>\n\t\t)}\n\t</Tabs>\n);"],"parameters":[{"name":"{ links }","type":"NavBarProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nPart of the Telestion Client Common header.\n\nIt displays the given links in a React Spectrum tab list.\nIf no links are set the application title are shown instead.\n","tags":[{"text":"{@link https://react-spectrum.adobe.com/react-spectrum/Tabs.html}\n","tagName":"@see"},{"text":"{@link NavBarProps}\n","tagName":"@see"},{"text":"{@link Header}\n\n","tagName":"@see"},{"text":"\nDisplay only title:\n```ts\nfunction AppHeader() {\n\treturn (\n\t\t<Header\n\t\t\tleft={<NavBar />}\n\t\t/>\n\t);\n}\n```\n\nDisplay some links:\n```ts\nconst links: Array<Link> = [\n\t{\n\t\ttitle: 'Dashboards',\n\t\tpath: '/dashboard'\n\t},\n\t{\n\t\ttitle: 'Preferences',\n\t\tpath: '/preferences'\n\t}\n];\n\nfunction AppHeader() {\n\treturn (\n\t\t<Header\n\t\t\tleft={<NavBar links={links} />}\n\t\t/>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -572,8 +646,34 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#NavBar"><code>NavBar</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#NavBar"><code>NavBar</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -593,8 +693,23 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Links to display in a tab list.
+If no links are set the application are shown.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Link"><code>Link</code></a></p>
+</div>
+            </div>
 
 <!-- Methods -->
                         </div>
@@ -624,8 +739,52 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Part of the Telestion Client Common header.</p>
+<p>It displays the current application logo fit inside the header component.
+If no logo is specified in the <a href="#CommonWrapper"><code>CommonWrapper</code></a>
+the default Telestion Logo is used.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#useLogo"><code>useLogo</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Header"><code>Header</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function AppHeader() {
+	return (
+		&lt;Header
+			left={&lt;AppLogo /&gt;}
+		/&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -653,8 +812,61 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Part of the Telestion Client Common header.</p>
+<p>It displays the current connection status of the event bus
+with a status light.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#@wuespace/telestion-client-core#ConnectionState"><code>@wuespace/telestion-client-core#ConnectionState</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://react-spectrum.adobe.com/react-spectrum/StatusLight.html"><code>https://react-spectrum.adobe.com/react-spectrum/StatusLight.html</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Header"><code>Header</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function AppHeader() {
+	return (
+		&lt;Header
+			right={&lt;ConnectionIndicator /&gt;}
+		/&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -697,9 +909,137 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Header","declarations":[{"type":"function","name":"Header","declarations":[{"name":"Header","statements":["return (\n\t\t<Provider flex={0} width=\"100%\" colorScheme=\"dark\" isQuiet>\n\t\t\t<View width=\"100%\" height=\"size-700\" backgroundColor=\"gray-200\">\n\t\t\t\t<Flex direction=\"row\" width=\"100%\" height=\"100%\" alignItems=\"center\">\n\t\t\t\t\t<Flex\n\t\t\t\t\t\tflex={1}\n\t\t\t\t\t\theight=\"100%\"\n\t\t\t\t\t\tmarginStart=\"size-200\"\n\t\t\t\t\t\tmarginEnd=\"size-200\"\n\t\t\t\t\t\tdirection=\"row\"\n\t\t\t\t\t\talignItems=\"center\"\n\t\t\t\t\t\tjustifyContent=\"start\"\n\t\t\t\t\t\tgap=\"size-200\"\n\t\t\t\t\t>\n\t\t\t\t\t\t{left ?? <></>}\n\t\t\t\t\t</Flex>\n\n\t\t\t\t\t<Flex\n\t\t\t\t\t\tflex={1}\n\t\t\t\t\t\theight=\"100%\"\n\t\t\t\t\t\tmarginStart=\"size-200\"\n\t\t\t\t\t\tmarginEnd=\"size-200\"\n\t\t\t\t\t\tdirection=\"row\"\n\t\t\t\t\t\talignItems=\"center\"\n\t\t\t\t\t\tjustifyContent=\"center\"\n\t\t\t\t\t\tgap=\"size-200\"\n\t\t\t\t\t>\n\t\t\t\t\t\t{center ?? <></>}\n\t\t\t\t\t</Flex>\n\n\t\t\t\t\t<Flex\n\t\t\t\t\t\tflex={1}\n\t\t\t\t\t\theight=\"100%\"\n\t\t\t\t\t\tmarginStart=\"size-200\"\n\t\t\t\t\t\tmarginEnd=\"size-200\"\n\t\t\t\t\t\tdirection=\"row\"\n\t\t\t\t\t\talignItems=\"center\"\n\t\t\t\t\t\tjustifyContent=\"end\"\n\t\t\t\t\t\tgap=\"size-200\"\n\t\t\t\t\t>\n\t\t\t\t\t\t{right ?? <></>}\n\t\t\t\t\t</Flex>\n\t\t\t\t</Flex>\n\t\t\t</View>\n\t\t</Provider>\n\t);"],"parameters":[{"name":"{ left, center, right }","type":"HeaderProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
+    <!-- Description -->
+    <p>The Header component of Telestion Client Common.</p>
+<p>It displays a header in style of the Adobe Spectrum header pattern.
+Components of the header can be left, center or right aligned.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://spectrum.adobe.com/page/headers/"><code>https://spectrum.adobe.com/page/headers/</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#HeaderProps"><code>HeaderProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AppLogo"><code>AppLogo</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#NavBar"><code>NavBar</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#DashboardPicker"><code>DashboardPicker</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#ConnectionIndicator"><code>ConnectionIndicator</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Actions"><code>Actions</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#ColorSchemeAction"><code>ColorSchemeAction</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AccountControls"><code>AccountControls</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function AppHeader() {
+	return (
+		&lt;Header
+			left={
+				&lt;&gt;
+					&lt;AppLogo /&gt;
+					&lt;NavBar /&gt;
+				&lt;/&gt;
+			}
+			center={&lt;DashboardPicker&gt;}
+			right={
+				&lt;&gt;
+					&lt;ConnectionIndicator /&gt;
+					&lt;Actions&gt;
+					  &lt;ColorSchemeAction /&gt;
+					&lt;/Actions&gt;
+					&lt;AccountControls /&gt;
+				&lt;/&gt;
+			}
+		/&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"Header","declarations":[{"type":"function","name":"Header","declarations":[{"name":"Header","statements":["return (\n\t\t<Provider flex={0} width=\"100%\" colorScheme=\"dark\" isQuiet>\n\t\t\t<View width=\"100%\" height=\"size-700\" backgroundColor=\"gray-200\">\n\t\t\t\t<Flex direction=\"row\" width=\"100%\" height=\"100%\" alignItems=\"center\">\n\t\t\t\t\t<Flex\n\t\t\t\t\t\tflex={1}\n\t\t\t\t\t\theight=\"100%\"\n\t\t\t\t\t\tmarginStart=\"size-200\"\n\t\t\t\t\t\tmarginEnd=\"size-200\"\n\t\t\t\t\t\tdirection=\"row\"\n\t\t\t\t\t\talignItems=\"center\"\n\t\t\t\t\t\tjustifyContent=\"start\"\n\t\t\t\t\t\tgap=\"size-200\"\n\t\t\t\t\t>\n\t\t\t\t\t\t{left ?? <></>}\n\t\t\t\t\t</Flex>\n\n\t\t\t\t\t<Flex\n\t\t\t\t\t\tflex={1}\n\t\t\t\t\t\theight=\"100%\"\n\t\t\t\t\t\tmarginStart=\"size-200\"\n\t\t\t\t\t\tmarginEnd=\"size-200\"\n\t\t\t\t\t\tdirection=\"row\"\n\t\t\t\t\t\talignItems=\"center\"\n\t\t\t\t\t\tjustifyContent=\"center\"\n\t\t\t\t\t\tgap=\"size-200\"\n\t\t\t\t\t>\n\t\t\t\t\t\t{center ?? <></>}\n\t\t\t\t\t</Flex>\n\n\t\t\t\t\t<Flex\n\t\t\t\t\t\tflex={1}\n\t\t\t\t\t\theight=\"100%\"\n\t\t\t\t\t\tmarginStart=\"size-200\"\n\t\t\t\t\t\tmarginEnd=\"size-200\"\n\t\t\t\t\t\tdirection=\"row\"\n\t\t\t\t\t\talignItems=\"center\"\n\t\t\t\t\t\tjustifyContent=\"end\"\n\t\t\t\t\t\tgap=\"size-200\"\n\t\t\t\t\t>\n\t\t\t\t\t\t{right ?? <></>}\n\t\t\t\t\t</Flex>\n\t\t\t\t</Flex>\n\t\t\t</View>\n\t\t</Provider>\n\t);"],"parameters":[{"name":"{ left, center, right }","type":"HeaderProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nThe Header component of Telestion Client Common.\n\nIt displays a header in style of the Adobe Spectrum header pattern.\nComponents of the header can be left, center or right aligned.\n","tags":[{"text":"{@link https://spectrum.adobe.com/page/headers/}\n","tagName":"@see"},{"text":"{@link HeaderProps}\n","tagName":"@see"},{"text":"{@link AppLogo}\n","tagName":"@see"},{"text":"{@link NavBar}\n","tagName":"@see"},{"text":"{@link DashboardPicker}\n","tagName":"@see"},{"text":"{@link ConnectionIndicator}\n","tagName":"@see"},{"text":"{@link Actions}\n","tagName":"@see"},{"text":"{@link ColorSchemeAction}\n","tagName":"@see"},{"text":"{@link AccountControls}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction AppHeader() {\n\treturn (\n\t\t<Header\n\t\t\tleft={\n\t\t\t\t<>\n\t\t\t\t\t<AppLogo />\n\t\t\t\t\t<NavBar />\n\t\t\t\t</>\n\t\t\t}\n\t\t\tcenter={<DashboardPicker>}\n\t\t\tright={\n\t\t\t\t<>\n\t\t\t\t\t<ConnectionIndicator />\n\t\t\t\t\t<Actions>\n\t\t\t\t\t  <ColorSchemeAction />\n\t\t\t\t\t</Actions>\n\t\t\t\t\t<AccountControls />\n\t\t\t\t</>\n\t\t\t}\n\t\t/>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -723,8 +1063,34 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#Header"><code>Header</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#Header"><code>Header</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -744,8 +1110,12 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Header components aligned on the left side of the header.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
     <a id="HeaderProps.center" href="#HeaderProps.center">
         <h5><code>
                                                                                 center                ?            </code></h5>
@@ -760,8 +1130,12 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Header components aligned in the center of the header.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
     <a id="HeaderProps.right" href="#HeaderProps.right">
         <h5><code>
                                                                                 right                ?            </code></h5>
@@ -776,8 +1150,12 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Header components aligned on the right side of the header.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
 
 <!-- Methods -->
                         </div>
