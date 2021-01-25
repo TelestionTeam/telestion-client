@@ -813,8 +813,53 @@
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>The wrapper component of the Telestion Client Common library.</p>
+<p>It defines the basic display structure in form of a vertical flex element.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#CommonWrapperProps"><code>CommonWrapperProps</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const widgets: Array&lt;Widget&gt; = [
+	...commonWidgets,
+	...projectWidgets
+];
+
+function App() {
+	return (
+		&lt;TelestionClient
+			wrapper={children =&gt; (
+			  &lt;CommonWrapper widgets={widgets}&gt;
+			  	{children}
+			 	&lt;/CommonWrapper&gt;
+			)}
+		&gt;
+			&lt;Pages&gt;
+				...
+			&lt;/Pages&gt;
+		&lt;/TelestionClient&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -838,8 +883,34 @@
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>React Props of <a href="#CommonWrapper"><code>CommonWrapper</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#CommonWrapper"><code>CommonWrapper</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
 
 <!-- Constructors -->
 
@@ -859,8 +930,12 @@
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>A custom application logo instead of the default Telestion logo.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
     <a id="CommonWrapperProps.widgets" href="#CommonWrapperProps.widgets">
         <h5><code>
                                                                                 widgets                ?            </code></h5>
@@ -875,8 +950,12 @@
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Registered widgets for the application to use.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
     <a id="CommonWrapperProps.children" href="#CommonWrapperProps.children">
         <h5><code>
                                                                                 children                            </code></h5>
@@ -891,8 +970,13 @@
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>The children received from the wrapper function of the &quot;root&quot; component
+<a href="#@wuespace/telestion-client-core#TelestionClient"><code>@wuespace/telestion-client-core#TelestionClient</code></a>.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
 
 <!-- Methods -->
                         </div>
