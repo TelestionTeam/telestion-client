@@ -12,10 +12,6 @@
             line-height: inherit;
         }
 
-        :root {
-            scroll-behavior: smooth;
-        }
-
         header {
             display: flex;
             align-items: center;
@@ -2807,7 +2803,7 @@ that are merged with the custom options in the constructor</p>
 </div>
 </div>
 <script src="https://rawcdn.githack.com/nextapps-de/flexsearch/master/dist/flexsearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fliegwerk/search-popup/dist/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fliegwerk/search-popup@2.0.0/dist/bundle.js"></script>
 <script>
     const searchIndex = new FlexSearch({
         encode: q => (q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase() + ' ' + q.toLowerCase(),
@@ -2829,7 +2825,6 @@ that are merged with the custom options in the constructor</p>
 
     fetch('/telestion-client/search-index.json').then(r => r.json()).then(index => {
         searchIndex.add(index)
-
         const searchPopup = document.createElement('search-popup');
         searchPopup.setAttribute('search', 'search')
         document.body.appendChild(searchPopup);

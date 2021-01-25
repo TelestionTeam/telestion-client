@@ -12,10 +12,6 @@
             line-height: inherit;
         }
 
-        :root {
-            scroll-behavior: smooth;
-        }
-
         header {
             display: flex;
             align-items: center;
@@ -530,7 +526,7 @@ and will always be reachable under the given
             <!-- Type Parameters -->
             
             <!-- Extends -->
-                            extends BaseRouting, AbstractRedirect                    </code>
+                            extends BaseRouting,AbstractRedirect                    </code>
     </b>
 </p>
 
@@ -606,7 +602,7 @@ otherwise the app will be redirected to the given
             <!-- Type Parameters -->
             
             <!-- Extends -->
-                            extends BaseRouting, AbstractRedirect                    </code>
+                            extends BaseRouting,AbstractRedirect                    </code>
     </b>
 </p>
 
@@ -3844,7 +3840,7 @@ Usually contains more detailed information and can be multi-line.</p>
 </div>
 </div>
 <script src="https://rawcdn.githack.com/nextapps-de/flexsearch/master/dist/flexsearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fliegwerk/search-popup/dist/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fliegwerk/search-popup@2.0.0/dist/bundle.js"></script>
 <script>
     const searchIndex = new FlexSearch({
         encode: q => (q.replace(/([a-z])([A-Z])/g, "$1 $2")).toLowerCase() + ' ' + q.toLowerCase(),
@@ -3866,7 +3862,6 @@ Usually contains more detailed information and can be multi-line.</p>
 
     fetch('/telestion-client/search-index.json').then(r => r.json()).then(index => {
         searchIndex.add(index)
-
         const searchPopup = document.createElement('search-popup');
         searchPopup.setAttribute('search', 'search')
         document.body.appendChild(searchPopup);
