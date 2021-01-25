@@ -117,7 +117,7 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>TypeError - if not in an appLogo context</p>
+            <div class="col-sm-10"><p>TypeError - if called outside of the <a href="#CommonWrapper"><code>CommonWrapper</code></a></p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -181,8 +181,62 @@ It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>Common
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Returns a list of all registered widgets in the application.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>TypeError - if called outside of the <a href="#CommonWrapper"><code>CommonWrapper</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#WidgetsContext"><code>WidgetsContext</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#CommonWrapper"><code>CommonWrapper</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function RegisteredWidgets() {
+	const widgets = useWidgets();
+	const names = widgets.map(widget =&gt; widget.name);
+
+	return (
+		&lt;ul&gt;
+			{names.map(name =&gt; &lt;li&gt;{name}&lt;/li&gt;)}
+		&lt;/ul&gt;
+	);
+}
+</code></pre>
+</div>
+            </div>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
