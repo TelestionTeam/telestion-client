@@ -103,8 +103,57 @@
 </p>
 
 <!-- Docs -->
-    <!-- no docs :( -->
-    <p><small>No docs provided</small></p>
+    <!-- Description -->
+    <p>Returns the path to the current application logo.
+It can be replaced by a custom logo in the <a href="#CommonWrapper"><code>CommonWrapper</code></a> component.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>TypeError - if not in an appLogo context</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#AppLogoContext"><code>AppLogoContext</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#CommonWrapper"><code>CommonWrapper</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">function AppLogo() {
+	const appLogo = useLogo();
+	return &lt;Image src={appLogo} alt=&quot;Application logo&quot; /&gt;;
+}
+</code></pre>
+</div>
+            </div>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -931,7 +980,8 @@ function App() {
 
 <!-- Docs -->
     <!-- Description -->
-    <p>A custom application logo instead of the default Telestion logo.</p>
+    <p>Path to a custom application logo that are used
+instead of the default Telestion logo.</p>
 
     <!-- Tags -->
     <div class="row">
