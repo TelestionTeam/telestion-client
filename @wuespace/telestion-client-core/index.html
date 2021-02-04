@@ -1576,21 +1576,7 @@ otherwise for the preference in the global scope.</p>
             
             function useBroadcast
             <!-- Type Parameters -->
-                <!-- opening angle bracket -->
-    &lt;
-
             
-        <!-- Name -->
-        C
-        <!-- Constraints -->
-                    : string        
-        <!-- Default -->
-                    = string        
-        <!-- Comma if not last -->
-            
-    <!-- Closing angle bracket -->
-    &gt;
-
                         <!-- Parameters -->
             (
                             
@@ -1599,11 +1585,11 @@ otherwise for the preference in the global scope.</p>
 
                                 
                 <!-- parameter name -->
-                channel
+                address
                 
                 <!-- type -->
                 :
-                C
+                ChannelAddress
                 <!-- Default value -->
                 
                 <!-- Comma if not last -->
@@ -1618,7 +1604,7 @@ otherwise for the preference in the global scope.</p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Send a broadcast on the specified channel with the returned function.</p>
+    <p>Sends a broadcast on the specified address with the returned function.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -1630,7 +1616,7 @@ otherwise for the preference in the global scope.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>channel - channel to broadcast to</p>
+            <div class="col-sm-10"><p>address - the channel with the address to broadcast to</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -1645,22 +1631,12 @@ otherwise for the preference in the global scope.</p>
                     <!-- Tag name -->
             <div class="col-sm-2">
                 <p>
-                    <mark class="tag">@typeParam:</mark>
-                </p>
-            </div>
-
-            <!-- Tag content -->
-            <div class="col-sm-10"><p>C - union of all possible channels (defaults to <code>string</code>)</p>
-</div>
-                    <!-- Tag name -->
-            <div class="col-sm-2">
-                <p>
                     <mark class="tag">@throws:</mark>
                 </p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>if there is no eventbus instance</p>
+            <div class="col-sm-10"><p>TypeError - if there is no eventbus instance</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -1690,7 +1666,7 @@ otherwise for the preference in the global scope.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><pre><code class="language-ts">const broadcast = useBroadcast('channel:hello-world');
+            <div class="col-sm-10"><pre><code class="language-ts">const broadcast = useBroadcast('address:hello-world');
 
 const handleClick = () =&gt; {
   broadcast('Hello World');
@@ -1720,11 +1696,11 @@ return &lt;button onClick={handleClick}&gt;Broadcast a hello world&lt;/button&gt
 
             
         <!-- Name -->
-        C
+        T
         <!-- Constraints -->
-                    : string        
+                    : JsonSerializable        
         <!-- Default -->
-                    = string        
+                    = JsonSerializable        
         <!-- Comma if not last -->
             
     <!-- Closing angle bracket -->
@@ -1738,11 +1714,11 @@ return &lt;button onClick={handleClick}&gt;Broadcast a hello world&lt;/button&gt
 
                                 
                 <!-- parameter name -->
-                channel
+                address
                 
                 <!-- type -->
                 :
-                C
+                ChannelAddress
                 <!-- Default value -->
                 
                 <!-- Comma if not last -->
@@ -1756,7 +1732,7 @@ return &lt;button onClick={handleClick}&gt;Broadcast a hello world&lt;/button&gt
                 
                 <!-- type -->
                 :
-                (data: JsonSerializable | null, error: ErrorMessage | null) =&gt; void
+                (data: T | null, error: ErrorMessage | null) =&gt; void
                 <!-- Default value -->
                 
                 <!-- Comma if not last -->
@@ -1771,7 +1747,7 @@ return &lt;button onClick={handleClick}&gt;Broadcast a hello world&lt;/button&gt
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Subscribes to the eventbus via a specific channel.</p>
+    <p>Subscribes to an event bus channel specified by an address.</p>
 <p><strong>Important note:</strong></p>
 <p>Please preserve the identity of the <code>onUpdate</code> function
 to minimize registers and unregisters on the eventbus.</p>
@@ -1790,7 +1766,7 @@ It handles the caveats for you.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>channel - the channel address</p>
+            <div class="col-sm-10"><p>address - the channel with the address to receive data from</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -1800,7 +1776,7 @@ It handles the caveats for you.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>onUpdate - callback that gets called on new data</p>
+            <div class="col-sm-10"><p>onUpdate - callback that gets called on new received data</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -1810,7 +1786,8 @@ It handles the caveats for you.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>C - union of all possible channels (defaults to <code>string</code>)</p>
+            <div class="col-sm-10"><p>T - the type of the received data
+(defaults to JSON serializable data)</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -1820,7 +1797,7 @@ It handles the caveats for you.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>if there is no eventbus instance</p>
+            <div class="col-sm-10"><p>TypeError - if there is no eventbus instance</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -1892,11 +1869,11 @@ return &lt;p&gt;Content: {state}&lt;/p&gt;;
 
             
         <!-- Name -->
-        C
+        T
         <!-- Constraints -->
-                    : string        
+                    : JsonSerializable        
         <!-- Default -->
-                    = string        
+                    = JsonSerializable        
         <!-- Comma if not last -->
             
     <!-- Closing angle bracket -->
@@ -1910,11 +1887,11 @@ return &lt;p&gt;Content: {state}&lt;/p&gt;;
 
                                 
                 <!-- parameter name -->
-                channel
+                address
                 
                 <!-- type -->
                 :
-                C
+                ChannelAddress
                 <!-- Default value -->
                 
                 <!-- Comma if not last -->
@@ -1923,13 +1900,13 @@ return &lt;p&gt;Content: {state}&lt;/p&gt;;
 
             <!-- Return type -->
             :
-            JsonSerializable | undefined        </code>
+            T | undefined        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Gets the latest information broadcast on a specific channel.</p>
+    <p>Gets the latest information broadcast from a channel specified by an address.</p>
 
     <!-- Tags -->
     <div class="row">
@@ -1941,7 +1918,7 @@ return &lt;p&gt;Content: {state}&lt;/p&gt;;
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>channel - the channel address</p>
+            <div class="col-sm-10"><p>address - the channel with the address to receive data from</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -1962,7 +1939,8 @@ or <code>undefined</code> if no message was received yet</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>C - union of all possible channels (defaults to <code>string</code>)</p>
+            <div class="col-sm-10"><p>T - the type of the received data
+(defaults to JSON serializable data)</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -2002,7 +1980,7 @@ or <code>undefined</code> if no message was received yet</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><pre><code class="language-ts">const latestPos = useChannelLatest('channel:position');
+            <div class="col-sm-10"><pre><code class="language-ts">const latestPos = useChannelLatest('address:position');
 return &lt;p&gt;Latest position: {latestPos}&lt;/p&gt;;
 </code></pre>
 </div>
@@ -2027,11 +2005,11 @@ return &lt;p&gt;Latest position: {latestPos}&lt;/p&gt;;
 
             
         <!-- Name -->
-        C
+        T
         <!-- Constraints -->
-                    : string        
+                    : JsonSerializable        
         <!-- Default -->
-                    = string        
+                    = JsonSerializable        
         <!-- Comma if not last -->
             
     <!-- Closing angle bracket -->
@@ -2045,11 +2023,11 @@ return &lt;p&gt;Latest position: {latestPos}&lt;/p&gt;;
 
                                 
                 <!-- parameter name -->
-                channel
+                address
                 
                 <!-- type -->
                 :
-                C
+                ChannelAddress
                 <!-- Default value -->
                 
                 <!-- Comma if not last -->
@@ -2058,13 +2036,13 @@ return &lt;p&gt;Latest position: {latestPos}&lt;/p&gt;;
 
             <!-- Return type -->
             :
-            SendFunction        </code>
+            SendFunction&lt;T&gt;        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Send a message on the specified channel
+    <p>Sends a message on the specified address
 and get the first reply via a callback.</p>
 
     <!-- Tags -->
@@ -2077,7 +2055,7 @@ and get the first reply via a callback.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>channel - the channel to send to</p>
+            <div class="col-sm-10"><p>address - the channel with the address to send the message to</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -2097,7 +2075,8 @@ and get the first reply via a callback.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>C - union of all possible channels (defaults to <code>string</code>)</p>
+            <div class="col-sm-10"><p>T - the type of the received data in the callback
+(defaults to JSON serializable data)</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -2107,7 +2086,7 @@ and get the first reply via a callback.</p>
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p>if there is no eventbus instance</p>
+            <div class="col-sm-10"><p>TypeError - if there is no eventbus instance</p>
 </div>
                     <!-- Tag name -->
             <div class="col-sm-2">
@@ -2138,7 +2117,7 @@ and get the first reply via a callback.</p>
 
             <!-- Tag content -->
             <div class="col-sm-10"><pre><code class="language-ts">const [answer, setAnswer] = useState&lt;JSONSerializable&gt;();
-const send = useRequest('channel:send-my-anything');
+const send = useRequest('address:send-my-anything');
 
 const handleClick = () =&gt; {
   send('Ping', (message: JSONSerializable) =&gt; {
@@ -2169,7 +2148,21 @@ return (
             <!-- Name -->
             type SendFunction
             <!-- Type Parameters -->
-                    </code>
+                <!-- opening angle bracket -->
+    &lt;
+
+            
+        <!-- Name -->
+        T
+        <!-- Constraints -->
+                    : JsonSerializable        
+        <!-- Default -->
+        
+        <!-- Comma if not last -->
+            
+    <!-- Closing angle bracket -->
+    &gt;
+        </code>
     </b>
 </p>
 
@@ -2180,20 +2173,28 @@ return (
         <code>
             (
 		message: JsonSerializable,
-		callback: (
-			message: JsonSerializable | null,
-			error: ErrorMessage | null
-		) =&gt; void
+		callback: (message: T | null, error: ErrorMessage | null) =&gt; void
 	) =&gt; void        </code>
     </b>
 </p>
 
 <!-- Docs -->
     <!-- Description -->
-    <p>Send a message to the event bus and get the first reply via a callback.</p>
+    <p>Sends a message to the event bus and get the first reply via a callback.</p>
 
     <!-- Tags -->
     <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@typeParam:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>T - the type of the received data in the callback
+(defaults to JSON serializable data)</p>
+</div>
             </div>
                         </div>
     <div class="card fluid">
@@ -2528,7 +2529,7 @@ export function App() {
             </div>
 
             <!-- Tag content -->
-            <div class="col-sm-10"><p><a href="#@wuespace/vertx-event-bus#Options"><code>@wuespace/vertx-event-bus#Options</code></a></p>
+            <div class="col-sm-10"><p><a href="#@wuespace/telestion-client-types#Options"><code>@wuespace/telestion-client-types#Options</code></a></p>
 </div>
             </div>
     <a id="EventBusManagerOptions.onOpen" href="#EventBusManagerOptions.onOpen">

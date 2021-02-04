@@ -102,7 +102,7 @@
             | number
 	| string
 	| boolean
-	| Map&lt;string, JsonSerializable&gt;
+	| { [key: string]: JsonSerializable }
 	| Array&lt;JsonSerializable&gt;        </code>
     </b>
 </p>
@@ -3835,6 +3835,1071 @@ Usually contains more detailed information and can be multi-line.</p>
             </div>
 
 <!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="AddressableMessage" href="#AddressableMessage">
+            <h3><code>AddressableMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            AddressableMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends BaseMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is addressable to a specific locations on the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="AddressableMessage.address" href="#AddressableMessage.address">
+        <h5><code>
+                                                                                address                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            ChannelAddress        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the address of a event bus location registered to the backend</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="AddressableMessage.headers" href="#AddressableMessage.headers">
+        <h5><code>
+                                                                                headers                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Headers        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>additional headers that will be sent with the message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="AddressableMessage.replyAddress" href="#AddressableMessage.replyAddress">
+        <h5><code>
+                                                                                replyAddress                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>optional reply address to send a message back</p>
+<p>very useful for a send-receive pattern
+where a backend node sends a message and waits for a receiving message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="AddressableMessage.reply" href="#AddressableMessage.reply">
+        <h5><code>
+                                                                                reply                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            (message: any, callback: Callback, headers?: Headers) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Sends a message back to the sender with a actual content.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>message - the content that will be sent with the message</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>callback - a callback function that will be invoked
+if the sender reply again.</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>headers - additional headers to send with the message</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">eb.registerHandler('awesome-channel', message =&gt; {
+	if (message.replyAddress) {
+		console.log(message.body); // ping
+		message.reply('pong', () =&gt; {});
+	}
+});
+</code></pre>
+</div>
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="BaseMessage" href="#BaseMessage">
+            <h3><code>BaseMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            BaseMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a generic message that is sent to and received by the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="BaseMessage.type" href="#BaseMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;ping&#39; | &#39;register&#39; | &#39;unregister&#39; | &#39;publish&#39; | &#39;send&#39; | &#39;rec&#39; | &#39;err&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>every message must have a type
+so backend and frontend can differentiate
+between received and sent messages</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Callback" href="#Callback">
+            <h3><code>Callback</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type Callback
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            (
+	message: ReceiveMessage | null,
+	error: ErrorMessage | null
+) =&gt; void        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a function that is used as event handlers
+in the event bus when receiving messages</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#EventBus"><code>EventBus</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>[<code>EventBus.setupConnection | setupConnection (here socket.onmessage)</code>](#EventBus.setupConnection | setupConnection (here socket.onmessage))</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// some vertx channel
+const channel = 'VERTX_CHANNEL';
+
+const eventBus = new EventBus('http://localhost:8081/');
+
+eventBus.onopen = () =&gt; {
+	eventBus.registerHandler(channel, (message, error) =&gt; {
+		if (message) {
+			console.log('Received message:', message);
+		} else {
+			console.error('Received error:', error);
+		}
+	});
+};
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ContentMessage" href="#ContentMessage">
+            <h3><code>ContentMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            ContentMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends AddressableMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message with actual content that will be transferred with the message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="ContentMessage.body" href="#ContentMessage.body">
+        <h5><code>
+                                                                                body                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            JsonSerializable        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the content that will be transferred with the message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ErrorMessage" href="#ErrorMessage">
+            <h3><code>ErrorMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            ErrorMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends AddressableMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is received from the event bus if something went wrong</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="ErrorMessage.type" href="#ErrorMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;err&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+    <a id="ErrorMessage.failureCode" href="#ErrorMessage.failureCode">
+        <h5><code>
+                                                                                failureCode                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the failure code of the received error</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="ErrorMessage.failureType" href="#ErrorMessage.failureType">
+        <h5><code>
+                                                                                failureType                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>additional error type of the received message</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="ErrorMessage.message" href="#ErrorMessage.message">
+        <h5><code>
+                                                                                message                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>additional information about the received error</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Headers" href="#Headers">
+            <h3><code>Headers</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            Headers
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>headers that are sent with event bus messages</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Message" href="#Message">
+            <h3><code>Message</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type Message
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            | PingMessage
+	| RegisterMessage
+	| UnregisterMessage
+	| PublishMessage
+	| SendMessage
+	| ReceiveMessage
+	| ErrorMessage        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message sent to and received from the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PingMessage" href="#PingMessage">
+            <h3><code>PingMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PingMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends BaseMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a basic message that is sent
+to prove to the backend server that the client is still connected</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PingMessage.type" href="#PingMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;ping&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="PublishMessage" href="#PublishMessage">
+            <h3><code>PublishMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            PublishMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends ContentMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that gets broadcasted on a specified channel</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="PublishMessage.type" href="#PublishMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;publish&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ReceiveMessage" href="#ReceiveMessage">
+            <h3><code>ReceiveMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            ReceiveMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends ContentMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is received from the event bus containing new information</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="ReceiveMessage.type" href="#ReceiveMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;rec&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="RegisterMessage" href="#RegisterMessage">
+            <h3><code>RegisterMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            RegisterMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends AddressableMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is sent to the backend server
+to register to a specific channel
+to receive future messages from the event bus from this specific channel</p>
+<p>to unregister or unsubscribe from the channel,
+use <a href="#UnregisterMessage"><code>UnregisterMessage</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="RegisterMessage.type" href="#RegisterMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;register&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="SendMessage" href="#SendMessage">
+            <h3><code>SendMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            SendMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends ContentMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is sent on the specified channel
+containing a reply address gets sent</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="SendMessage.type" href="#SendMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;send&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="UnregisterMessage" href="#UnregisterMessage">
+            <h3><code>UnregisterMessage</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            UnregisterMessage
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                            extends AddressableMessage                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>a message that is sent to the backend server
+to unregister or unsubscribe from a specific channel
+to not receive any further messages from this channel</p>
+<p>to register to a channel, use <a href="#RegisterMessage"><code>RegisterMessage</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="UnregisterMessage.type" href="#UnregisterMessage.type">
+        <h5><code>
+                                                                                type                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            &#39;unregister&#39;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="Options" href="#Options">
+            <h3><code>Options</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            Options
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>the default options for the event bus</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="Options.pingInterval" href="#Options.pingInterval">
+        <h5><code>
+                                                                                pingInterval                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>time between ping messages sent to the backend server in milliseconds</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.reconnectAttempts" href="#Options.reconnectAttempts">
+        <h5><code>
+                                                                                reconnectAttempts                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>number of attempts to try to reconnect to the backend server
+before no more reconnects get attempted</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.reconnectExponent" href="#Options.reconnectExponent">
+        <h5><code>
+                                                                                reconnectExponent                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>exponent of the power function used to determine a new reconnect delay
+based on reconnect attempts</p>
+<p>for implementation details, see <a href="#@wuespace/vertx-event-bus#EventBus.newReconnectDelay"><code>@wuespace/vertx-event-bus#EventBus.newReconnectDelay</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.delayMin" href="#Options.delayMin">
+        <h5><code>
+                                                                                delayMin                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>minimum time to wait between reconnect attempts in milliseconds</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.delayMax" href="#Options.delayMax">
+        <h5><code>
+                                                                                delayMax                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>maximum time to wait between reconnect attempts in milliseconds</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+    <a id="Options.randomizationFactor" href="#Options.randomizationFactor">
+        <h5><code>
+                                                                                randomizationFactor                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>randomization factor for the deviation
+used in the reconnect delay generator function</p>
+<p>for implementation details, see <a href="#@wuespace/vertx-event-bus#EventBus.newReconnectDelay"><code>@wuespace/vertx-event-bus#EventBus.newReconnectDelay</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="ChannelAddress" href="#ChannelAddress">
+            <h3><code>ChannelAddress</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Name -->
+            type ChannelAddress
+            <!-- Type Parameters -->
+                    </code>
+    </b>
+</p>
+
+<!-- Definition -->
+<p>
+    <b>
+        Alias for:
+        <code>
+            string        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>The type of a communication channel address in the event bus.</p>
+
+    <!-- Tags -->
+    <div class="row">
+            </div>
                         </div>
 </div>
 </div>
