@@ -1271,13 +1271,15 @@ where the user enters their information and credentials to log in with.</p>
             <div class="col-sm-10"><pre><code class="language-ts">function MyLoginPage() {
 	return (
 		&lt;LoginPage&gt;
-			&lt;LoginTitle /&gt;
 			&lt;LoginLogo /&gt;
+			&lt;LoginTitle /&gt;
 			&lt;LoginDescription /&gt;
 			&lt;LoginForm initialServerURL=&quot;http://localhost:9870/bridge&quot; /&gt;
 		&lt;/LoginPage&gt;
 	);
 }
+
+MyLoginPage.routing = TCLoginPage.routing;
 </code></pre>
 </div>
             </div>
@@ -1471,13 +1473,15 @@ and the children are rendered instead!</p>
             <div class="col-sm-10"><pre><code class="language-ts">function MyLoginPage() {
 	return (
 		&lt;LoginPage&gt;
-			&lt;LoginTitle /&gt;
 			&lt;LoginLogo /&gt;
+			&lt;LoginTitle /&gt;
 			&lt;LoginDescription /&gt;
 			&lt;LoginForm initialServerURL=&quot;http://localhost:9870/bridge&quot; /&gt;
 		&lt;/LoginPage&gt;
 	);
 }
+
+MyLoginPage.routing = TCLoginPage.routing;
 </code></pre>
 </div>
             </div>
@@ -1635,13 +1639,15 @@ in the login page.</p>
             <div class="col-sm-10"><pre><code class="language-ts">function MyLoginPage() {
 	return (
 		&lt;LoginPage&gt;
-			&lt;LoginTitle /&gt;
 			&lt;LoginLogo /&gt;
+			&lt;LoginTitle /&gt;
 			&lt;LoginDescription /&gt;
 			&lt;LoginForm initialServerURL=&quot;http://localhost:9870/bridge&quot; /&gt;
 		&lt;/LoginPage&gt;
 	);
 }
+
+MyLoginPage.routing = TCLoginPage.routing;
 </code></pre>
 </div>
             </div>
@@ -1765,17 +1771,19 @@ Otherwise, it redirects to the dashboard page.</p>
             <div class="col-sm-10"><pre><code class="language-ts">function MyLoginPage() {
 	return (
 		&lt;LoginPage&gt;
-			&lt;LoginTitle /&gt;
 			&lt;LoginLogo /&gt;
+			&lt;LoginTitle /&gt;
 			&lt;LoginDescription /&gt;
 			&lt;LoginForm initialServerURL=&quot;http://localhost:9870/bridge&quot; /&gt;
 		&lt;/LoginPage&gt;
 	);
 }
+
+MyLoginPage.routing = TCLoginPage.routing;
 </code></pre>
 </div>
             </div>
-                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"LoginPage","declarations":[{"type":"function","name":"LoginPage","declarations":[{"name":"LoginPage","statements":["return (\n\t<Flex\n\t\twidth=\"100%\"\n\t\theight=\"100%\"\n\t\tdirection=\"column\"\n\t\tjustifyContent=\"center\"\n\t\talignItems=\"center\"\n\t>\n\t\t<Flex direction=\"column\" maxWidth=\"size-4600\">\n\t\t\t{children}\n\t\t</Flex>\n\t</Flex>\n);"],"parameters":[{"name":"{ children }","type":"LoginPageProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nA Telestion Client page that renders a login page\nwhere the user typically enters their credentials\nto log into the application.\n\nIt only renders if nobody is authenticated.\nOtherwise, it redirects to the dashboard page.\n\nIt aligns its children vertically.\n\nPossible children components are:\n- {@link LoginTitle}\n- {@link LoginLogo}\n- {@link LoginDescription}\n- {@link LoginForm}\n","tags":[{"text":"{@Link LoginPageProps}\n","tagName":"@see"},{"text":"{@link LoginTitle}\n","tagName":"@see"},{"text":"{@link LoginLogo}\n","tagName":"@see"},{"text":"{@link LoginDescription}\n","tagName":"@see"},{"text":"{@link LoginForm}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyLoginPage() {\n\treturn (\n\t\t<LoginPage>\n\t\t\t<LoginTitle />\n\t\t\t<LoginLogo />\n\t\t\t<LoginDescription />\n\t\t\t<LoginForm initialServerURL=\"http://localhost:9870/bridge\" />\n\t\t</LoginPage>\n\t);\n}\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
+                                            <!-- UNRESOLVED TYPE: identifier with {"type":"identifier","name":"LoginPage","declarations":[{"type":"function","name":"LoginPage","declarations":[{"name":"LoginPage","statements":["return (\n\t<Flex\n\t\twidth=\"100%\"\n\t\theight=\"100%\"\n\t\tdirection=\"column\"\n\t\tjustifyContent=\"center\"\n\t\talignItems=\"center\"\n\t>\n\t\t<Flex direction=\"column\" maxWidth=\"size-4600\">\n\t\t\t{children}\n\t\t</Flex>\n\t</Flex>\n);"],"parameters":[{"name":"{ children }","type":"LoginPageProps","isReadonly":false,"decorators":[],"hasQuestionToken":false,"kind":28,"isRestParameter":false}],"typeParameters":[],"docs":[{"description":"\nA Telestion Client page that renders a login page\nwhere the user typically enters their credentials\nto log into the application.\n\nIt only renders if nobody is authenticated.\nOtherwise, it redirects to the dashboard page.\n\nIt aligns its children vertically.\n\nPossible children components are:\n- {@link LoginTitle}\n- {@link LoginLogo}\n- {@link LoginDescription}\n- {@link LoginForm}\n","tags":[{"text":"{@Link LoginPageProps}\n","tagName":"@see"},{"text":"{@link LoginTitle}\n","tagName":"@see"},{"text":"{@link LoginLogo}\n","tagName":"@see"},{"text":"{@link LoginDescription}\n","tagName":"@see"},{"text":"{@link LoginForm}\n\n","tagName":"@see"},{"text":"\n```ts\nfunction MyLoginPage() {\n\treturn (\n\t\t<LoginPage>\n\t\t\t<LoginLogo />\n\t\t\t<LoginTitle />\n\t\t\t<LoginDescription />\n\t\t\t<LoginForm initialServerURL=\"http://localhost:9870/bridge\" />\n\t\t</LoginPage>\n\t);\n}\n\nMyLoginPage.routing = TCLoginPage.routing;\n```\n","tagName":"@example"}]}],"isExported":true,"isDefaultExport":false,"hasDeclareKeyword":false,"isGenerator":false,"isAsync":false,"kind":11,"overloads":[]}]}]}-->
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
@@ -1916,13 +1924,15 @@ in the login page.</p>
             <div class="col-sm-10"><pre><code class="language-ts">function MyLoginPage() {
 	return (
 		&lt;LoginPage&gt;
-			&lt;LoginTitle /&gt;
 			&lt;LoginLogo /&gt;
+			&lt;LoginTitle /&gt;
 			&lt;LoginDescription /&gt;
 			&lt;LoginForm initialServerURL=&quot;http://localhost:9870/bridge&quot; /&gt;
 		&lt;/LoginPage&gt;
 	);
 }
+
+MyLoginPage.routing = TCLoginPage.routing;
 </code></pre>
 </div>
             </div>
