@@ -1251,6 +1251,226 @@ Components of the header can be left, center or right aligned.</p>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
+        <a id="LoadingIndicator" href="#LoadingIndicator">
+            <h3><code>LoadingIndicator</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function LoadingIndicator
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                {
+	children,
+	dependencies,
+	timeout
+}
+                
+                <!-- type -->
+                :
+                LoadingIndicatorProps
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            any        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Renders a loading indicator if some of the dependencies are not defined.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>children - a function to children to display
+if all dependencies are defined</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>dependencies - he dependencies to check if they are undefined</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>timeout - the timeout in milliseconds until the function throws,
+if it is 0 it waits indefinitely</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Error - if some dependencies are undefined until timeout
+and timeout is set</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">// Render a loading indicator if position is undefined otherwise the position
+const [position, setPosition] = useState&lt;Position&gt;();
+return (
+	 &lt;LoadingIndicator dependencies={[position]}&gt;
+	   {() =&gt; (
+	     &lt;p&gt;{position}&lt;/p&gt;
+	   )}
+	 &lt;/LoadingIndicator&gt;
+);
+</code></pre>
+</div>
+            </div>
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="LoadingIndicatorProps" href="#LoadingIndicatorProps">
+            <h3><code>LoadingIndicatorProps</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    <!-- Signature -->
+<p>
+    <b>
+        <code>
+            <!-- Type -->
+            interface
+            <!-- Name -->
+            LoadingIndicatorProps
+            <!-- Type Parameters -->
+            
+            <!-- Extends -->
+                    </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>React Props of <a href="#LoadingIndicator"><code>LoadingIndicator</code></a></p>
+<p>For more information about React Props, please look here:
+<a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#LoadingIndicator"><code>LoadingIndicator</code></a></p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@see:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p><a href="#https://reactjs.org/docs/components-and-props.html"><code>https://reactjs.org/docs/components-and-props.html</code></a></p>
+</div>
+            </div>
+
+<!-- Constructors -->
+
+<!-- Properties -->
+<h4>Properties</h4>
+    <a id="LoadingIndicatorProps.children" href="#LoadingIndicatorProps.children">
+        <h5><code>
+                                                                                children                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            () =&gt; ReactElement | Array&lt;ReactElement&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+    <a id="LoadingIndicatorProps.dependencies" href="#LoadingIndicatorProps.dependencies">
+        <h5><code>
+                                                                                dependencies                            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            Array&lt;any&gt;        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+    <a id="LoadingIndicatorProps.timeout" href="#LoadingIndicatorProps.timeout">
+        <h5><code>
+                                                                                timeout                ?            </code></h5>
+    </a>
+    <!-- Signature -->
+<p>
+    <b>Type:
+        <code>
+            <!-- Type -->
+            number        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- no docs :( -->
+    <p><small>No docs provided</small></p>
+
+<!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
         <a id="CommonWrapper" href="#CommonWrapper">
             <h3><code>CommonWrapper</code></h3></a>
 
@@ -2530,6 +2750,126 @@ console.log(infos.dashboards);
             </div>
 
 <!-- Methods -->
+                        </div>
+    <div class="card fluid">
+        <!-- Name with anchor link -->
+        <a id="useDependencyTimeout" href="#useDependencyTimeout">
+            <h3><code>useDependencyTimeout</code></h3></a>
+
+        <!-- Description, based on type -->
+                                    
+<!-- Signature -->
+<p>
+    <b>
+        <code>
+            
+            function useDependencyTimeout
+            <!-- Type Parameters -->
+            
+                        <!-- Parameters -->
+            (
+                            
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                timeout
+                
+                <!-- type -->
+                :
+                number
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                ,                             
+                <br>
+                &nbsp;&nbsp;
+
+                                
+                <!-- parameter name -->
+                dependencies
+                
+                <!-- type -->
+                :
+                Array&lt;any&gt;
+                <!-- Default value -->
+                
+                <!-- Comma if not last -->
+                                                        <br>
+                        )
+
+            <!-- Return type -->
+            :
+            boolean        </code>
+    </b>
+</p>
+
+<!-- Docs -->
+    <!-- Description -->
+    <p>Throws an error after a timeout if any dependency is undefined.</p>
+
+    <!-- Tags -->
+    <div class="row">
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>dependencies - the dependencies to check if they are undefined</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@param:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>timeout - the timeout in milliseconds until the function throws,
+if it is 0 it waits indefinitely</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@returns:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>the current state of undefined dependencies</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@throws:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><p>Error - if some dependencies are undefined until timeout
+and timeout is set</p>
+</div>
+                    <!-- Tag name -->
+            <div class="col-sm-2">
+                <p>
+                    <mark class="tag">@example:</mark>
+                </p>
+            </div>
+
+            <!-- Tag content -->
+            <div class="col-sm-10"><pre><code class="language-ts">const [position, setPosition] = useState&lt;Position&gt;();
+
+// throws if no position received after 5 seconds
+useDependencyTimeout(5, [position]);
+
+return &lt;p&gt;Latest position: {position}&lt;/p&gt;;
+</code></pre>
+</div>
+            </div>
                         </div>
     <div class="card fluid">
         <!-- Name with anchor link -->
